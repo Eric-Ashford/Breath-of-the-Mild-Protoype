@@ -7,54 +7,6 @@ using UnityEngine;
 
 public class PlayerMove : MonoBehaviour
 {
-    //[SerializeField]
-    //float speed;
-
-    //Rigidbody rb;
-    ////AudioSource footstep;
-
-    //const string horizontalAxisName = "Horizontal";
-    //const string verticalAxisName = "Vertical";
-
-    //void Start()
-    //{
-    //    rb = this.gameObject.GetComponent<Rigidbody>();
-    //    //footstep = this.gameObject.GetComponent<AudioSource>();
-    //}
-
-    //void FixedUpdate()
-    //{
-    //    MovePlayer();
-    //    //PlayFootstep();
-    //}
-
-    //void MovePlayer()
-    //{
-    //    float moveHorizontal = Input.GetAxis(horizontalAxisName);
-    //    float moveVertical = Input.GetAxis(verticalAxisName);
-
-    //    Vector3 movement = new Vector3(moveHorizontal, 0.0f, moveVertical);
-
-    //    // doesn't work well with cube
-    //    rb.AddForce(movement * speed);
-    //}
-
-    ////void PlayFootstep()
-    ////{
-    ////    if (rb.velocity.magnitude > 4.0f && !footstep.isPlaying)
-    ////    {
-    ////        // placeholder footstep
-    ////        // TODO: need to tweak randomization/walk speed
-
-    ////        // randomizes volume and pitch for every step, increasing with walk speed
-    ////        footstep.volume = Mathf.Clamp(Random.Range(0.55f, 0.75f) * rb.velocity.magnitude, 0.0f, 1.0f);
-    ////        footstep.pitch = Random.Range(0.85f, 1.15f) * (rb.velocity.magnitude / 6);
-
-    ////        footstep.Play();
-    ////    }
-    ////}
-    ///
-
     [SerializeField]
     float walkSpeed = 5f;
     [SerializeField]
@@ -71,6 +23,7 @@ public class PlayerMove : MonoBehaviour
 
     Rigidbody rb;
     CapsuleCollider cc;
+    //AudioSource footstep;
     Transform cameraTransform;
 
     Vector3 facingDirection;
@@ -79,6 +32,7 @@ public class PlayerMove : MonoBehaviour
     float horizontalInput;
     float verticalInput;
     float moveSpeed;
+
     bool isRunning;
     bool isJumping;
     bool isOnGround;
@@ -87,36 +41,55 @@ public class PlayerMove : MonoBehaviour
     const string verticalAxisName = "Vertical";
     const string jumpButtonName = "Jump";
 
+    void Awake()
+    {
+        isRunning = false;
+        isJumping = false;
+        isOnGround = true;
+    }
+
     void Start()
     {
         rb = this.gameObject.GetComponent<Rigidbody>();
         cc = this.gameObject.GetComponent<CapsuleCollider>();
+        //footstep = this.gameObject.GetComponent<AudioSource>();
         cameraTransform = Camera.main.transform;
-
-        isOnGround = true;
     }
 
     void Update()
     {
-        HandleFriction();
+        ChangeFrictionMaterial();
     }
 
     void FixedUpdate()
     {
+        MovePlayer();
+        //PlayFootstep();
+    }
+
+    void ChangeFrictionMaterial()
+    {
+        if (horizontalInput == 0 && verticalInput == 0)
+        {
+            cc.material = maxFriction;      //a lot of friction when wanting to stop so player doesn't slide forever
+        }
+        else
+        {
+            cc.material = zeroFriction;     //zero friction when wanting to move so player actually moves
+        }
+    }
+
+    void MovePlayer()
+    {
         horizontalInput = Input.GetAxis(horizontalAxisName);
         verticalInput = Input.GetAxis(verticalAxisName);
         isJumping = Input.GetButtonDown(jumpButtonName);
+        
+        storDir = cameraTransform.right;
 
-        /*
-            This if statment is how tolerant we are on changing the direction based on where the camera is looking.
-            For example, if the player is moving to the left/right of where the camera is looking and then he rotates the camera
-            so it looks towards where he is going, we will keep moving at the same direction as before
-        */
-        storDir = cameraTransform.right;        //This means, the player can keep moving in the same direction they were before even if they change the camera angle
-
-
-        if (isOnGround)        //Jump!, does not rotate
+        if (isOnGround)
         {
+            //movement controls
             if (Input.GetKey(KeyCode.LeftShift) || Input.GetKey(KeyCode.RightShift))
             {
                 isRunning = true;
@@ -137,66 +110,64 @@ public class PlayerMove : MonoBehaviour
 
             rb.AddForce(((storDir * horizontalInput) + (cameraTransform.forward * verticalInput)) * moveSpeed / Time.deltaTime);
 
-            //Jump controls
+            //jump controls
             if (isJumping && isOnGround)
             {
-                rb.AddForce(Vector3.up * jumpStrength, ForceMode.Impulse);      //ForceMode.Impulse (I think) gives all the force to the jump for only one frame.
+                rb.AddForce(Vector3.up * jumpStrength, ForceMode.Impulse);
+
+                // TODO: play jump sound
             }
         }
 
-        /*Rotates the Character*/
-        //Find a position in front of where the camera is looking
+        //rotation controls
         facingDirection = transform.position + (storDir * horizontalInput) + (cameraTransform.forward * verticalInput);
-        //Find the direction from that position
-        Vector3 dir = facingDirection - transform.position;
-        dir.y = 0;  //The player should not be bouncing up and down.
+        Vector3 dir = facingDirection - this.gameObject.transform.position;
+        dir.y = 0;  //stops player from tipping over
 
-        //If the player has been given input, we move!
-        if (horizontalInput != 0 || verticalInput != 0)
+        if (horizontalInput != 0 || verticalInput != 0)     //only rotate player when moving
         {
-            //find the angle, between the character's rotation and where the camera is looking
-            float angle = Quaternion.Angle(transform.rotation, Quaternion.LookRotation(dir));
+            float angle = Quaternion.Angle(this.gameObject.transform.rotation, Quaternion.LookRotation(dir));
 
-            //and if it's not zero (to avoid a warning)
-            if (angle != 0)   //look towards the camera
-            { rb.rotation = Quaternion.Slerp(transform.rotation, Quaternion.LookRotation(dir), turnSpeed * Time.deltaTime); }
+            if (angle != 0)
+            {
+                rb.rotation = Quaternion.Slerp(this.gameObject.transform.rotation, Quaternion.LookRotation(dir), turnSpeed * Time.deltaTime);       //rotate player to face look direction
+            }
         }
     }
 
-    //If we are touching something (like the ground )
+    // TODO: change to use footstep array code
+    //void PlayFootstep()
+    //{
+    //    if (rb.velocity.magnitude > 4.0f && !footstep.isPlaying)
+    //    {
+    //        // placeholder footstep
+    //        // TODO: need to tweak randomization/walk speed
+
+    //        // randomizes volume and pitch for every step, increasing with walk speed
+    //        footstep.volume = Mathf.Clamp(Random.Range(0.55f, 0.75f) * rb.velocity.magnitude, 0.0f, 1.0f);
+    //        footstep.pitch = Random.Range(0.85f, 1.15f) * (rb.velocity.magnitude / 6);
+
+    //        footstep.Play();
+    //    }
+    //}
+
     void OnCollisionEnter(Collision other)
     {
-        //This means we are on the ground
-
-        if (other.gameObject.tag == "Ground")
+        //check if on the ground
+        if (other.gameObject.tag == "Ground")       //need to use ground tag for any jumpable surface
         {
             isOnGround = true;
-            rb.drag = 5;
+            rb.drag = 5;        //increase drag when on ground
         }
     }
-
-    //Once we are no longer touching the object we collided with earlier
+    
     void OnCollisionExit(Collision other)
     {
-        //We want to know when we have left the ground (or anything else)
-        if (other.gameObject.tag == "Ground")    //You can copy this if statement and make it "Vehicle" or something to jump off a car.
+        //check if left the ground
+        if (other.gameObject.tag == "Ground")
         {
             isOnGround = false;
-            rb.drag = 0;
-        }
-    }
-
-    void HandleFriction()
-    {
-        if (horizontalInput == 0 && verticalInput == 0)       // max friction when not moving
-        {
-            cc.material = maxFriction;
-        }
-        else
-        {
-            cc.material = zeroFriction;     // zero friction when moving
+            rb.drag = 0;        //decrease drag when in the air
         }
     }
 }
-
-// copied a lot from: https://www.reddit.com/r/Unity3D/comments/4zs2zy/pffft_who_needs_a_third_person_controller/

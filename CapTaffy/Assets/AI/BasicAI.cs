@@ -37,18 +37,32 @@ public class BasicAI : MonoBehaviour
         if (playerDistance <= attackDistance)
         {
             rndr.material.color = Color.red;
-            Attack();
+            MoveTowardsPlayer();
+            //Attack();
+        }
+
+        if (playerDistance > lookDistance && playerDistance > attackDistance)
+        {
+            rndr.material.color = Color.white;
         }
     }
 
     private void AlignToPlayer()
     {
         Quaternion rotation = Quaternion.LookRotation(player.position - transform.position);
-        transform.rotation = Quaternion.Slerp(transform.rotation, rotation, Time.deltaTime * damping);
+        transform.rotation = Quaternion.Euler(new Vector3(0f, rotation.eulerAngles.y, 0f));
     }
 
-    private void Attack()
+    private void MoveTowardsPlayer()
     {
-        rb.AddForce(transform.forward * movementSpeed * Time.deltaTime);
+        rb.AddForce(transform.forward * movementSpeed, ForceMode.Impulse);
     }
+
+    //Don't know why this doesn't work
+
+    //private void Attack()
+    //{
+    //    rb.AddForce(transform.forward * movementSpeed, ForceMode.Force);
+        
+    //}
 }

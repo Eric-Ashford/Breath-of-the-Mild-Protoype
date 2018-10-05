@@ -9,7 +9,6 @@ using UnityEngine;
 
 public class playerController : MonoBehaviour
 {
-
     [SerializeField] float walkSpeed = 6f;
     [SerializeField] float runSpeed = 15f;
 
@@ -18,17 +17,13 @@ public class playerController : MonoBehaviour
 
     Transform cameraM;
 
-
-    // Use this for initialization
     void Start()
     {
         cameraM = Camera.main.transform;
     }
 
-    // Update is called once per frame
     void FixedUpdate()
     {
-
         Vector2 input = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical"));
         Vector2 inputDir = input.normalized;
 
@@ -39,9 +34,8 @@ public class playerController : MonoBehaviour
         }
 
         bool running = Input.GetKey(KeyCode.LeftShift) || Input.GetKey(KeyCode.RightShift);
-        float speed = ((running) ? runSpeed : walkSpeed) * inputDir.magnitude;                                                         // If were running then runspeed else walkspeed
+        float speed = ((running) ? runSpeed : walkSpeed) * inputDir.magnitude;      // If we're running then runspeed else walkspeed
 
         transform.Translate(transform.forward * speed * Time.deltaTime, Space.World);
-
     }
 }

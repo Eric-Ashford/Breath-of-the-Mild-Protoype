@@ -6,22 +6,11 @@ public class InputHandler : MonoBehaviour
 {
 	private float vertical;
 	private float horizontal;
-
-
-
-	// Use this for initialization
-	void Start () {
-		
-	}
 	
-	// Update is called once per frame
-	void FixedUpdate ()
+	void FixedUpdate()
 	{
-		
 	   GetInput();
-
 	}
-
 
 	void GetInput()
 	{

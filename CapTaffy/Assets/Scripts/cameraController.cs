@@ -20,7 +20,6 @@ public class cameraController : MonoBehaviour
 
     public bool lockCursor;
 
-
     void Start()
     {
         if (lockCursor)
@@ -29,11 +28,9 @@ public class cameraController : MonoBehaviour
             Cursor.visible = false;
         }
     }
-
-    // Update is called once per frame
+    
     void LateUpdate()
     {
-
         yaw += Input.GetAxis("Mouse X") * mouseSensitivity;
         pitch -= Input.GetAxis("Mouse Y") * mouseSensitivity;
         pitch = Mathf.Clamp(pitch, pitchMinMax.x, pitchMinMax.y);

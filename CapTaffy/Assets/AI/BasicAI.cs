@@ -58,9 +58,11 @@ public class BasicAI : MonoBehaviour
         rb.AddForce(transform.forward * movementSpeed, ForceMode.Impulse);
     }
 
-    private void Attack()
-    {
-        
+    //Don't know why this doesn't work
 
-    }
+    //private void Attack()
+    //{
+    //    rb.AddForce(transform.forward * movementSpeed, ForceMode.Force);
+        
+    //}
 }

@@ -55,7 +55,7 @@ public class BasicAI : MonoBehaviour
 
     private void MoveTowardsPlayer()
     {
-        rb.velocity = transform.forward * movementSpeed;
+        rb.AddForce(transform.forward * movementSpeed, ForceMode.Impulse);
     }
 
     //Don't know why this doesn't work

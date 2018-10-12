@@ -98,7 +98,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mouseSensitivity: 10
   target: {fileID: 0}
-  dstFromTarget: 7
+  dstFromTarget: 5
   pitchMinMax: {x: -40, y: 85}
   rotationSmoothTime: 0.05
   lockCursor: 0

@@ -1758,9 +1758,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c5dce60acd0196f408cd57cb7d08f7b4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  creatureHealth: 100
   playerDistance: 0
   lookDistance: 40
-  attackDistance: 20
+  chaseDistance: 20
+  attackDistance: 10
   movementSpeed: 40
   damping: 100
   player: {fileID: 0}

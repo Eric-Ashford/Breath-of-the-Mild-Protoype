@@ -35,8 +35,7 @@ public class WeaponWheel : MonoBehaviour
 	void Update ()
     {
         OpenWeaponWheel();
-        CloseWeaponWheel();
-        
+        CloseWeaponWheel(); 
 	}
 
     void FixedUpdate()

@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class DamageCubeTest : MonoBehaviour
+public class DamagePlayer : MonoBehaviour
 {
     [SerializeField]
     GameObject damageSplashScreen;

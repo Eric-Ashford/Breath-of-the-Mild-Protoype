@@ -54,12 +54,6 @@ public class PlayerHealth : MonoBehaviour
         
     }
 
-    void OnTriggerEnter(Collider other)
-    {
-      //  if (other.tag == "Enemy")
-          //  camShake.CamShake();
-    }
-
 
 
 }

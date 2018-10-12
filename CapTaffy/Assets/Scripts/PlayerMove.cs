@@ -8,13 +8,13 @@ using UnityEngine;
 public class PlayerMove : MonoBehaviour
 {
     [SerializeField]
-    float walkSpeed = 5f;
+    float walkSpeed = 5.0f;
     [SerializeField]
-    float runSpeed = 25f;
+    float runSpeed = 25.0f;
     [SerializeField]
-    float turnSpeed = 5;
+    float turnSpeed = 5.0f;
     [SerializeField]
-    float jumpStrength = 5;
+    float jumpStrength = 5.0f;
 
     [SerializeField]
     PhysicMaterial zeroFriction;
@@ -30,7 +30,7 @@ public class PlayerMove : MonoBehaviour
     Transform cameraTransform;
 
     Vector3 facingDirection;
-    Vector3 storDir;
+    Vector3 previousDirection;
 
     float horizontalInput;
     float verticalInput;
@@ -44,6 +44,7 @@ public class PlayerMove : MonoBehaviour
     const string horizontalAxisName = "Horizontal";
     const string verticalAxisName = "Vertical";
     const string jumpButtonName = "Jump";
+    const string sprintButtonName = "Sprint";
 
     void Awake()
     {
@@ -74,7 +75,7 @@ public class PlayerMove : MonoBehaviour
 
     void ChangeFrictionMaterial()
     {
-        if (horizontalInput == 0 && verticalInput == 0)
+        if (horizontalInput == 0.0f && verticalInput == 0.0f)
         {
             cc.material = maxFriction;      //a lot of friction when wanting to stop so player doesn't slide forever
         }
@@ -90,12 +91,12 @@ public class PlayerMove : MonoBehaviour
         verticalInput = Input.GetAxis(verticalAxisName);
         isJumping = Input.GetButtonDown(jumpButtonName);
         
-        storDir = cameraTransform.right;
+        previousDirection = cameraTransform.right;
 
         if (isOnGround)
         {
             //movement controls
-            if (Input.GetKey(KeyCode.LeftShift) || Input.GetKey(KeyCode.RightShift))
+            if (Input.GetButton(sprintButtonName) || Input.GetAxis(sprintButtonName) > 0.0f)
             {
                 isRunning = true;
             }
@@ -113,7 +114,7 @@ public class PlayerMove : MonoBehaviour
                 moveSpeed = walkSpeed;
             }
 
-            rb.AddForce(((storDir * horizontalInput) + (cameraTransform.forward * verticalInput)) * moveSpeed / Time.deltaTime);
+            rb.AddForce(((previousDirection * horizontalInput) + (cameraTransform.forward * verticalInput)) * moveSpeed / Time.deltaTime);
 
             //jump controls
             if (isJumping && isOnGround)
@@ -125,15 +126,15 @@ public class PlayerMove : MonoBehaviour
         }
 
         //rotation controls
-        facingDirection = transform.position + (storDir * horizontalInput) + (cameraTransform.forward * verticalInput);
+        facingDirection = transform.position + (previousDirection * horizontalInput) + (cameraTransform.forward * verticalInput);
         Vector3 dir = facingDirection - this.gameObject.transform.position;
         dir.y = 0;  //stops player from tipping over
 
-        if (horizontalInput != 0 || verticalInput != 0)     //only rotate player when moving
+        if (horizontalInput != 0.0f || verticalInput != 0.0f)     //only rotate player when moving
         {
             float angle = Quaternion.Angle(this.gameObject.transform.rotation, Quaternion.LookRotation(dir));
 
-            if (angle != 0)
+            if (angle != 0.0f)
             {
                 rb.rotation = Quaternion.Slerp(this.gameObject.transform.rotation, Quaternion.LookRotation(dir), turnSpeed * Time.deltaTime);       //rotate player to face look direction
             }
@@ -167,7 +168,7 @@ public class PlayerMove : MonoBehaviour
         isTakingStep = true;
 
         // pause in between playing footstep sound, decreasing with walk speed
-        yield return new WaitForSecondsRealtime(0.5f / (Mathf.Clamp(rb.velocity.magnitude / 7, 0.8f, 1.5f)));
+        yield return new WaitForSecondsRealtime(0.5f / (Mathf.Clamp(rb.velocity.magnitude / 7.0f, 0.8f, 1.5f)));
 
         isTakingStep = false;
     }
@@ -178,7 +179,7 @@ public class PlayerMove : MonoBehaviour
         if (other.gameObject.tag == "Ground")       //need to use ground tag for any walkable surface
         {
             isOnGround = true;
-            rb.drag = 5;        //increase drag when on ground
+            rb.drag = 5.0f;        //increase drag when on ground
         }
     }
     
@@ -188,7 +189,7 @@ public class PlayerMove : MonoBehaviour
         if (other.gameObject.tag == "Ground")
         {
             isOnGround = false;
-            rb.drag = 0;        //decrease drag when in the air
+            rb.drag = 0.0f;        //decrease drag when in the air
         }
     }
 }

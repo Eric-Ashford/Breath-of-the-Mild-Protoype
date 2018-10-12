@@ -31,8 +31,8 @@ public class cameraController : MonoBehaviour
     
     void LateUpdate()
     {
-        yaw += Input.GetAxis("Mouse X") * mouseSensitivity;
-        pitch -= Input.GetAxis("Mouse Y") * mouseSensitivity;
+        yaw += Input.GetAxis("Camera Horizontal") * mouseSensitivity;
+        pitch -= Input.GetAxis("Camera Vertical") * mouseSensitivity;
         pitch = Mathf.Clamp(pitch, pitchMinMax.x, pitchMinMax.y);
 
         currentRotation = Vector3.SmoothDamp(currentRotation, new Vector3(pitch, yaw), ref rotationSmoothVelocity, rotationSmoothTime);

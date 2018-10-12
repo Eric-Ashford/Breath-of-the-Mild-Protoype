@@ -78,10 +78,12 @@ public class PlayerMove : MonoBehaviour
         if (horizontalInput == 0.0f && verticalInput == 0.0f)
         {
             cc.material = maxFriction;      //a lot of friction when wanting to stop so player doesn't slide forever
+            Debug.Log("reached max frictipnm.");
         }
         else
         {
             cc.material = zeroFriction;     //zero friction when wanting to move so player actually moves
+            Debug.Log("reached zero frictipnm.");
         }
     }
 

@@ -13,15 +13,17 @@ public class BasicAI : MonoBehaviour
         damping;
     [SerializeField]
     private Transform player;
-
+    
     private Rigidbody rb;
     private Renderer rndr;
+    private Animator anmtr;
 
     // Use this for initialization
     void Start()
     {
-        rndr = GetComponent<Renderer>();
+        //rndr = GetComponent<Renderer>();
         rb = GetComponent<Rigidbody>();
+        anmtr = GetComponent<Animator>();
     }
 
     void FixedUpdate()
@@ -30,20 +32,22 @@ public class BasicAI : MonoBehaviour
 
         if (playerDistance <= lookDistance)
         {
-            rndr.material.color = Color.yellow;
+            //rndr.material.color = Color.yellow;
             AlignToPlayer();
+            anmtr.SetBool("chasePlayer", false);
         }
 
         if (playerDistance <= attackDistance)
         {
-            rndr.material.color = Color.red;
+            //rndr.material.color = Color.red;
             MoveTowardsPlayer();
             //Attack();
         }
 
         if (playerDistance > lookDistance && playerDistance > attackDistance)
         {
-            rndr.material.color = Color.white;
+            //rndr.material.color = Color.white;
+            anmtr.SetBool("chasePlayer", false);
         }
     }
 
@@ -55,7 +59,8 @@ public class BasicAI : MonoBehaviour
 
     private void MoveTowardsPlayer()
     {
-        rb.AddForce(transform.forward * movementSpeed, ForceMode.Impulse);
+        rb.AddForce(new Vector3(player.position.x, 0f, player.position.z) * movementSpeed, ForceMode.Impulse);
+        anmtr.SetBool("chasePlayer", true);
     }
 
     //Don't know why this doesn't work

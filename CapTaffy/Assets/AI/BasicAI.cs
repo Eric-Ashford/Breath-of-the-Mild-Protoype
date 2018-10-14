@@ -6,44 +6,56 @@ public class BasicAI : MonoBehaviour
 {
 
     [SerializeField]
-    private float playerDistance,
+    private float creatureHealth,
+        playerDistance,
         lookDistance,
+        chaseDistance,
         attackDistance,
         movementSpeed,
         damping;
     [SerializeField]
     private Transform player;
-
+    
     private Rigidbody rb;
-    private Renderer rndr;
+    private Animator anmtr;
 
     // Use this for initialization
     void Start()
     {
-        rndr = GetComponent<Renderer>();
         rb = GetComponent<Rigidbody>();
+        anmtr = GetComponent<Animator>();
     }
 
-    void FixedUpdate()
+    private void Update()
+    {
+        CheckHealth();
+    }
+
+    private void FixedUpdate()
     {
         playerDistance = Vector3.Distance(player.position, transform.position);
 
         if (playerDistance <= lookDistance)
         {
-            rndr.material.color = Color.yellow;
             AlignToPlayer();
+            anmtr.SetBool("chasePlayer", false);
+        }
+
+        if (playerDistance <= chaseDistance)
+        {
+            MoveTowardsPlayer();
+            anmtr.SetBool("attackPlayer", false);
         }
 
         if (playerDistance <= attackDistance)
         {
-            rndr.material.color = Color.red;
-            MoveTowardsPlayer();
-            //Attack();
+            anmtr.SetBool("chasePlayer", false);
+            anmtr.SetBool("attackPlayer", true);
         }
 
-        if (playerDistance > lookDistance && playerDistance > attackDistance)
+        if (playerDistance > lookDistance && playerDistance > chaseDistance)
         {
-            rndr.material.color = Color.white;
+            anmtr.SetBool("chasePlayer", false);
         }
     }
 
@@ -55,14 +67,22 @@ public class BasicAI : MonoBehaviour
 
     private void MoveTowardsPlayer()
     {
-        rb.AddForce(transform.forward * movementSpeed, ForceMode.Impulse);
+        rb.AddForce(new Vector3(player.position.x, 0f, player.position.z) * movementSpeed, ForceMode.Impulse);
+        anmtr.SetBool("chasePlayer", true);
     }
 
-    //Don't know why this doesn't work
+    private void CheckHealth()
+    {
+        if (creatureHealth <= 0)
+        {
+            anmtr.SetBool("isDead", true);
+            anmtr.SetBool("chasePlayer", false);
+            anmtr.SetBool("attackPlayer", false);
+        }
+    }
 
-    //private void Attack()
-    //{
-    //    rb.AddForce(transform.forward * movementSpeed, ForceMode.Force);
-        
-    //}
+    private void RemoveCreature()
+    {
+        Destroy(gameObject);
+    }
 }

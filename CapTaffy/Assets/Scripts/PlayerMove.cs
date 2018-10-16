@@ -8,13 +8,15 @@ using UnityEngine;
 public class PlayerMove : MonoBehaviour
 {
     [SerializeField]
-    float walkSpeed = 5.0f;
+    float strafeSpeed = 20.0f;
     [SerializeField]
-    float runSpeed = 25.0f;
+    float walkSpeed = 35.0f;
+    [SerializeField]
+    float runSpeed = 100.0f;
     [SerializeField]
     float turnSpeed = 5.0f;
     [SerializeField]
-    float jumpStrength = 5.0f;
+    float jumpStrength = 500.0f;
 
     [SerializeField]
     PhysicMaterial zeroFriction;
@@ -117,13 +119,17 @@ public class PlayerMove : MonoBehaviour
                 isRunning = false;
             }
 
-            if (isRunning)
+            if (isRunning && !isAiming)
             {
                 moveSpeed = runSpeed;
             }
-            else
+            else if (!isAiming)
             {
                 moveSpeed = walkSpeed;
+            }
+            else
+            {
+                moveSpeed = strafeSpeed;
             }
 
             rb.AddForce(((previousDirection * horizontalInput) + (cameraTransform.forward * verticalInput)) * moveSpeed / Time.deltaTime);
@@ -138,17 +144,30 @@ public class PlayerMove : MonoBehaviour
         }
         
         //rotation controls
-        facingDirection = transform.position + (previousDirection * horizontalInput) + (cameraTransform.forward * verticalInput);
-        Vector3 dir = facingDirection - this.gameObject.transform.position;
-        dir.y = 0;  //stops player from tipping over
-
         if (horizontalInput != 0.0f && !isAiming || verticalInput != 0.0f && !isAiming)     //only rotate player when moving and not aiming
         {
+            facingDirection = transform.position + (previousDirection * horizontalInput) + (cameraTransform.forward * verticalInput);
+            Vector3 dir = facingDirection - this.gameObject.transform.position;
+            dir.y = 0;  //stops player from tipping over
+
             float angle = Quaternion.Angle(this.gameObject.transform.rotation, Quaternion.LookRotation(dir));
 
             if (angle != 0.0f)
             {
                 rb.rotation = Quaternion.Slerp(this.gameObject.transform.rotation, Quaternion.LookRotation(dir), turnSpeed * Time.deltaTime);       //rotate player to face look direction
+            }
+        }
+
+        if (isAiming)
+        {
+            Vector3 dir = cameraTransform.forward;
+            dir.y = 0;  //stops player from tipping over
+
+            float angle = Quaternion.Angle(this.gameObject.transform.rotation, Quaternion.LookRotation(dir));
+
+            if (angle != 0.0f)
+            {
+                rb.rotation = Quaternion.Slerp(this.gameObject.transform.rotation, Quaternion.LookRotation(dir), turnSpeed * Time.deltaTime);       //rotate player to face aim direction
             }
         }
     }

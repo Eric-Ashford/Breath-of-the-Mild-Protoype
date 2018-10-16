@@ -38,18 +38,21 @@ public class PlayerMove : MonoBehaviour
 
     bool isRunning;
     bool isJumping;
+    bool isAiming;
     bool isOnGround;
     bool isTakingStep;
 
     const string horizontalAxisName = "Horizontal";
     const string verticalAxisName = "Vertical";
-    const string jumpButtonName = "Jump";
     const string sprintButtonName = "Sprint";
+    const string jumpButtonName = "Jump";
+    const string aimButtonName = "Aim";
 
     void Awake()
     {
         isRunning = false;
         isJumping = false;
+        isAiming = false;
         isOnGround = true;
         isTakingStep = false;
     }
@@ -78,12 +81,10 @@ public class PlayerMove : MonoBehaviour
         if (horizontalInput == 0.0f && verticalInput == 0.0f)
         {
             cc.material = maxFriction;      //a lot of friction when wanting to stop so player doesn't slide forever
-            Debug.Log("reached max frictipnm.");
         }
         else
         {
             cc.material = zeroFriction;     //zero friction when wanting to move so player actually moves
-            Debug.Log("reached zero frictipnm.");
         }
     }
 
@@ -92,6 +93,15 @@ public class PlayerMove : MonoBehaviour
         horizontalInput = Input.GetAxis(horizontalAxisName);
         verticalInput = Input.GetAxis(verticalAxisName);
         isJumping = Input.GetButtonDown(jumpButtonName);
+
+        if (Input.GetButton(aimButtonName) || Input.GetAxis(aimButtonName) > 0.0f)
+        {
+            isAiming = true;
+        }
+        else
+        {
+            isAiming = false;
+        }
         
         previousDirection = cameraTransform.right;
 
@@ -123,16 +133,16 @@ public class PlayerMove : MonoBehaviour
             {
                 rb.AddForce(Vector3.up * jumpStrength, ForceMode.Impulse);
 
-                // TODO: play jump sound
+                //TODO: play jump sound
             }
         }
-
+        
         //rotation controls
         facingDirection = transform.position + (previousDirection * horizontalInput) + (cameraTransform.forward * verticalInput);
         Vector3 dir = facingDirection - this.gameObject.transform.position;
         dir.y = 0;  //stops player from tipping over
 
-        if (horizontalInput != 0.0f || verticalInput != 0.0f)     //only rotate player when moving
+        if (horizontalInput != 0.0f && !isAiming || verticalInput != 0.0f && !isAiming)     //only rotate player when moving and not aiming
         {
             float angle = Quaternion.Angle(this.gameObject.transform.rotation, Quaternion.LookRotation(dir));
 
@@ -145,19 +155,22 @@ public class PlayerMove : MonoBehaviour
 
     void PlayFootstep()
     {
+        //TODO: add check for ground type
+        //TODO: change footstep array to specific type (i.e. gravelArray)
+
         if (rb.velocity.magnitude > 2.0f && !footstep.isPlaying && !isTakingStep && isOnGround)
         {
-            // choose random clip, excluding the first one
+            //choose random clip, excluding the first one
             int n = Random.Range(1, footstepsArray.Length - 1);
             footstep.clip = footstepsArray[n];
 
-            // randomizes volume and pitch for every step, increasing with walk speed
-            footstep.volume = Mathf.Clamp(Random.Range(0.4f, 0.65f) * rb.velocity.magnitude, 0.0f, 1.0f);
-            footstep.pitch = Random.Range(0.9f, 1.1f) * (Mathf.Clamp(rb.velocity.magnitude / 7, 1.0f, 1.5f));
+            //randomizes volume and pitch for every step, increasing with walk speed
+            footstep.volume = Mathf.Clamp(Random.Range(0.45f, 0.65f) * rb.velocity.magnitude, 0.0f, 1.0f);
+            footstep.pitch = Random.Range(0.85f, 1.15f) * (Mathf.Clamp(rb.velocity.magnitude / 7, 1.0f, 1.5f));
 
             footstep.Play();
 
-            // move clip to first index so it won't play again right away
+            //move clip to first index so it won't play again right away
             footstepsArray[n] = footstepsArray[0];
             footstepsArray[0] = footstep.clip;
 
@@ -169,7 +182,7 @@ public class PlayerMove : MonoBehaviour
     {
         isTakingStep = true;
 
-        // pause in between playing footstep sound, decreasing with walk speed
+        //pause in between playing footstep sound, decreasing with walk speed
         yield return new WaitForSecondsRealtime(0.5f / (Mathf.Clamp(rb.velocity.magnitude / 7.0f, 0.8f, 1.5f)));
 
         isTakingStep = false;
@@ -181,7 +194,7 @@ public class PlayerMove : MonoBehaviour
         if (other.gameObject.tag == "Ground")       //need to use ground tag for any walkable surface
         {
             isOnGround = true;
-            rb.drag = 5.0f;        //increase drag when on ground
+            rb.drag = 5.0f;        //increase drag when on the ground
         }
     }
     

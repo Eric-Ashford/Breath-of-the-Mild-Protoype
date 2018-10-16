@@ -13,12 +13,15 @@ public class cameraController : MonoBehaviour
     float zOffset;
 
     [SerializeField]
-    float normalFOV = 60.0f;
+    float normalCameraFOV = 60.0f;
     [SerializeField]
-    float aimingFOV = 45.0f;
+    float aimingCameraFOV = 45.0f;
+    [SerializeField]
+    float normalCameraSensitivity = 6.0f;
+    [SerializeField]
+    float aimingCameraSensitivity = 4.0f;
 
-    [SerializeField]
-    float mouseSensitivity = 5.0f;
+
     [SerializeField]
     Transform target;
 
@@ -30,6 +33,7 @@ public class cameraController : MonoBehaviour
 
     private float yaw;
     private float pitch;
+    float cameraSensitivity;
 
     bool lockCursor;
 
@@ -77,13 +81,15 @@ public class cameraController : MonoBehaviour
 
         if (isAiming)
         {
-            Camera.main.fieldOfView = aimingFOV;
+            Camera.main.fieldOfView = aimingCameraFOV;
+            cameraSensitivity = aimingCameraSensitivity;
 
             //TODO: make crosshair appear
         }
         else
         {
-            Camera.main.fieldOfView = normalFOV;
+            Camera.main.fieldOfView = normalCameraFOV;
+            cameraSensitivity = normalCameraSensitivity;
 
             //TODO: make crosshair disappear
         }
@@ -91,8 +97,8 @@ public class cameraController : MonoBehaviour
 
     void FollowPlayer()
     {
-        yaw += Input.GetAxis(horizontalAxisName) * mouseSensitivity;
-        pitch -= Input.GetAxis(verticalAxisName) * mouseSensitivity;
+        yaw += Input.GetAxis(horizontalAxisName) * cameraSensitivity;
+        pitch -= Input.GetAxis(verticalAxisName) * cameraSensitivity;
         pitch = Mathf.Clamp(pitch, pitchMinMax.x, pitchMinMax.y);
 
         currentRotation = Vector3.SmoothDamp(currentRotation, new Vector3(pitch, yaw), ref rotationSmoothVelocity, rotationSmoothTime);

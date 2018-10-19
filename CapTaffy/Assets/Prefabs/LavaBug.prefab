@@ -672,6 +672,7 @@ GameObject:
   - component: {fileID: 54927490430658064}
   - component: {fileID: 198350855744455900}
   - component: {fileID: 199916867903424164}
+  - component: {fileID: 114163678029455650}
   m_Layer: 0
   m_Name: FlameCollider
   m_TagString: Untagged
@@ -782,6 +783,7 @@ GameObject:
   - component: {fileID: 114514025453820788}
   - component: {fileID: 54956468461290814}
   - component: {fileID: 65842490354523152}
+  - component: {fileID: 114432149407528172}
   m_Layer: 0
   m_Name: LavaBug
   m_TagString: Enemy
@@ -1548,7 +1550,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1777326614928628}
   m_LocalRotation: {x: 0, y: -1, z: 0, w: 0}
-  m_LocalPosition: {x: 0, y: 0.17, z: 100.2}
+  m_LocalPosition: {x: 0, y: 0.17, z: 90}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4739684935972078}
@@ -1807,6 +1809,30 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &114163678029455650
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1606166400165148}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9c7bf1c50a0acd746b77039473518585, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damageSplashScreen: {fileID: 0}
+--- !u!114 &114432149407528172
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1777326614928628}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0f8d4a51449910c41b30ffc908b6ddad, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  healthBar: {fileID: 0}
 --- !u!114 &114514025453820788
 MonoBehaviour:
   m_ObjectHideFlags: 1

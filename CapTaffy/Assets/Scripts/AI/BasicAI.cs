@@ -11,8 +11,7 @@ public class BasicAI : MonoBehaviour
         lookDistance = 20f,
         chaseDistance = 15f,
         attackDistance = 10f,
-        movementSpeed = 40f,
-        damping = 10f;
+        movementSpeed = 40f;
     [SerializeField]
     private Transform player;
 
@@ -52,7 +51,7 @@ public class BasicAI : MonoBehaviour
         }
         else
         {
-            rb.AddForce(-transform.forward * movementSpeed, ForceMode.Force);
+            rb.AddForce(-transform.forward * movementSpeed * 2, ForceMode.Force);
             anim.SetBool("chasePlayer", false);
         }
 
@@ -77,7 +76,7 @@ public class BasicAI : MonoBehaviour
 
     private void AttackPlayer()
     {
-        rb.AddForce(-transform.forward * movementSpeed, ForceMode.Force);
+        rb.AddForce(-transform.forward * movementSpeed * 2, ForceMode.Force);
         anim.SetBool("chasePlayer", false);
         anim.SetBool("attackPlayer", true);
     }
@@ -86,7 +85,7 @@ public class BasicAI : MonoBehaviour
     {
         if (creatureHealth <= 0)
         {
-            rb.AddForce(-transform.forward * movementSpeed, ForceMode.Force);
+            rb.velocity = Vector3.zero;
             anim.SetBool("isDead", true);
             anim.SetBool("chasePlayer", false);
             anim.SetBool("attackPlayer", false);

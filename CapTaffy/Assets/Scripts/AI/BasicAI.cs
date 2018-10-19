@@ -52,7 +52,7 @@ public class BasicAI : MonoBehaviour
         }
         else
         {
-            rb.velocity = Vector3.zero;
+            rb.AddForce(-transform.forward * movementSpeed, ForceMode.Force);
             anim.SetBool("chasePlayer", false);
         }
 
@@ -78,7 +78,6 @@ public class BasicAI : MonoBehaviour
     private void AttackPlayer()
     {
         rb.AddForce(-transform.forward * movementSpeed, ForceMode.Force);
-        //rb.velocity = Vector3.zero;
         anim.SetBool("chasePlayer", false);
         anim.SetBool("attackPlayer", true);
     }
@@ -87,7 +86,7 @@ public class BasicAI : MonoBehaviour
     {
         if (creatureHealth <= 0)
         {
-            rb.velocity = Vector3.zero;
+            rb.AddForce(-transform.forward * movementSpeed, ForceMode.Force);
             anim.SetBool("isDead", true);
             anim.SetBool("chasePlayer", false);
             anim.SetBool("attackPlayer", false);

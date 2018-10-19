@@ -643,11 +643,6 @@ Prefab:
       propertyPath: player
       value: 
       objectReference: {fileID: 1753677817}
-    - target: {fileID: 114305318114717170, guid: 61e5907a346da4642acdffd3538322fa,
-        type: 2}
-      propertyPath: damping
-      value: 1
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 61e5907a346da4642acdffd3538322fa, type: 2}
   m_IsPrefabParent: 0

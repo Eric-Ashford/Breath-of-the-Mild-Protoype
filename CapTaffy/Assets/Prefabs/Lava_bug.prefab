@@ -1761,8 +1761,8 @@ MonoBehaviour:
   creatureHealth: 100
   playerDistance: 0
   lookDistance: 80
-  chaseDistance: 40
-  attackDistance: 15
+  chaseDistance: 50
+  attackDistance: 20
   movementSpeed: 15
   damping: 100
   player: {fileID: 0}

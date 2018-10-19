@@ -8,9 +8,10 @@ public class BasicAI : MonoBehaviour
     [SerializeField]
     private float creatureHealth = 100f,
         playerDistance = 0f,
-        lookDistance = 20f,
-        chaseDistance = 15f,
-        attackDistance = 10f,
+        lookDistance = 80f,
+        chaseDistance = 50f,
+        rangedDistance = 20f,
+        meleeDistance = 10f,
         movementSpeed = 40f;
     [SerializeField]
     private Transform player;
@@ -40,9 +41,13 @@ public class BasicAI : MonoBehaviour
             AlignToPlayer();
         }
 
-        if (playerDistance <= attackDistance)
+        if (playerDistance <= meleeDistance)
         {
-            AttackPlayer();
+            MeleeAttack();
+        }
+        else if (playerDistance <= rangedDistance)
+        {
+            ShootFire();
         }
         else if (playerDistance <= chaseDistance)
         {
@@ -50,12 +55,6 @@ public class BasicAI : MonoBehaviour
             MoveTowardsPlayer();
         }
         else
-        {
-            rb.AddForce(-transform.forward * movementSpeed * 2, ForceMode.Force);
-            anim.SetBool("chasePlayer", false);
-        }
-
-        if (playerDistance > lookDistance && playerDistance > chaseDistance)
         {
             anim.SetBool("chasePlayer", false);
         }
@@ -70,14 +69,21 @@ public class BasicAI : MonoBehaviour
     private void MoveTowardsPlayer()
     {
         anim.SetBool("attackPlayer", false);
+        anim.SetBool("breatheFire", false);
         anim.SetBool("chasePlayer", true);
         rb.AddForce(transform.forward * movementSpeed, ForceMode.Acceleration);
     }
 
-    private void AttackPlayer()
-    {
-        rb.AddForce(-transform.forward * movementSpeed * 2, ForceMode.Force);
+    private void ShootFire()
+    {       
         anim.SetBool("chasePlayer", false);
+        anim.SetBool("attackPlayer", false);
+        anim.SetBool("breatheFire", true);
+    }
+    
+    private void MeleeAttack()
+    {
+        anim.SetBool("breatheFire", false);
         anim.SetBool("attackPlayer", true);
     }
 
@@ -88,6 +94,7 @@ public class BasicAI : MonoBehaviour
             rb.velocity = Vector3.zero;
             anim.SetBool("isDead", true);
             anim.SetBool("chasePlayer", false);
+            anim.SetBool("breatheFire", false);
             anim.SetBool("attackPlayer", false);
         }
     }
@@ -95,5 +102,10 @@ public class BasicAI : MonoBehaviour
     private void RemoveCreature()
     {
         Destroy(gameObject);
+    }
+
+    private void ResetIdle()
+    {
+        anim.SetTrigger("resetIdle");
     }
 }

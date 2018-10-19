@@ -6,24 +6,24 @@ public class BasicAI : MonoBehaviour
 {
 
     [SerializeField]
-    private float creatureHealth,
-        playerDistance,
-        lookDistance,
-        chaseDistance,
-        attackDistance,
-        movementSpeed,
-        damping;
+    private float creatureHealth = 100f,
+        playerDistance = 0f,
+        lookDistance = 20f,
+        chaseDistance = 15f,
+        attackDistance = 10f,
+        movementSpeed = 40f,
+        damping = 10f;
     [SerializeField]
     private Transform player;
-    
+
     private Rigidbody rb;
-    private Animator anmtr;
+    private Animator anim;
 
     // Use this for initialization
     void Start()
     {
         rb = GetComponent<Rigidbody>();
-        anmtr = GetComponent<Animator>();
+        anim = GetComponent<Animator>();
     }
 
     private void Update()
@@ -33,29 +33,32 @@ public class BasicAI : MonoBehaviour
 
     private void FixedUpdate()
     {
+        anim.SetFloat("speed", rb.velocity.magnitude);
         playerDistance = Vector3.Distance(player.position, transform.position);
 
         if (playerDistance <= lookDistance)
         {
             AlignToPlayer();
-            anmtr.SetBool("chasePlayer", false);
-        }
-
-        if (playerDistance <= chaseDistance)
-        {
-            MoveTowardsPlayer();
-            anmtr.SetBool("attackPlayer", false);
         }
 
         if (playerDistance <= attackDistance)
         {
-            anmtr.SetBool("chasePlayer", false);
-            anmtr.SetBool("attackPlayer", true);
+            AttackPlayer();
+        }
+        else if (playerDistance <= chaseDistance)
+        {
+            AlignToPlayer();
+            MoveTowardsPlayer();
+        }
+        else
+        {
+            rb.AddForce(-transform.forward * movementSpeed, ForceMode.Force);
+            anim.SetBool("chasePlayer", false);
         }
 
         if (playerDistance > lookDistance && playerDistance > chaseDistance)
         {
-            anmtr.SetBool("chasePlayer", false);
+            anim.SetBool("chasePlayer", false);
         }
     }
 
@@ -67,17 +70,26 @@ public class BasicAI : MonoBehaviour
 
     private void MoveTowardsPlayer()
     {
-        rb.AddForce(new Vector3(player.position.x, 0f, player.position.z) * movementSpeed, ForceMode.Impulse);
-        anmtr.SetBool("chasePlayer", true);
+        anim.SetBool("attackPlayer", false);
+        anim.SetBool("chasePlayer", true);
+        rb.AddForce(transform.forward * movementSpeed, ForceMode.Acceleration);
+    }
+
+    private void AttackPlayer()
+    {
+        rb.AddForce(-transform.forward * movementSpeed, ForceMode.Force);
+        anim.SetBool("chasePlayer", false);
+        anim.SetBool("attackPlayer", true);
     }
 
     private void CheckHealth()
     {
         if (creatureHealth <= 0)
         {
-            anmtr.SetBool("isDead", true);
-            anmtr.SetBool("chasePlayer", false);
-            anmtr.SetBool("attackPlayer", false);
+            rb.AddForce(-transform.forward * movementSpeed, ForceMode.Force);
+            anim.SetBool("isDead", true);
+            anim.SetBool("chasePlayer", false);
+            anim.SetBool("attackPlayer", false);
         }
     }
 

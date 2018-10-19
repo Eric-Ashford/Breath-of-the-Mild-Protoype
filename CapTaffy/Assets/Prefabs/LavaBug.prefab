@@ -1760,10 +1760,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   creatureHealth: 100
   playerDistance: 0
-  lookDistance: 40
-  chaseDistance: 20
-  attackDistance: 10
-  movementSpeed: 40
+  lookDistance: 80
+  chaseDistance: 50
+  attackDistance: 15
+  movementSpeed: 15
   damping: 100
   player: {fileID: 0}
 --- !u!137 &137466456008429558

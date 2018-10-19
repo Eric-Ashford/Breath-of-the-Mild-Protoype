@@ -7,6 +7,10 @@ public class PlayerMagic : MonoBehaviour
 {
     [SerializeField]
     Slider magicBar;
+    [SerializeField]
+    Transform projectileSpawnPoint;
+    [SerializeField]
+    GameObject projectilePrefab;
 
     public float currentMagic;
     const int maxMagic = 100;
@@ -31,6 +35,7 @@ public class PlayerMagic : MonoBehaviour
     {
        if (Input.GetKey(KeyCode.M) && currentMagic == maxMagic)
         {
+            Fire();
             currentMagic = 0f;
         }
     }
@@ -56,5 +61,20 @@ public class PlayerMagic : MonoBehaviour
             coolDownHasStarted = false;
             currentMagic = 100;
         }
+    }
+
+    void Fire()
+    {
+        // Create the Bullet from the Bullet Prefab
+        var projectile = (GameObject)Instantiate(
+            projectilePrefab,
+            projectileSpawnPoint.position,
+            projectileSpawnPoint.rotation);
+
+        // Add velocity to the bullet
+        projectile.GetComponent<Rigidbody>().velocity = projectile.transform.forward * 30;
+
+        // Destroy the bullet after 2 seconds
+        Destroy(projectile, 2.0f);
     }
 }

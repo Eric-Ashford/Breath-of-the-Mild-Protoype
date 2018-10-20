@@ -302,7 +302,7 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 20
+    m_FontSize: 18
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 0
@@ -315,7 +315,8 @@ MonoBehaviour:
     m_LineSpacing: 1
   m_Text: "Product Owner\n\tDavid Beaudoin\n\nScrum Master\n\tCrosby Nelson\n\nArtists\n\tBrandi
     Hall\n\t\t- Character/Animations\n\tJordan Heckerdorn\n\t\t- Environment\n\t\t-
-    Character/Creature Rigging\n\tIvan Leon\n\t\t- Creature/Animations\n\t\t- VFX\n\n"
+    Character Rigging\n\t\t- VFX\n\tIvan Leon\n\t\t- Creatures/Rigging/Animations\n\t\t-
+    VFX\n\n"
 --- !u!222 &488404208
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1102,7 +1103,7 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 20
+    m_FontSize: 18
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 0
@@ -1579,7 +1580,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1603067421
 RectTransform:
   m_ObjectHideFlags: 0

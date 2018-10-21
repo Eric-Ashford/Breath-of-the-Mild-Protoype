@@ -13,12 +13,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   HasSourceProject: 1
   HasPlatforms: 1
-  sourceProjectPath: C:\workspace\CrosbyNelson\SoundStuffFMOD\LargeTeamFMODSession
-    Most Recent\LargeTeamFMODSession.fspro
-  SourceProjectPathUnformatted: C:\workspace\CrosbyNelson\SoundStuffFMOD\LargeTeamFMODSession
-    Most Recent\LargeTeamFMODSession.fspro
-  SourceBankPathUnformatted: C:\workspace\CrosbyNelson\SoundStuffFMOD\LargeTeamFMODSession
-    Most Recent\Build
+  sourceProjectPath: Assets\LargeTeamFMODSession Most Recent\LargeTeamFMODSession.fspro
+  SourceProjectPathUnformatted: Assets\LargeTeamFMODSession Most Recent\LargeTeamFMODSession.fspro
+  SourceBankPathUnformatted: Assets\LargeTeamFMODSession Most Recent\Build
   AutomaticEventLoading: 1
   AutomaticSampleLoading: 0
   ImportType: 0

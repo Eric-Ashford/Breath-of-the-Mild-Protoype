@@ -9882,7 +9882,7 @@ AnimationClip:
     m_AdditiveReferencePoseClip: {fileID: 0}
     m_AdditiveReferencePoseTime: 0
     m_StartTime: 0
-    m_StopTime: 4.1666665
+    m_StopTime: 4.2916665
     m_OrientationOffsetY: 0
     m_Level: 0
     m_CycleOffset: 0
@@ -60115,7 +60115,7 @@ AnimationClip:
   m_HasMotionFloatCurves: 0
   m_GenerateMotionCurves: 0
   m_Events:
-  - time: 4.1666665
+  - time: 4.2916665
     functionName: RemoveCreature
     data: 
     objectReferenceParameter: {fileID: 11500000, guid: c5dce60acd0196f408cd57cb7d08f7b4,

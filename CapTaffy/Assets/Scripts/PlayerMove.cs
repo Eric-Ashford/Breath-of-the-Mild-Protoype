@@ -27,6 +27,7 @@ public class PlayerMove : MonoBehaviour
     AudioClip[] footstepsArray;
 
     Rigidbody rb;
+    Animator anim;
     CapsuleCollider cc;
     AudioSource footstep;
     Transform cameraTransform;
@@ -62,6 +63,7 @@ public class PlayerMove : MonoBehaviour
     void Start()
     {
         rb = this.gameObject.GetComponent<Rigidbody>();
+        anim = this.gameObject.GetComponent<Animator>();
         cc = this.gameObject.GetComponent<CapsuleCollider>();
         footstep = this.gameObject.GetComponent<AudioSource>();
         cameraTransform = Camera.main.transform;
@@ -70,6 +72,14 @@ public class PlayerMove : MonoBehaviour
     void Update()
     {
         ChangeFrictionMaterial();
+
+
+        //Barebones Player Attack
+        if (Input.GetButton("Fire 1"))
+        {
+            anim.SetTrigger("Attack");
+        }
+        //End
     }
 
     void FixedUpdate()

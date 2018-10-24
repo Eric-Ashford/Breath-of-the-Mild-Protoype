@@ -12,8 +12,11 @@ public class EnemyHealth : MonoBehaviour
     float currentHealth;
     const int maxHealth = 100;
 
+    private Animator anim;
+
     void Start()
     {
+        anim = GetComponent<Animator>();
         currentHealth = maxHealth;
         UpdateHealthBar();
     }
@@ -29,7 +32,7 @@ public class EnemyHealth : MonoBehaviour
 
         if (currentHealth <= 0)
         {
-            this.gameObject.SetActive(false);
+            anim.SetBool("isDead", true);
         }
     }
 

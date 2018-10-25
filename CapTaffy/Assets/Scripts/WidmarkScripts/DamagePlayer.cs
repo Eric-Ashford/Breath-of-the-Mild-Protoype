@@ -7,6 +7,8 @@ public class DamagePlayer : MonoBehaviour
 {
     [SerializeField]
     GameObject damageSplashScreen;
+    [SerializeField]
+    private float attackDamage = 15f;
 
     //CameraShake camShake;
     private bool splashScreenHasBeenActivated;
@@ -34,7 +36,7 @@ public class DamagePlayer : MonoBehaviour
             splashScreenHasBeenActivated = true;
             //camShake.CamShake();
             damageSplashScreen.gameObject.SetActive(true); // Damage splash screen appears
-            other.gameObject.GetComponent<PlayerHealth>().DamagePlayer(15); // player takes damage
+            other.gameObject.GetComponent<PlayerHealth>().DamagePlayer(attackDamage); // player takes damage
 
             //this.gameObject.SetActive(false);
         }

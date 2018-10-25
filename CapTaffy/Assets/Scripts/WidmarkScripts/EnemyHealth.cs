@@ -12,14 +12,26 @@ public class EnemyHealth : MonoBehaviour
     private float currentHealth;
     [SerializeField]
     private float maxHealth = 100f;
+    [SerializeField]
+    private Material[] injuryState;
 
+    private SkinnedMeshRenderer sknMeshRndr;
     private Animator anim;
 
     void Start()
     {
+        sknMeshRndr = GetComponent<SkinnedMeshRenderer>();
         anim = GetComponent<Animator>();
         currentHealth = maxHealth;
         UpdateHealthBar();
+        InjuryStatus();
+    }
+
+    private void Update()
+    {
+        Debug.Log(currentHealth / maxHealth);
+        Debug.Log(2f / 3f);
+        InjuryStatus();
     }
 
     void LateUpdate()
@@ -37,7 +49,7 @@ public class EnemyHealth : MonoBehaviour
         }
     }
 
-    public void HealPlayer(float amount)
+    public void HealEnemy(float amount)
     {
         currentHealth += amount;
 
@@ -47,8 +59,27 @@ public class EnemyHealth : MonoBehaviour
         }
     }
 
-    void UpdateHealthBar()
+    private void UpdateHealthBar()
     {
-        healthBar.value = currentHealth / maxHealth;
+        healthBar.value = currentHealth / maxHealth;                
+    }
+
+    private void InjuryStatus()
+    {
+        if (currentHealth / maxHealth >= 2f / 3f)
+        {
+            Debug.Log("no injury");
+            sknMeshRndr.sharedMaterial = injuryState[0];
+        }
+        else if (currentHealth / maxHealth >= 1f / 3f)
+        {
+            Debug.Log("light injury");
+            sknMeshRndr.sharedMaterial = injuryState[1];
+        }
+        else
+        {
+            Debug.Log("heavy injury");
+            sknMeshRndr.sharedMaterial = injuryState[2];
+        }
     }
 }

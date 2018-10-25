@@ -7,7 +7,7 @@
 [LOG] OutputWASAPI::init                       : Output buffer size: 4096 samples, latency: 0.00ms, period: 10.00ms, DSP buffer: 1024 * 4
 [LOG] Thread::initThread                       : Init FMOD stream thread. Priority: 2, Stack Size: 65536, Semaphore: No, Sleep Time: 10, Looping: Yes.
 [LOG] Thread::initThread                       : Init FMOD mixer thread. Priority: 3, Stack Size: 49152, Semaphore: No, Sleep Time: 0, Looping: Yes.
-[LOG] AsyncManager::init                       : manager 000000001D668F58 isAsync 0 updatePeriod 0.02
+[LOG] AsyncManager::init                       : manager 0000000048379B78 isAsync 0 updatePeriod 0.02
 [LOG] AsyncManager::init                       : done
 [LOG] PlaybackSystem::init                     : 
 [LOG] Thread::initThread                       : Init FMOD Studio sample load thread. Priority: 0, Stack Size: 65536, Semaphore: No, Sleep Time: 1, Looping: No.
@@ -17,88 +17,41 @@
 [LOG] Manager::readBank                        : fileversion = 100, compatVersion = 99 (oldest = 44, newest = 100)
 [LOG] Manager::readBank                        : fileversion = 100, compatVersion = 99 (oldest = 44, newest = 100)
 [LOG] Manager::readBank                        : fileversion = 100, compatVersion = 99 (oldest = 44, newest = 100)
-[LOG] Thread::initThread                       : Init FMOD profiler thread (recv). Priority: 0, Stack Size: 131072, Semaphore: No, Sleep Time: 0, Looping: No.
-[LOG] Thread::initThread                       : Init FMOD profiler thread (send). Priority: 0, Stack Size: 131072, Semaphore: No, Sleep Time: 0, Looping: No.
-[LOG] LiveUpdate::clientConnected              : client = 000000004A2B0748
-[LOG] LiveUpdate::readPacket                   : Accepting init message for client 000000004A2B0748
-[LOG] LiveUpdate::transitionToConnected        : 
-[LOG] Manager::sendConnectTimeHash             : 
-[LOG] LiveUpdate::sendBankHash                 : 
-[LOG] LiveUpdate::sendBankHash                 : 
-[LOG] LiveUpdate::sendBankHash                 : 
-[LOG] LiveUpdate::acceptInitPacket             : Client 000000004A2B0748 connected, entering connected state
-[LOG] Manager::receiveLiveUpdateBank           : Received live update bank path: fmod:///remote/C:/Users/crn22/AppData/Local/FMOD Studio/UnsavedProjects/Hotswap-W1T4eb/hotswap_0.bank
-[LOG] ProfileRemoteFile::fileOpen              : Attemping to open remote file 'C:/Users/crn22/AppData/Local/FMOD Studio/UnsavedProjects/Hotswap-W1T4eb/hotswap_0.bank'
-[LOG] Manager::readBank                        : fileversion = 100, compatVersion = 99 (oldest = 44, newest = 100)
 [LOG] Manager::readBank                        : fileversion = 100, compatVersion = 99 (oldest = 44, newest = 100)
 [LOG] Manager::readBank                        : fileversion = 100, compatVersion = 99 (oldest = 44, newest = 100)
 [LOG] Manager::readBank                        : fileversion = 100, compatVersion = 99 (oldest = 44, newest = 100)
 [LOG] PlaybackSystem::acquireMasterBus         : Setting master channel group format to 6
-[LOG] Manager::receiveLiveUpdateBank           : Received live update bank path: fmod:///remote/C:/Users/crn22/AppData/Local/FMOD Studio/UnsavedProjects/Hotswap-W1T4eb/hotswap_1.bank
-[LOG] ProfileRemoteFile::fileOpen              : Attemping to open remote file 'C:/Users/crn22/AppData/Local/FMOD Studio/UnsavedProjects/Hotswap-W1T4eb/hotswap_1.bank'
-[LOG] Manager::readBank                        : fileversion = 100, compatVersion = 99 (oldest = 44, newest = 100)
-[LOG] Manager::receiveLiveUpdateBank           : Received live update bank path: fmod:///remote/C:/Users/crn22/AppData/Local/FMOD Studio/UnsavedProjects/Hotswap-W1T4eb/hotswap_2.bank
-[LOG] ProfileRemoteFile::fileOpen              : Attemping to open remote file 'C:/Users/crn22/AppData/Local/FMOD Studio/UnsavedProjects/Hotswap-W1T4eb/hotswap_2.bank'
-[LOG] Manager::readBank                        : fileversion = 100, compatVersion = 99 (oldest = 44, newest = 100)
-[LOG] Manager::receiveLiveUpdateBank           : Received live update bank path: fmod:///remote/C:/Users/crn22/AppData/Local/FMOD Studio/UnsavedProjects/Hotswap-W1T4eb/hotswap_3.bank
-[LOG] ProfileRemoteFile::fileOpen              : Attemping to open remote file 'C:/Users/crn22/AppData/Local/FMOD Studio/UnsavedProjects/Hotswap-W1T4eb/hotswap_3.bank'
-[LOG] Manager::readBank                        : fileversion = 100, compatVersion = 99 (oldest = 44, newest = 100)
-[LOG] Manager::receiveLiveUpdateBank           : Received live update bank path: fmod:///remote/C:/Users/crn22/AppData/Local/FMOD Studio/UnsavedProjects/Hotswap-W1T4eb/hotswap_4.bank
-[LOG] ProfileRemoteFile::fileOpen              : Attemping to open remote file 'C:/Users/crn22/AppData/Local/FMOD Studio/UnsavedProjects/Hotswap-W1T4eb/hotswap_4.bank'
-[LOG] Manager::readBank                        : fileversion = 100, compatVersion = 99 (oldest = 44, newest = 100)
-[LOG] Manager::receiveLiveUpdateBank           : Received live update bank path: fmod:///remote/C:/Users/crn22/AppData/Local/FMOD Studio/UnsavedProjects/Hotswap-W1T4eb/hotswap_5.bank
-[LOG] ProfileRemoteFile::fileOpen              : Attemping to open remote file 'C:/Users/crn22/AppData/Local/FMOD Studio/UnsavedProjects/Hotswap-W1T4eb/hotswap_5.bank'
-[LOG] Manager::readBank                        : fileversion = 100, compatVersion = 99 (oldest = 44, newest = 100)
-[LOG] Manager::receiveLiveUpdateBank           : Received live update bank path: fmod:///remote/C:/Users/crn22/AppData/Local/FMOD Studio/UnsavedProjects/Hotswap-W1T4eb/hotswap_6.bank
-[LOG] ProfileRemoteFile::fileOpen              : Attemping to open remote file 'C:/Users/crn22/AppData/Local/FMOD Studio/UnsavedProjects/Hotswap-W1T4eb/hotswap_6.bank'
-[LOG] Manager::readBank                        : fileversion = 100, compatVersion = 99 (oldest = 44, newest = 100)
-[LOG] Manager::receiveLiveUpdateBank           : Received live update bank path: fmod:///remote/C:/Users/crn22/AppData/Local/FMOD Studio/UnsavedProjects/Hotswap-W1T4eb/hotswap_7.bank
-[LOG] ProfileRemoteFile::fileOpen              : Attemping to open remote file 'C:/Users/crn22/AppData/Local/FMOD Studio/UnsavedProjects/Hotswap-W1T4eb/hotswap_7.bank'
-[LOG] Manager::readBank                        : fileversion = 100, compatVersion = 99 (oldest = 44, newest = 100)
-[LOG] Manager::receiveLiveUpdateBank           : Received live update bank path: fmod:///remote/C:/Users/crn22/AppData/Local/FMOD Studio/UnsavedProjects/Hotswap-W1T4eb/hotswap_8.bank
-[LOG] ProfileRemoteFile::fileOpen              : Attemping to open remote file 'C:/Users/crn22/AppData/Local/FMOD Studio/UnsavedProjects/Hotswap-W1T4eb/hotswap_8.bank'
-[LOG] Manager::readBank                        : fileversion = 100, compatVersion = 99 (oldest = 44, newest = 100)
-[LOG] Manager::receiveLiveUpdateBank           : Received live update bank path: fmod:///remote/C:/Users/crn22/AppData/Local/FMOD Studio/UnsavedProjects/Hotswap-W1T4eb/hotswap_9.bank
-[LOG] ProfileRemoteFile::fileOpen              : Attemping to open remote file 'C:/Users/crn22/AppData/Local/FMOD Studio/UnsavedProjects/Hotswap-W1T4eb/hotswap_9.bank'
-[LOG] Manager::readBank                        : fileversion = 100, compatVersion = 99 (oldest = 44, newest = 100)
-[LOG] Manager::receiveLiveUpdateBank           : Received live update bank path: fmod:///remote/C:/Users/crn22/AppData/Local/FMOD Studio/UnsavedProjects/Hotswap-W1T4eb/hotswap_10.bank
-[LOG] ProfileRemoteFile::fileOpen              : Attemping to open remote file 'C:/Users/crn22/AppData/Local/FMOD Studio/UnsavedProjects/Hotswap-W1T4eb/hotswap_10.bank'
-[LOG] Manager::readBank                        : fileversion = 100, compatVersion = 99 (oldest = 44, newest = 100)
-[LOG] SoundI::release                          :  (000000004A2A8E98)
-[LOG] SoundI::release                          :     Footstep_StoneRough01 (000000004A2A9F68)
-[LOG] SoundI::release                          :  (000000004A2A9738)
-[LOG] SoundI::release                          :     Footstep_StoneRough02 (000000004A2AA928)
-[LOG] SoundI::release                          :  (00000000001B2C18)
-[LOG] SoundI::release                          :     Footstep_StoneRough03 (000000004A2AA788)
-[LOG] SoundI::release                          :  (00000000009A2298)
-[LOG] SoundI::release                          :     Footstep_StoneRough04 (000000001D677F18)
-[LOG] SoundI::release                          :  (00000000009A30F8)
-[LOG] SoundI::release                          :     Footstep_StoneRough05 (000000001D677A38)
-[LOG] SoundI::release                          :  (00000000009A29C8)
-[LOG] SoundI::release                          :     Footstep_StoneRough06 (000000001D6788D8)
-[LOG] SoundI::release                          :  (000000004A2A8BB8)
-[LOG] SoundI::release                          :     Footstep_StoneRough07 (000000004A2AB2E8)
-[LOG] SoundI::release                          :  (00000000009A2408)
-[LOG] SoundI::release                          :     Footstep_StoneRough08 (000000001D6780B8)
-[LOG] SoundI::release                          :  (000000004A2A8D28)
-[LOG] SoundI::release                          :     Footstep_StoneRough09 (000000004A2AAAC8)
-[LOG] SoundI::release                          :  (000000004A2A8318)
-[LOG] SoundI::release                          :     Footstep_StoneRough10 (000000004A2AB628)
-[LOG] SoundI::release                          :  (00000000009A2858)
-[LOG] SoundI::release                          :     footstep_snow02 (000000001D678738)
-[LOG] SoundI::release                          :  (000000004A2A92E8)
-[LOG] SoundI::release                          :     footstep_snow03 (000000004A2AB148)
-[LOG] SoundI::release                          :  (00000000009A2E18)
-[LOG] SoundI::release                          :     footstep_snow04 (000000001D678A78)
-[LOG] SoundI::release                          :  (00000000009A26E8)
-[LOG] SoundI::release                          :     footstep_snow05 (000000001D6783F8)
+[LOG] SoundI::release                          :  (00000000484435A8)
+[LOG] SoundI::release                          :     Footstep_StoneRough01 (00000000485301D8)
+[LOG] SoundI::release                          :  (0000000048443B68)
+[LOG] SoundI::release                          :     Footstep_StoneRough02 (000000004852F4D8)
+[LOG] SoundI::release                          :  (0000000048442D08)
+[LOG] SoundI::release                          :     Footstep_StoneRough03 (000000000F5BFF78)
+[LOG] SoundI::release                          :  (000000000F6DCEE8)
+[LOG] SoundI::release                          :     Footstep_StoneRough04 (000000000F5BF278)
+[LOG] SoundI::release                          :  (000000000F6DCA98)
+[LOG] SoundI::release                          :     Footstep_StoneRough05 (000000000F5C02B8)
+[LOG] SoundI::release                          :  (000000000F6DC7B8)
+[LOG] SoundI::release                          :     Footstep_StoneRough06 (000000000F5BED98)
+[LOG] SoundI::release                          :  (0000000048443888)
+[LOG] SoundI::release                          :     Footstep_StoneRough07 (0000000048530518)
+[LOG] SoundI::release                          :  (000000000F6DD058)
+[LOG] SoundI::release                          :     Footstep_StoneRough08 (000000000F5BF5B8)
+[LOG] SoundI::release                          :  (0000000048442A28)
+[LOG] SoundI::release                          :     Footstep_StoneRough09 (0000000048530D38)
+[LOG] SoundI::release                          :  (00000000484439F8)
+[LOG] SoundI::release                          :     Footstep_StoneRough10 (000000004852EFF8)
+[LOG] SoundI::release                          :  (000000000F6DD338)
+[LOG] SoundI::release                          :     footstep_snow02 (000000000F5BF8F8)
+[LOG] SoundI::release                          :  (0000000048443718)
+[LOG] SoundI::release                          :     footstep_snow03 (00000000485306B8)
+[LOG] SoundI::release                          :  (000000000F6DC928)
+[LOG] SoundI::release                          :     footstep_snow04 (000000000F5BFDD8)
+[LOG] SoundI::release                          :  (000000000F6DD1C8)
+[LOG] SoundI::release                          :     footstep_snow05 (000000000F5BF758)
 [LOG] Thread::callback                         : FMOD Studio update thread finished.
 [LOG] Thread::callback                         : FMOD Studio bank load thread finished.
-[LOG] ProfileClient::markForDead               : Closing client connection
 [LOG] Profile::disconnectAll                   : Profiler disconnecting all clients
-[LOG] FMOD_OS_Net_Read                         : Interrupted.[LOG] Thread::callback                         : FMOD profiler thread (send) finished.
-[ERR] ProfileClient::recvThreadLoopFunction    : Recv thread loop returned 16
-[LOG] Thread::callback                         : FMOD profiler thread (recv) finished.
 [LOG] Thread::callback                         : FMOD Studio sample load thread finished.
 [LOG] LiveUpdate::release                      : 
 [LOG] LiveUpdate::reset                        : Reset connection (reason Disconnected)

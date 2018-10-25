@@ -21,8 +21,23 @@ MonoBehaviour:
   - {fileID: 114633529394034970}
   MasterBankRef: {fileID: 114622398348028390}
   StringsBankRef: {fileID: 114879455284970924}
-  stringsBankWriteTime: 636757353201716662
+  stringsBankWriteTime: 636757438873618967
   cacheVersion: 2
+--- !u!114 &114014237409565484
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: Cave
+  Min: 0
+  Max: 1
+  Default: 0
 --- !u!114 &114085279763583390
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -173,8 +188,8 @@ MonoBehaviour:
   Is3D: 0
   IsOneShot: 1
   Parameters:
-  - {fileID: 114104439236113108}
-  - {fileID: 114085279763583390}
+  - {fileID: 114014237409565484}
+  - {fileID: 114960219762617928}
   MinDistance: 0
   MaxDistance: 0
   Length: 360
@@ -230,11 +245,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Path: C:\Users\crn22\OneDrive\Documents\GitHub\StudioTaffy\CapTaffy\Assets\LargeTeamFMODSession
     Most Recent\Build\Desktop\Master Bank.bank
-  lastModified: 636757353201437175
+  lastModified: 636757438873568872
   LoadResult: 0
   FileSizes:
   - Name: Desktop
-    Value: 1972864
+    Value: 1973408
   Exists: 1
 --- !u!114 &114633529394034970
 MonoBehaviour:
@@ -329,11 +344,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Path: Assets\LargeTeamFMODSession Most Recent\Build\Desktop\Master Bank.strings.bank
-  lastModified: 636757353201716662
+  lastModified: 636757438873618967
   LoadResult: 0
   FileSizes:
   - Name: Desktop
-    Value: 866
+    Value: 1018
   Exists: 1
 --- !u!114 &114879520187487024
 MonoBehaviour:
@@ -354,3 +369,18 @@ MonoBehaviour:
   - Name: Desktop
     Value: 768
   Exists: 1
+--- !u!114 &114960219762617928
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: Snow
+  Min: 0
+  Max: 1
+  Default: 0

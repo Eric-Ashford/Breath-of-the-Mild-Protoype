@@ -29,8 +29,6 @@ public class EnemyHealth : MonoBehaviour
 
     private void Update()
     {
-        Debug.Log(currentHealth / maxHealth);
-        Debug.Log(2f / 3f);
         InjuryStatus();
     }
 
@@ -68,17 +66,14 @@ public class EnemyHealth : MonoBehaviour
     {
         if (currentHealth / maxHealth >= 2f / 3f)
         {
-            Debug.Log("no injury");
             sknMeshRndr.sharedMaterial = injuryState[0];
         }
         else if (currentHealth / maxHealth >= 1f / 3f)
         {
-            Debug.Log("light injury");
             sknMeshRndr.sharedMaterial = injuryState[1];
         }
         else
         {
-            Debug.Log("heavy injury");
             sknMeshRndr.sharedMaterial = injuryState[2];
         }
     }

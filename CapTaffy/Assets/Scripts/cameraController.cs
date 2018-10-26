@@ -32,7 +32,6 @@ public class cameraController : MonoBehaviour
     private float pitch;
 
     bool lockCursor;
-
     bool isAiming;
 
     const string horizontalAxisName = "Camera Horizontal";

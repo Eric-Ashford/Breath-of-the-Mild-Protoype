@@ -14,5 +14,4 @@ AudioManager:
   m_SpatializerPlugin: 
   m_AmbisonicDecoderPlugin: 
   m_DisableAudio: 0
-  m_DisableAudio: 1
   m_VirtualizeEffects: 1

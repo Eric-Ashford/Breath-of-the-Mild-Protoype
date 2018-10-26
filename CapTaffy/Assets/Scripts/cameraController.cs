@@ -5,9 +5,22 @@ using System.Collections.Generic;
 
 public class cameraController : MonoBehaviour
 {
-    public float mouseSensitivity = 10;
-    public Transform target;
-    public float dstFromTarget = 2;
+    [SerializeField]
+    float xOffset;
+    [SerializeField]
+    float yOffset;
+    [SerializeField]
+    float zOffset;
+
+    [SerializeField]
+    float normalFOV = 60.0f;
+    [SerializeField]
+    float aimingFOV = 45.0f;
+
+    [SerializeField]
+    float mouseSensitivity = 5.0f;
+    [SerializeField]
+    Transform target;
 
     public Vector2 pitchMinMax = new Vector2(-40, 85);
 
@@ -18,7 +31,18 @@ public class cameraController : MonoBehaviour
     private float yaw;
     private float pitch;
 
-    public bool lockCursor;
+    bool lockCursor;
+    bool isAiming;
+
+    const string horizontalAxisName = "Camera Horizontal";
+    const string verticalAxisName = "Camera Vertical";
+    const string aimButtonName = "Aim";
+
+    void Awake()
+    {
+        lockCursor = true;
+        isAiming = false;
+    }
 
     void Start()
     {
@@ -28,18 +52,62 @@ public class cameraController : MonoBehaviour
             Cursor.visible = false;
         }
     }
-    
+
+    void Update()
+    {
+        HandleAiming();
+    }
+
     void LateUpdate()
     {
-        yaw += Input.GetAxis("Camera Horizontal") * mouseSensitivity;
-        pitch -= Input.GetAxis("Camera Vertical") * mouseSensitivity;
+        FollowPlayer();
+    }
+
+    void HandleAiming()
+    {
+        if (Input.GetButton(aimButtonName) || Input.GetAxis(aimButtonName) > 0.0f)
+        {
+            isAiming = true;
+        }
+        else
+        {
+            isAiming = false;
+        }
+
+        if (isAiming)
+        {
+            Camera.main.fieldOfView = aimingFOV;
+
+            //TODO: make crosshair appear
+            //TODO: change to ranged attack
+        }
+        else
+        {
+            Camera.main.fieldOfView = normalFOV;
+
+            //TODO: make crosshair disappear
+            //TODO: change to melee attack
+        }
+    }
+
+    void FollowPlayer()
+    {
+        yaw += Input.GetAxis(horizontalAxisName) * mouseSensitivity;
+        pitch -= Input.GetAxis(verticalAxisName) * mouseSensitivity;
         pitch = Mathf.Clamp(pitch, pitchMinMax.x, pitchMinMax.y);
 
         currentRotation = Vector3.SmoothDamp(currentRotation, new Vector3(pitch, yaw), ref rotationSmoothVelocity, rotationSmoothTime);
 
         //Vector3 targetRotation = new Vector3(pitch, yaw);
         transform.eulerAngles = currentRotation;
-
-        transform.position = target.position - transform.forward * dstFromTarget;
+        
+        if (isAiming)
+        {
+            this.gameObject.transform.position = target.position - (transform.forward * zOffset / 3) + (transform.up * yOffset) + (transform.right * xOffset);
+        }
+        else
+        {
+            this.gameObject.transform.position = target.position - (transform.forward * zOffset) + (transform.up * yOffset) + (transform.right * xOffset);
+        }
     }
 }

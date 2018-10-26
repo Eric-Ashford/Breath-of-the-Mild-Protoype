@@ -8,14 +8,28 @@ public class EnemyHealth : MonoBehaviour
 
     [SerializeField]
     Slider healthBar;
+    [SerializeField]
+    private float currentHealth;
+    [SerializeField]
+    private float maxHealth = 100f;
+    [SerializeField]
+    private Material[] injuryState;
 
-    float currentHealth;
-    const int maxHealth = 100;
+    private SkinnedMeshRenderer sknMeshRndr;
+    private Animator anim;
 
     void Start()
     {
+        sknMeshRndr = GetComponent<SkinnedMeshRenderer>();
+        anim = GetComponent<Animator>();
         currentHealth = maxHealth;
         UpdateHealthBar();
+        InjuryStatus();
+    }
+
+    private void Update()
+    {
+        InjuryStatus();
     }
 
     void LateUpdate()
@@ -23,17 +37,21 @@ public class EnemyHealth : MonoBehaviour
         UpdateHealthBar();
     }
 
-    public void DamageEnemy(int amount)
+    public void DamageEnemy(float amount)
     {
         currentHealth -= amount;
 
         if (currentHealth <= 0)
         {
-            this.gameObject.SetActive(false);
+            anim.SetBool("isDead", true);
+        }
+        else
+        {
+            anim.SetTrigger("takeDamage");
         }
     }
 
-    public void HealPlayer(int amount)
+    public void HealEnemy(float amount)
     {
         currentHealth += amount;
 
@@ -43,8 +61,24 @@ public class EnemyHealth : MonoBehaviour
         }
     }
 
-    void UpdateHealthBar()
+    private void UpdateHealthBar()
     {
-        healthBar.value = currentHealth / maxHealth;
+        healthBar.value = currentHealth / maxHealth;                
+    }
+
+    private void InjuryStatus()
+    {
+        if (currentHealth / maxHealth >= 2f / 3f)
+        {
+            sknMeshRndr.sharedMaterial = injuryState[0];
+        }
+        else if (currentHealth / maxHealth >= 1f / 3f)
+        {
+            sknMeshRndr.sharedMaterial = injuryState[1];
+        }
+        else
+        {
+            sknMeshRndr.sharedMaterial = injuryState[2];
+        }
     }
 }

@@ -9,9 +9,10 @@ public class PlayerHealth : MonoBehaviour
     Slider healthBar;
 
     //CameraShake camShake;
-
-    float currentHealth;
-    const int maxHealth = 100;
+    [SerializeField]
+    private float currentHealth;
+    [SerializeField]
+    private float maxHealth = 100f;
 
     void Start()
     {
@@ -26,7 +27,7 @@ public class PlayerHealth : MonoBehaviour
     }
     
 
-    public void DamagePlayer(int amount)
+    public void DamagePlayer(float amount)
     {
         currentHealth -= amount;
         
@@ -37,7 +38,7 @@ public class PlayerHealth : MonoBehaviour
         }
     }
 
-    public void HealPlayer(int amount)
+    public void HealPlayer(float amount)
     {
         currentHealth += amount;
 

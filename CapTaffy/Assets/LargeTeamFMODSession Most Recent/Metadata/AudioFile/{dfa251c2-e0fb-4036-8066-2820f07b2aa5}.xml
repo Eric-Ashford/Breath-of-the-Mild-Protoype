@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.01.10.00">
+    <object class="AudioFile" id="{dfa251c2-e0fb-4036-8066-2820f07b2aa5}">
+        <property name="assetPath">
+            <value>Footsteps/Footstep_StoneRough07.wav</value>
+        </property>
+        <property name="frequencyInKHz">
+            <value>48</value>
+        </property>
+        <property name="channelCount">
+            <value>1</value>
+        </property>
+        <property name="length">
+            <value>0.65066666666666662</value>
+        </property>
+        <relationship name="masterAssetFolder">
+            <destination>{343a2949-05ef-4924-aad5-e7cf47daa71a}</destination>
+        </relationship>
+    </object>
+</objects>

@@ -38,9 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-
-  m_IndirectSpecularColor: {r: 0.44101664, g: 0.48224175, b: 0.529279, a: 1}
-
+  m_IndirectSpecularColor: {r: 0.44101644, g: 0.48224145, b: 0.52927864, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -365,7 +363,7 @@ Light:
   serializedVersion: 8
   m_Type: 1
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Intensity: 1
+  m_Intensity: 2
   m_Range: 10
   m_SpotAngle: 30
   m_CookieSize: 10
@@ -468,9 +466,9 @@ Prefab:
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 114624028905854594, guid: 9ef7c337164b7ad42a7061e20b93b073, type: 2}
+    - {fileID: 114136385137374740, guid: 9ef7c337164b7ad42a7061e20b93b073, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: 9ef7c337164b7ad42a7061e20b93b073, type: 2}
   m_IsPrefabParent: 0
-
 --- !u!1 &823070220
 GameObject:
   m_ObjectHideFlags: 0
@@ -507,12 +505,10 @@ RectTransform:
   m_SizeDelta: {x: 160, y: 108.29}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &823070222
-
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-
   m_GameObject: {fileID: 823070220}
   m_Enabled: 1
   m_EditorHideFlags: 0
@@ -555,7 +551,6 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 823070220}
-
 --- !u!1001 &1082921150
 Prefab:
   m_ObjectHideFlags: 0
@@ -715,6 +710,31 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 10, y: 2.220446e-16, z: 10}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!1 &1176361421 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1633685147008856, guid: 9ef7c337164b7ad42a7061e20b93b073,
+    type: 2}
+  m_PrefabInternal: {fileID: 430908703}
+--- !u!114 &1176361423
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1176361421}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e1963f915d0759648a62ab233b790ff6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  xOffset: 1
+  yOffset: 1
+  zOffset: 2
+  normalFOV: 60
+  aimingFOV: 45
+  mouseSensitivity: 5
+  target: {fileID: 266432811}
+  pitchMinMax: {x: -40, y: 85}
+  rotationSmoothTime: 0.05
 --- !u!114 &1191561893 stripped
 MonoBehaviour:
   m_PrefabParentObject: {fileID: 114880913164300452, guid: e0c3738dfade5f04cb195e30c5c14218,
@@ -818,7 +838,7 @@ RectTransform:
   m_Children:
   - {fileID: 823070221}
   m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -942,7 +962,6 @@ Prefab:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
-
     - target: {fileID: 224490432603014916, guid: e0c3738dfade5f04cb195e30c5c14218,
         type: 2}
       propertyPath: m_AnchoredPosition.y
@@ -962,7 +981,6 @@ Prefab:
         type: 2}
       propertyPath: m_AnchoredPosition.x
       value: -248
-
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e0c3738dfade5f04cb195e30c5c14218, type: 2}

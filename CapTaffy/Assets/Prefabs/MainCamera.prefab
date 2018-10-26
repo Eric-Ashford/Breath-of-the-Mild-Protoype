@@ -99,10 +99,9 @@ MonoBehaviour:
   xOffset: 1
   yOffset: 1
   zOffset: 4
-  normalCameraFOV: 60
-  aimingCameraFOV: 45
-  normalCameraSensitivity: 6
-  aimingCameraSensitivity: 4
+  normalFOV: 60
+  aimingFOV: 45
+  mouseSensitivity: 5
   target: {fileID: 0}
   pitchMinMax: {x: -40, y: 85}
   rotationSmoothTime: 0.05

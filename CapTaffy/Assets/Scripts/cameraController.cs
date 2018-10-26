@@ -32,7 +32,6 @@ public class cameraController : MonoBehaviour
     private float pitch;
 
     bool lockCursor;
-
     bool isAiming;
 
     const string horizontalAxisName = "Camera Horizontal";
@@ -80,12 +79,14 @@ public class cameraController : MonoBehaviour
             Camera.main.fieldOfView = aimingFOV;
 
             //TODO: make crosshair appear
+            //TODO: change to ranged attack
         }
         else
         {
             Camera.main.fieldOfView = normalFOV;
 
             //TODO: make crosshair disappear
+            //TODO: change to melee attack
         }
     }
 

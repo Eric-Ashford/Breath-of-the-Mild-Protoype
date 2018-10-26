@@ -10,15 +10,21 @@ public class PauseMenu : MonoBehaviour
 
     bool isPaused;
 
-    void Start()
+    const string startButtonName = "Start";
+
+    void Awake()
     {
         isPaused = false;
+    }
+
+    void Start()
+    {
         menuCanvas.SetActive(false);
     }
 
     void Update()
     {
-        if (Input.GetButtonDown("J_Start1") || Input.GetButtonDown("J_Start2") || Input.GetButtonDown("Cancel"))
+        if (Input.GetButtonDown(startButtonName))
         {
             isPaused = !isPaused;
 

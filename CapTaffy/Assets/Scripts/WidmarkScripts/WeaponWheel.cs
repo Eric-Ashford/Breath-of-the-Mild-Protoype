@@ -50,6 +50,8 @@ public class WeaponWheel : MonoBehaviour
             Cursor.visible = true;
             isPressed = true;
             theWeaponWheel.SetActive(true);
+            Cursor.visible = true;
+            Cursor.lockState = CursorLockMode.None;
         }
     }
 
@@ -59,7 +61,10 @@ public class WeaponWheel : MonoBehaviour
         {
             Cursor.visible = false;
             isPressed = false;
+            Cursor.visible = false;
+            Cursor.lockState = CursorLockMode.Locked;
             theWeaponWheel.SetActive(false);
+            
         }
     }
 

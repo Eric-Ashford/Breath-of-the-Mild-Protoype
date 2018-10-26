@@ -45,6 +45,10 @@ public class EnemyHealth : MonoBehaviour
         {
             anim.SetBool("isDead", true);
         }
+        else
+        {
+            anim.SetTrigger("takeDamage");
+        }
     }
 
     public void HealEnemy(float amount)

@@ -1,0 +1,124 @@
+fileFormatVersion: 2
+guid: fb36c567da168fb4f807264c78a610ac
+ModelImporter:
+  serializedVersion: 22
+  fileIDToRecycleName:
+    100000: Low_Poly_Body:Low_Poly_Body
+    100002: Low_Poly_Jacket:Low_Poly_Jacket
+    100004: Low_Poly_Jacket:Low_Poly_Jacket1
+    100006: Low_Poly_Jacket:transform1
+    100008: Low_Poly_Jacket:transform2
+    100010: Low_Poly_Jacket:transform3
+    100012: Low_Poly_Pants:Low_Poly_Pants
+    100014: polySurface1
+    100016: polySurface2
+    100018: polySurface3
+    100020: polySurface3 1
+    100022: //RootNode
+    100024: transform1
+    100026: transform2
+    100028: transform3
+    100030: transform4
+    400000: Low_Poly_Body:Low_Poly_Body
+    400002: Low_Poly_Jacket:Low_Poly_Jacket
+    400004: Low_Poly_Jacket:Low_Poly_Jacket1
+    400006: Low_Poly_Jacket:transform1
+    400008: Low_Poly_Jacket:transform2
+    400010: Low_Poly_Jacket:transform3
+    400012: Low_Poly_Pants:Low_Poly_Pants
+    400014: polySurface1
+    400016: polySurface2
+    400018: polySurface3
+    400020: polySurface3 1
+    400022: //RootNode
+    400024: transform1
+    400026: transform2
+    400028: transform3
+    400030: transform4
+    2100000: Low_Poly_Body_Low_Poly_Body_blinn
+    2100002: Low_Poly_Pants_Low_Poly_Pants_blinn
+    2100004: Low_Poly_Jacket_Low_Poly_Jacket_blinn
+    2300000: polySurface3
+    3300000: polySurface3
+    4300000: polySurface3
+  externalObjects: {}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 0
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

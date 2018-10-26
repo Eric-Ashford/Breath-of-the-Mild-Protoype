@@ -33,7 +33,7 @@ public class cameraFollow : MonoBehaviour
     Vector3 playerOffset = new Vector3(offsetX, offsetY, offsetZ);
 
     // Use this for initialization
-    void Start ()
+    void Start()
     {
         //Get the local rotation of the Camera, grab the euler angles and set our rotation axis variables to the local rotation's axis.
         Vector3 rotation = transform.localRotation.eulerAngles;
@@ -45,31 +45,31 @@ public class cameraFollow : MonoBehaviour
         Cursor.visible = false;
 
     }
-	
-	// Update is called once per frame
-	void Update ()
-	{
 
-	    float inputX = Input.GetAxis("RightAxis X");
-	    float inputZ = Input.GetAxis("RightAxis Y");
+    // Update is called once per frame
+    void Update()
+    {
+
+        float inputX = Input.GetAxis("RightAxis X");
+        float inputZ = Input.GetAxis("RightAxis Y");
 
         mouseX = Input.GetAxis("Mouse X");
-	    mouseY = Input.GetAxis("Mouse Y");
+        mouseY = Input.GetAxis("Mouse Y");
 
-	    finalInputX = inputX + mouseX;
-	    finalInputZ = inputZ + mouseY;
+        finalInputX = inputX + mouseX;
+        finalInputZ = inputZ + mouseY;
 
         //Rotate on input
-	    rotY += finalInputX * inputSensitivity * Time.deltaTime;
+        rotY += finalInputX * inputSensitivity * Time.deltaTime;
         rotX += finalInputZ * inputSensitivity * Time.deltaTime;
 
         //Clamping the value of X so it cant go higher or lower then what we set
-	    rotX = Mathf.Clamp(rotX, -clampAngle, clampAngle);
+        rotX = Mathf.Clamp(rotX, -clampAngle, clampAngle);
 
-        
-	    Quaternion localRotation = Quaternion.Euler(rotX, rotY, 0.0f);
-	    transform.rotation = localRotation;
-	}
+
+        Quaternion localRotation = Quaternion.Euler(rotX, rotY, 0.0f);
+        transform.rotation = localRotation;
+    }
 
     //Happens after each frame
     void LateUpdate()

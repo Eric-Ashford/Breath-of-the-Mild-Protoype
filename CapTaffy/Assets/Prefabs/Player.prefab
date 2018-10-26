@@ -114,9 +114,10 @@ GameObject:
   - component: {fileID: 114504875425811174}
   - component: {fileID: 114294249027980864}
   - component: {fileID: 95973634195843484}
+  - component: {fileID: 114659658783427370}
   m_Layer: 0
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -219,7 +220,7 @@ MeshRenderer:
   m_ReflectionProbeUsage: 1
   m_RenderingLayerMask: 4294967295
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: c519e7fbea0b8f74b9b07531ba062be0, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -289,7 +290,7 @@ MeshRenderer:
   m_ReflectionProbeUsage: 1
   m_RenderingLayerMask: 4294967295
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: c519e7fbea0b8f74b9b07531ba062be0, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -554,6 +555,22 @@ MonoBehaviour:
   healthBar: {fileID: 0}
   currentHealth: 0
   maxHealth: 100
+--- !u!114 &114659658783427370
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1987866581882940}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2f425534f34c75d468cd9316ed1b9029, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  theWeaponWheel: {fileID: 0}
+  weaponSpawnPoint: {fileID: 0}
+  weaponOne: {fileID: 0}
+  weaponTwo: {fileID: 0}
+  weaponThree: {fileID: 0}
 --- !u!114 &114712259940428248
 MonoBehaviour:
   m_ObjectHideFlags: 1

@@ -47,6 +47,7 @@ public class WeaponWheel : MonoBehaviour
     {
         if (Input.GetKey(KeyCode.K) && isPressed == false)
         {
+            Cursor.visible = true;
             isPressed = true;
             theWeaponWheel.SetActive(true);
         }
@@ -56,6 +57,7 @@ public class WeaponWheel : MonoBehaviour
     {
         if (Input.GetKey(KeyCode.L) && isPressed == true)
         {
+            Cursor.visible = false;
             isPressed = false;
             theWeaponWheel.SetActive(false);
         }

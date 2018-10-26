@@ -9,6 +9,8 @@ public class EnemyHealth : MonoBehaviour
     [SerializeField]
     Slider healthBar;
     [SerializeField]
+    private float sliderOffset = 5f;
+    [SerializeField]
     private float currentHealth;
     [SerializeField]
     private float maxHealth = 100f;
@@ -29,6 +31,7 @@ public class EnemyHealth : MonoBehaviour
 
     private void Update()
     {
+        healthBar.transform.position = new Vector3 (transform.position.x, transform.position.y + sliderOffset, transform.position.z);
         InjuryStatus();
     }
 
@@ -44,6 +47,7 @@ public class EnemyHealth : MonoBehaviour
         if (currentHealth <= 0)
         {
             anim.SetBool("isDead", true);
+            
         }
         else
         {

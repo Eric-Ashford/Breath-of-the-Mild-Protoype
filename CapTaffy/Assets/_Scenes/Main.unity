@@ -126,6 +126,11 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 114696027874371780, guid: 1f24429c601ca0545a1bd002f596f824,
+        type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 224824019546762946, guid: 1f24429c601ca0545a1bd002f596f824,
         type: 2}
       propertyPath: m_LocalPosition.x
@@ -234,6 +239,46 @@ Prefab:
         type: 2}
       propertyPath: m_FontData.m_Alignment
       value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 114696027874371780, guid: 1f24429c601ca0545a1bd002f596f824,
+        type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114696027874371780, guid: 1f24429c601ca0545a1bd002f596f824,
+        type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 114696027874371780, guid: 1f24429c601ca0545a1bd002f596f824,
+        type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1593067348}
+    - target: {fileID: 114696027874371780, guid: 1f24429c601ca0545a1bd002f596f824,
+        type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: Play
+      objectReference: {fileID: 0}
+    - target: {fileID: 114345558923147838, guid: 1f24429c601ca0545a1bd002f596f824,
+        type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 436063514}
+    - target: {fileID: 114345558923147838, guid: 1f24429c601ca0545a1bd002f596f824,
+        type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: Play
+      objectReference: {fileID: 0}
+    - target: {fileID: 114805388271167630, guid: 1f24429c601ca0545a1bd002f596f824,
+        type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 385820689}
+    - target: {fileID: 114805388271167630, guid: 1f24429c601ca0545a1bd002f596f824,
+        type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: Play
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 1f24429c601ca0545a1bd002f596f824, type: 2}
@@ -442,6 +487,33 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 12.129001, y: 33.565002, z: 6.872}
+--- !u!1 &385820688 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1485943745284792, guid: 1f24429c601ca0545a1bd002f596f824,
+    type: 2}
+  m_PrefabInternal: {fileID: 128720061}
+--- !u!114 &385820689
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 385820688}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Event: event:/UI/WeaponWheelSelect
+  PlayEvent: 0
+  StopEvent: 0
+  CollisionTag: 
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 0
+  OverrideMaxDistance: 0
 --- !u!1 &388751291 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 1987866581882940, guid: d6c4f37ad8f2ead4999fc73e819fe09c,
@@ -527,6 +599,33 @@ Prefab:
     - {fileID: 114136385137374740, guid: 9ef7c337164b7ad42a7061e20b93b073, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: 9ef7c337164b7ad42a7061e20b93b073, type: 2}
   m_IsPrefabParent: 0
+--- !u!1 &436063513 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1396700315107740, guid: 1f24429c601ca0545a1bd002f596f824,
+    type: 2}
+  m_PrefabInternal: {fileID: 128720061}
+--- !u!114 &436063514
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 436063513}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Event: event:/UI/WeaponWheelSelect
+  PlayEvent: 0
+  StopEvent: 0
+  CollisionTag: 
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 0
+  OverrideMaxDistance: 0
 --- !u!1 &823070220
 GameObject:
   m_ObjectHideFlags: 0
@@ -825,6 +924,33 @@ GameObject:
   m_PrefabParentObject: {fileID: 1788561933333208, guid: 1f24429c601ca0545a1bd002f596f824,
     type: 2}
   m_PrefabInternal: {fileID: 128720061}
+--- !u!1 &1593067343 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1138357055967658, guid: 1f24429c601ca0545a1bd002f596f824,
+    type: 2}
+  m_PrefabInternal: {fileID: 128720061}
+--- !u!114 &1593067348
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1593067343}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Event: event:/UI/WeaponWheelSelect
+  PlayEvent: 0
+  StopEvent: 0
+  CollisionTag: 
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 0
+  OverrideMaxDistance: 0
 --- !u!1 &1704412331 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 1094146738156594, guid: 9ef7c337164b7ad42a7061e20b93b073,

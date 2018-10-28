@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.01.10.00">
+    <object class="AudioFile" id="{7d5b98eb-a52e-4249-a8dc-8b3b41cac908}">
+        <property name="assetPath">
+            <value>Music/Frantic Battle LOOP.wav</value>
+        </property>
+        <property name="isStreaming">
+            <value>true</value>
+        </property>
+        <property name="frequencyInKHz">
+            <value>44.0999985</value>
+        </property>
+        <property name="channelCount">
+            <value>2</value>
+        </property>
+        <property name="length">
+            <value>92.3077097505669</value>
+        </property>
+        <relationship name="masterAssetFolder">
+            <destination>{343a2949-05ef-4924-aad5-e7cf47daa71a}</destination>
+        </relationship>
+    </object>
+</objects>

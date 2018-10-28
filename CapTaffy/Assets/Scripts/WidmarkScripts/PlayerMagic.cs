@@ -16,6 +16,9 @@ public class PlayerMagic : MonoBehaviour
     const int maxMagic = 100;
     bool coolDownHasStarted;
 
+    [FMODUnity.EventRef]
+    public string fireBallSound;
+
     void Start ()
     {
         coolDownHasStarted = false;
@@ -37,6 +40,7 @@ public class PlayerMagic : MonoBehaviour
         {
             Fire();
             currentMagic = 0f;
+            FMODUnity.RuntimeManager.PlayOneShot(fireBallSound);
         }
     }
 

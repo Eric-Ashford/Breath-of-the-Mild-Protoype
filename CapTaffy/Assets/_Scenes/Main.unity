@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44101644, g: 0.48224145, b: 0.52927864, a: 1}
+  m_IndirectSpecularColor: {r: 0.44101673, g: 0.48224217, b: 0.52927977, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -292,6 +292,16 @@ Prefab:
       propertyPath: healthBar
       value: 
       objectReference: {fileID: 1191561893}
+    - target: {fileID: 82680850409206524, guid: d6c4f37ad8f2ead4999fc73e819fe09c,
+        type: 2}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114294249027980864, guid: d6c4f37ad8f2ead4999fc73e819fe09c,
+        type: 2}
+      propertyPath: fireBallSound
+      value: event:/PlayerAttacks/FireBall
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d6c4f37ad8f2ead4999fc73e819fe09c, type: 2}
   m_IsPrefabParent: 0
@@ -437,6 +447,19 @@ GameObject:
   m_PrefabParentObject: {fileID: 1987866581882940, guid: d6c4f37ad8f2ead4999fc73e819fe09c,
     type: 2}
   m_PrefabInternal: {fileID: 266432809}
+--- !u!114 &388751292
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 388751291}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 805ffa980202b324fb546f4d819e8358, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  InputFootsteps: event:/PlayerMovement/Footsteps
+  walkingSpeed: 0.5
 --- !u!1001 &430908703
 Prefab:
   m_ObjectHideFlags: 0
@@ -492,6 +515,11 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4562431403638004, guid: 9ef7c337164b7ad42a7061e20b93b073, type: 2}
       propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 81651151798163450, guid: 9ef7c337164b7ad42a7061e20b93b073,
+        type: 2}
+      propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents:
@@ -797,6 +825,23 @@ GameObject:
   m_PrefabParentObject: {fileID: 1788561933333208, guid: 1f24429c601ca0545a1bd002f596f824,
     type: 2}
   m_PrefabInternal: {fileID: 128720061}
+--- !u!1 &1704412331 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1094146738156594, guid: 9ef7c337164b7ad42a7061e20b93b073,
+    type: 2}
+  m_PrefabInternal: {fileID: 430908703}
+--- !u!114 &1704412335
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1704412331}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 86c6556701af9e04380698b89f691b6e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ListenerNumber: 0
 --- !u!1 &1843679528
 GameObject:
   m_ObjectHideFlags: 0

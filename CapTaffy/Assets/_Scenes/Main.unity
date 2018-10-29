@@ -264,7 +264,7 @@ Prefab:
         type: 2}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 436063514}
+      objectReference: {fileID: 436063518}
     - target: {fileID: 114345558923147838, guid: 1f24429c601ca0545a1bd002f596f824,
         type: 2}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
@@ -274,7 +274,7 @@ Prefab:
         type: 2}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 385820689}
+      objectReference: {fileID: 385820693}
     - target: {fileID: 114805388271167630, guid: 1f24429c601ca0545a1bd002f596f824,
         type: 2}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
@@ -346,6 +346,11 @@ Prefab:
         type: 2}
       propertyPath: fireBallSound
       value: event:/PlayerAttacks/FireBall
+      objectReference: {fileID: 0}
+    - target: {fileID: 114145717368684830, guid: d6c4f37ad8f2ead4999fc73e819fe09c,
+        type: 2}
+      propertyPath: enemyDamageSound
+      value: event:/PlayerAttacks/CreatureHitSword
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d6c4f37ad8f2ead4999fc73e819fe09c, type: 2}
@@ -492,7 +497,7 @@ GameObject:
   m_PrefabParentObject: {fileID: 1485943745284792, guid: 1f24429c601ca0545a1bd002f596f824,
     type: 2}
   m_PrefabInternal: {fileID: 128720061}
---- !u!114 &385820689
+--- !u!114 &385820693
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
@@ -604,7 +609,7 @@ GameObject:
   m_PrefabParentObject: {fileID: 1396700315107740, guid: 1f24429c601ca0545a1bd002f596f824,
     type: 2}
   m_PrefabInternal: {fileID: 128720061}
---- !u!114 &436063514
+--- !u!114 &436063518
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
@@ -919,6 +924,60 @@ MonoBehaviour:
     type: 2}
   m_PrefabInternal: {fileID: 2025820650}
   m_Script: {fileID: -113659843, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+--- !u!1 &1466545757
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 1466545760}
+  - component: {fileID: 1466545759}
+  - component: {fileID: 1466545758}
+  m_Layer: 0
+  m_Name: MusicTriggerCave
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1466545758
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1466545757}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 656a021806c471345a58718204373cc6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  musicTriggerCave: event:/Music
+--- !u!65 &1466545759
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1466545757}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!4 &1466545760
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1466545757}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -41.8, y: 5.89, z: 145.04}
+  m_LocalScale: {x: 1, y: 13.02, z: -32.48}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 11
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1589986481 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 1788561933333208, guid: 1f24429c601ca0545a1bd002f596f824,

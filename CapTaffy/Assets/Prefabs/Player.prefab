@@ -553,7 +553,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   healthBar: {fileID: 0}
-  currentHealth: 0
+  currentHealth: 100
   maxHealth: 100
 --- !u!114 &114659658783427370
 MonoBehaviour:
@@ -587,7 +587,7 @@ MonoBehaviour:
   runSpeed: 100
   turnSpeed: 5
   jumpStrength: 500
-  zeroFriction: {fileID: 0}
+  zeroFriction: {fileID: 13400000, guid: b8adb3ec2d4c5854983daf8c656bf1d0, type: 2}
   maxFriction: {fileID: 13400000, guid: e0a7b53eb1018bc4e87fcbe2ea481c08, type: 2}
   footstepsArray:
   - {fileID: 8300000, guid: 8c095691393d526459af0d4e7473a2a4, type: 3}

@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44101644, g: 0.48224145, b: 0.52927864, a: 1}
+  m_IndirectSpecularColor: {r: 0.44101682, g: 0.482242, b: 0.52927935, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -277,21 +277,21 @@ Prefab:
       propertyPath: m_RootOrder
       value: 6
       objectReference: {fileID: 0}
-    - target: {fileID: 114659658783427370, guid: d6c4f37ad8f2ead4999fc73e819fe09c,
-        type: 2}
-      propertyPath: theWeaponWheel
-      value: 
-      objectReference: {fileID: 1589986481}
-    - target: {fileID: 114294249027980864, guid: d6c4f37ad8f2ead4999fc73e819fe09c,
-        type: 2}
-      propertyPath: magicBar
-      value: 
-      objectReference: {fileID: 39014264}
     - target: {fileID: 114504875425811174, guid: d6c4f37ad8f2ead4999fc73e819fe09c,
         type: 2}
       propertyPath: healthBar
       value: 
       objectReference: {fileID: 1191561893}
+    - target: {fileID: 114294249027980864, guid: d6c4f37ad8f2ead4999fc73e819fe09c,
+        type: 2}
+      propertyPath: magicBar
+      value: 
+      objectReference: {fileID: 39014264}
+    - target: {fileID: 114659658783427370, guid: d6c4f37ad8f2ead4999fc73e819fe09c,
+        type: 2}
+      propertyPath: theWeaponWheel
+      value: 
+      objectReference: {fileID: 1589986481}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d6c4f37ad8f2ead4999fc73e819fe09c, type: 2}
   m_IsPrefabParent: 0
@@ -466,22 +466,12 @@ Prefab:
       propertyPath: m_RootOrder
       value: 2
       objectReference: {fileID: 0}
-    - target: {fileID: 114002516848794368, guid: 9ef7c337164b7ad42a7061e20b93b073,
+    - target: {fileID: 114237440725885052, guid: 9ef7c337164b7ad42a7061e20b93b073,
         type: 2}
       propertyPath: target
       value: 
-      objectReference: {fileID: 388751291}
-    - target: {fileID: 4562431403638004, guid: 9ef7c337164b7ad42a7061e20b93b073, type: 2}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4562431403638004, guid: 9ef7c337164b7ad42a7061e20b93b073, type: 2}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 114624028905854594, guid: 9ef7c337164b7ad42a7061e20b93b073, type: 2}
-    - {fileID: 114136385137374740, guid: 9ef7c337164b7ad42a7061e20b93b073, type: 2}
+      objectReference: {fileID: 266432811}
+    m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 9ef7c337164b7ad42a7061e20b93b073, type: 2}
   m_IsPrefabParent: 0
 --- !u!1 &823070220
@@ -646,31 +636,6 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ddde2e0d1dc3f5043b1b80c9997b1c85, type: 2}
   m_IsPrefabParent: 0
---- !u!1 &1176361421 stripped
-GameObject:
-  m_PrefabParentObject: {fileID: 1633685147008856, guid: 9ef7c337164b7ad42a7061e20b93b073,
-    type: 2}
-  m_PrefabInternal: {fileID: 430908703}
---- !u!114 &1176361423
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1176361421}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e1963f915d0759648a62ab233b790ff6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  xOffset: 1
-  yOffset: 1
-  zOffset: 2
-  normalFOV: 60
-  aimingFOV: 45
-  mouseSensitivity: 5
-  target: {fileID: 266432811}
-  pitchMinMax: {x: -40, y: 85}
-  rotationSmoothTime: 0.05
 --- !u!114 &1191561893 stripped
 MonoBehaviour:
   m_PrefabParentObject: {fileID: 114880913164300452, guid: e0c3738dfade5f04cb195e30c5c14218,

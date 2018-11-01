@@ -466,23 +466,11 @@ Prefab:
       propertyPath: m_RootOrder
       value: 2
       objectReference: {fileID: 0}
-    - target: {fileID: 1693191064738374, guid: ddde2e0d1dc3f5043b1b80c9997b1c85, type: 2}
-      propertyPath: m_StaticEditorFlags
-      value: 4294967295
-      objectReference: {fileID: 0}
-    - target: {fileID: 1157661069708224, guid: ddde2e0d1dc3f5043b1b80c9997b1c85, type: 2}
-      propertyPath: m_StaticEditorFlags
-      value: 4294967295
-      objectReference: {fileID: 0}
-    - target: {fileID: 1564815230830830, guid: ddde2e0d1dc3f5043b1b80c9997b1c85, type: 2}
-      propertyPath: m_StaticEditorFlags
-      value: 4294967295
-      objectReference: {fileID: 0}
-    - target: {fileID: 23089622734676352, guid: ddde2e0d1dc3f5043b1b80c9997b1c85,
+    - target: {fileID: 114239891299524748, guid: ddde2e0d1dc3f5043b1b80c9997b1c85,
         type: 2}
-      propertyPath: m_Materials.Array.data[0]
+      propertyPath: damageSplashScreen
       value: 
-      objectReference: {fileID: 2100000, guid: 192fc269be07ff44db0b211f439b309c, type: 2}
+      objectReference: {fileID: 2132702540}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ddde2e0d1dc3f5043b1b80c9997b1c85, type: 2}
   m_IsPrefabParent: 0
@@ -1091,3 +1079,8 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e0c3738dfade5f04cb195e30c5c14218, type: 2}
   m_IsPrefabParent: 0
+--- !u!1 &2132702540 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1892507545217048, guid: 23bd0ab67148ff849983fc244bab460a,
+    type: 2}
+  m_PrefabInternal: {fileID: 1941820730}

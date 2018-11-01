@@ -40,6 +40,7 @@ GameObject:
   - component: {fileID: 33612148911677590}
   - component: {fileID: 23089622734676352}
   - component: {fileID: 64526758402681678}
+  - component: {fileID: 114239891299524748}
   m_Layer: 0
   m_Name: Lava
   m_TagString: Untagged
@@ -60,7 +61,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!1 &1318100850462518
 GameObject:
@@ -95,7 +96,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!1 &1693191064738374
 GameObject:
@@ -112,7 +113,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &4032142866369948
 Transform:
@@ -212,7 +213,7 @@ MeshRenderer:
   m_ReflectionProbeUsage: 1
   m_RenderingLayerMask: 4294967295
   m_Materials:
-  - {fileID: 2100000, guid: 3c21fa95d89a86541bdc7c733f36c614, type: 2}
+  - {fileID: 2100000, guid: 192fc269be07ff44db0b211f439b309c, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -447,3 +448,16 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &114239891299524748
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1054863205412176}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9c7bf1c50a0acd746b77039473518585, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damageSplashScreen: {fileID: 0}
+  attackDamage: 200

@@ -181,7 +181,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1987866581882940}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 1.494, z: 0}
+  m_LocalPosition: {x: 234.57, y: -17, z: -120.18}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4260709688801812}
@@ -540,6 +540,7 @@ MonoBehaviour:
   projectileSpawnPoint: {fileID: 4140382031303638}
   projectilePrefab: {fileID: 1217582482709366, guid: 5554b69750789db4ca37769ff346f151,
     type: 2}
+  projectileSpeed: 40
   currentMagic: 100
 --- !u!114 &114504875425811174
 MonoBehaviour:
@@ -583,8 +584,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   strafeSpeed: 20
-  walkSpeed: 35
-  runSpeed: 100
+  walkSpeed: 60
+  runSpeed: 120
   turnSpeed: 5
   jumpStrength: 500
   zeroFriction: {fileID: 0}

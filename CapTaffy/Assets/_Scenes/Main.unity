@@ -282,26 +282,16 @@ Prefab:
       propertyPath: theWeaponWheel
       value: 
       objectReference: {fileID: 1589986481}
-    - target: {fileID: 114294249027980864, guid: d6c4f37ad8f2ead4999fc73e819fe09c,
-        type: 2}
-      propertyPath: magicBar
-      value: 
-      objectReference: {fileID: 39014264}
     - target: {fileID: 114504875425811174, guid: d6c4f37ad8f2ead4999fc73e819fe09c,
         type: 2}
       propertyPath: healthBar
       value: 
       objectReference: {fileID: 1191561893}
-    - target: {fileID: 114712259940428248, guid: d6c4f37ad8f2ead4999fc73e819fe09c,
+    - target: {fileID: 114294249027980864, guid: d6c4f37ad8f2ead4999fc73e819fe09c,
         type: 2}
-      propertyPath: walkSpeed
-      value: 60
-      objectReference: {fileID: 0}
-    - target: {fileID: 114712259940428248, guid: d6c4f37ad8f2ead4999fc73e819fe09c,
-        type: 2}
-      propertyPath: runSpeed
-      value: 120
-      objectReference: {fileID: 0}
+      propertyPath: magicBar
+      value: 
+      objectReference: {fileID: 39014264}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d6c4f37ad8f2ead4999fc73e819fe09c, type: 2}
   m_IsPrefabParent: 0

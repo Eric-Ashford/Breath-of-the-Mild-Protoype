@@ -471,6 +471,16 @@ Prefab:
       propertyPath: damageSplashScreen
       value: 
       objectReference: {fileID: 2132702540}
+    - target: {fileID: 23917937582593878, guid: ddde2e0d1dc3f5043b1b80c9997b1c85,
+        type: 2}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: db3d22230145cb5498305e75a41d5391, type: 2}
+    - target: {fileID: 23790084047650278, guid: ddde2e0d1dc3f5043b1b80c9997b1c85,
+        type: 2}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: db3d22230145cb5498305e75a41d5391, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ddde2e0d1dc3f5043b1b80c9997b1c85, type: 2}
   m_IsPrefabParent: 0

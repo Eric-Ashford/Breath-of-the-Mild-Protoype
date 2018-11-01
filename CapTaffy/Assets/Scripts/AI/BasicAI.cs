@@ -6,18 +6,22 @@ public class BasicAI : MonoBehaviour
 {
 
     [SerializeField]
-    private float creatureHealth = 100f,
-        playerDistance = 0f,
+    private float playerDistance = 0f,
         lookDistance = 80f,
         chaseDistance = 50f,
         rangedDistance = 20f,
         meleeDistance = 10f,
-        movementSpeed = 40f;
+        movementSpeed = 40f,
+        turnSpeed = 1f,
+        rangeAttackDelay = 0f,
+        meleeAttackDelay = 0f;
     [SerializeField]
     private Transform player;
 
     private Rigidbody rb;
     private Animator anim;
+    private Vector3 lookDirection;
+    private bool waitActive;
 
     // Use this for initialization
     void Start()
@@ -26,37 +30,49 @@ public class BasicAI : MonoBehaviour
         anim = GetComponent<Animator>();
     }
 
-    private void Update()
-    {
-        CheckHealth();
-    }
-
     private void FixedUpdate()
     {
         anim.SetFloat("speed", rb.velocity.magnitude);
         playerDistance = Vector3.Distance(player.position, transform.position);
 
-        if (playerDistance <= lookDistance)
-        {
-            AlignToPlayer();
-        }
+        DecideAction();        
+    }
 
+    private void DecideAction()
+    {
         if (playerDistance <= meleeDistance)
         {
-            MeleeAttack();
+            if (!waitActive)
+            {
+                MeleeAttack();
+                StartCoroutine(Wait(meleeAttackDelay));
+                AlignToPlayer();
+            }
         }
         else if (playerDistance <= rangedDistance)
         {
-            ShootFire();
+            if (!waitActive)
+            {
+                ShootFire();
+                StartCoroutine(Wait(rangeAttackDelay));
+                AlignToPlayer();
+            }
         }
         else if (playerDistance <= chaseDistance)
         {
-            AlignToPlayer();
-            MoveTowardsPlayer();
+            if (!waitActive)
+            {
+                AlignToPlayer();
+                MoveTowardsPlayer();
+            }
         }
-        else
+        else if (playerDistance <= lookDistance)
         {
             anim.SetBool("chasePlayer", false);
+            if (!waitActive)
+            {
+                AlignToPlayer();
+            }
         }
     }
 
@@ -64,6 +80,7 @@ public class BasicAI : MonoBehaviour
     {
         Quaternion rotation = Quaternion.LookRotation(player.position - transform.position);
         transform.rotation = Quaternion.Euler(new Vector3(0f, rotation.eulerAngles.y, 0f));
+        //transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.LookRotation(lookDirection), turnSpeed * Time.deltaTime);
     }
 
     private void MoveTowardsPlayer()
@@ -87,18 +104,6 @@ public class BasicAI : MonoBehaviour
         anim.SetBool("attackPlayer", true);
     }
 
-    private void CheckHealth()
-    {
-        if (creatureHealth <= 0)
-        {
-            rb.velocity = Vector3.zero;
-            anim.SetBool("isDead", true);
-            anim.SetBool("chasePlayer", false);
-            anim.SetBool("breatheFire", false);
-            anim.SetBool("attackPlayer", false);
-        }
-    }
-
     private void RemoveCreature()
     {
         Destroy(gameObject);
@@ -107,5 +112,12 @@ public class BasicAI : MonoBehaviour
     private void ResetIdle()
     {
         anim.SetTrigger("resetIdle");
+    }
+
+    private IEnumerator Wait(float delay)
+    {
+        waitActive = true;
+        yield return new WaitForSeconds(delay);
+        waitActive = false;
     }
 }

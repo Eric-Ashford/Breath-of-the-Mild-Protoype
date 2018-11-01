@@ -59,6 +59,9 @@ public class EnemyHealth : MonoBehaviour
         if (currentHealth <= 0)
         {
             anim.SetBool("isDead", true);
+            anim.SetBool("chasePlayer", false);
+            anim.SetBool("breatheFire", false);
+            anim.SetBool("attackPlayer", false);
             Destroy(enemyCanvasClone);
             
         }

@@ -11,6 +11,8 @@ public class PlayerMagic : MonoBehaviour
     Transform projectileSpawnPoint;
     [SerializeField]
     GameObject projectilePrefab;
+    [SerializeField]
+    private float projectileSpeed = 40f;
 
     public float currentMagic;
     const int maxMagic = 100;
@@ -72,7 +74,7 @@ public class PlayerMagic : MonoBehaviour
             projectileSpawnPoint.rotation);
 
         // Add velocity to the bullet
-        projectile.GetComponent<Rigidbody>().velocity = projectile.transform.forward * 30;
+        projectile.GetComponent<Rigidbody>().velocity = projectile.transform.forward * projectileSpeed;
 
         // Destroy the bullet after 2 seconds
         Destroy(projectile, 2.0f);

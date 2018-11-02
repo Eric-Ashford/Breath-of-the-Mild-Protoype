@@ -80,12 +80,7 @@ public class PlayerMove : MonoBehaviour
 
 
         //Barebones Player Attack
-        if (Input.GetButton("Fire 1"))
-        {
-            anim.SetTrigger("Attack");
-            swordSwing.Play();
-            swordWhoosh.Play();
-        }
+        
         //End
     }
 
@@ -211,6 +206,16 @@ public class PlayerMove : MonoBehaviour
             footstepsArray[0] = footstep.clip;
 
             StartCoroutine(TakeStep());
+        }
+    }
+
+    private void HandleAttack()
+    {
+        if (Input.GetButton("Attack") || Input.GetAxis("Attack") > 0.0f)
+        {
+            anim.SetTrigger("Attack");
+            swordSwing.Play();
+            swordWhoosh.Play();
         }
     }
 

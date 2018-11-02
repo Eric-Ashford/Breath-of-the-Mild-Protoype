@@ -69,10 +69,18 @@ public class BasicAI : MonoBehaviour
         else if (playerDistance <= lookDistance)
         {
             anim.SetBool("chasePlayer", false);
+            anim.SetBool("attackPlayer", false);
+            anim.SetBool("breatheFire", false);
             if (!waitActive)
             {
                 AlignToPlayer();
             }
+        }
+        else
+        {
+            anim.SetBool("chasePlayer", false);
+            anim.SetBool("attackPlayer", false);
+            anim.SetBool("breatheFire", false);
         }
     }
 

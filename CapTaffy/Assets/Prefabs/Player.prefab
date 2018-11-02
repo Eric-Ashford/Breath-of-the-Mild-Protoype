@@ -136,7 +136,7 @@ Transform:
   m_LocalScale: {x: 0.1, y: 0.1, z: 0.1}
   m_Children: []
   m_Father: {fileID: 4596988124954548}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4140382031303638
 Transform:
@@ -149,7 +149,7 @@ Transform:
   m_LocalScale: {x: 0.1, y: 0.1, z: 0.1}
   m_Children: []
   m_Father: {fileID: 4596988124954548}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4260709688801812
 Transform:
@@ -188,9 +188,9 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4260709688801812}
+  - {fileID: 4957615889246112}
   - {fileID: 4138685143301008}
   - {fileID: 4140382031303638}
-  - {fileID: 4957615889246112}
   - {fileID: 4325059053758110}
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -206,7 +206,7 @@ Transform:
   m_LocalScale: {x: 0.2, y: 1, z: 0.2}
   m_Children: []
   m_Father: {fileID: 4596988124954548}
-  m_RootOrder: 3
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 23.882002, y: 0, z: 0}
 --- !u!23 &23457687297176402
 MeshRenderer:
@@ -354,7 +354,7 @@ MeshFilter:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1415478332011428}
-  m_Mesh: {fileID: 4300000, guid: 51f04ac71b21a72409a552fa3fc80223, type: 3}
+  m_Mesh: {fileID: 4300000, guid: 96caa80ea57f4284497e857e509167b0, type: 3}
 --- !u!33 &33507197901085198
 MeshFilter:
   m_ObjectHideFlags: 1
@@ -886,7 +886,7 @@ Animator:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1987866581882940}
   m_Enabled: 1
-  m_Avatar: {fileID: 0}
+  m_Avatar: {fileID: 9000000, guid: 96caa80ea57f4284497e857e509167b0, type: 3}
   m_Controller: {fileID: 9100000, guid: 5901c069c1ebb184795f16a675538407, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
@@ -956,6 +956,7 @@ MonoBehaviour:
   turnSpeed: 5
   jumpStrength: 1000
   dodgeDistance: 2500
+  attackDelay: 0.6
   zeroFriction: {fileID: 13400000, guid: b8adb3ec2d4c5854983daf8c656bf1d0, type: 2}
   maxFriction: {fileID: 13400000, guid: e0a7b53eb1018bc4e87fcbe2ea481c08, type: 2}
   cameraTransform: {fileID: 0}

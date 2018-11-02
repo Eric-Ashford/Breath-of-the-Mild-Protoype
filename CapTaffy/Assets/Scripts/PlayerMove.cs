@@ -19,6 +19,8 @@ public class PlayerMove : MonoBehaviour
     float jumpStrength = 500.0f;
     [SerializeField]
     float dodgeDistance = 2500.0f;
+    [SerializeField]
+    float attackDelay = 0f;
 
     [SerializeField]
     PhysicMaterial zeroFriction;
@@ -50,6 +52,8 @@ public class PlayerMove : MonoBehaviour
     bool isAiming;
     bool isOnGround;
     bool isTakingStep;
+    bool canAttack;
+    bool waitActive;
 
     const string horizontalAxisName = "Horizontal";
     const string verticalAxisName = "Vertical";
@@ -64,6 +68,8 @@ public class PlayerMove : MonoBehaviour
         isAiming = false;
         isOnGround = true;
         isTakingStep = false;
+        canAttack = true;
+        waitActive = false;
     }
 
     void Start()
@@ -214,8 +220,9 @@ public class PlayerMove : MonoBehaviour
 
     void Attack()   //should not be in movement script
     {
-        if (Input.GetButtonDown("Melee Attack") || Input.GetAxis("Melee Attack") > 0.0f)
+        if ((Input.GetButtonDown("Melee Attack") || Input.GetAxis("Melee Attack") > 0.0f) && canAttack)
         {
+            canAttack = false;
             anim.SetTrigger("Attack");
 
             swordSwing.volume = Random.Range(0.9f, 1.1f);
@@ -225,6 +232,9 @@ public class PlayerMove : MonoBehaviour
             swordWhoosh.volume = Random.Range(0.9f, 1.1f);
             swordWhoosh.pitch = Random.Range(0.85f, 1.1f);
             swordWhoosh.Play();
+            StartCoroutine(Wait(attackDelay));
+            canAttack = true;
+
         }
     }
 
@@ -270,5 +280,11 @@ public class PlayerMove : MonoBehaviour
             isOnGround = false;
             rb.drag = 0.0f;        //decrease drag when in the air
         }
+    }
+    private IEnumerator Wait(float delay)
+    {
+        waitActive = true;
+        yield return new WaitForSeconds(delay);
+        waitActive = false;
     }
 }

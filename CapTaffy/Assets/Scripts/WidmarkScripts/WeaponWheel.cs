@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class WeaponWheel : MonoBehaviour
 {
     [SerializeField]
-    GameObject theWeaponWheel;
+    GameObject weaponWheelCanvas;
     [SerializeField]
     GameObject weaponSpawnPoint;
     [SerializeField]
@@ -18,8 +18,7 @@ public class WeaponWheel : MonoBehaviour
 
     bool isPressed;
 
-    const string openWheelAxixName = "openWeaponWheel";
-
+    const string weaponWheelButtonName = "Weapon Wheel";
 	
 	void Start ()
     {
@@ -28,41 +27,38 @@ public class WeaponWheel : MonoBehaviour
         weaponTwo.SetActive(false);
         weaponThree.SetActive(false);
         isPressed = false;
-        theWeaponWheel.SetActive(false);
+        weaponWheelCanvas.SetActive(false);
 	}
 	
 	
 	void Update ()
     {
-        OpenWeaponWheel();
-        CloseWeaponWheel(); 
+        HandleWeaponWheel();
 	}
 
     void FixedUpdate()
     {
-        TimeSlow();
+        //TimeSlow();
     }
 
-    void OpenWeaponWheel() //opens the weapon wheel canvass
+    void HandleWeaponWheel() //opens/closes the weapon wheel canvas
     {
-        if (Input.GetKey(KeyCode.K) && isPressed == false)
+        if (Input.GetButtonDown(weaponWheelButtonName))
         {
-            isPressed = true;
-            theWeaponWheel.SetActive(true);
-            Cursor.visible = true;
-            Cursor.lockState = CursorLockMode.None;
-        }
-    }
+            isPressed = !isPressed;
 
-    void CloseWeaponWheel() //closes the weapon wheel canvass
-    {
-        if (Input.GetKey(KeyCode.L) && isPressed == true)
-        {
-            isPressed = false;
-            Cursor.visible = false;
-            Cursor.lockState = CursorLockMode.Locked;
-            theWeaponWheel.SetActive(false);
-            
+            if (isPressed == true)
+            {
+                weaponWheelCanvas.SetActive(true);
+                Cursor.visible = true;
+                Cursor.lockState = CursorLockMode.None;
+            }
+            else
+            {
+                weaponWheelCanvas.SetActive(false);
+                Cursor.visible = false;
+                Cursor.lockState = CursorLockMode.Locked;
+            }
         }
     }
 
@@ -95,7 +91,7 @@ public class WeaponWheel : MonoBehaviour
 
     void TimeSlow() 
     {
-        // slows down world time while the weapon wheel is open
+        // slows down world time while the weapon wheel is open (probably doesn't work with caleb's pause menu script active)
         if (isPressed == true)
         {
             Time.timeScale = 0.2f;

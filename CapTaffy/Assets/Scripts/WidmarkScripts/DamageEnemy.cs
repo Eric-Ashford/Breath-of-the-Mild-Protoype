@@ -22,7 +22,7 @@ public class DamageEnemy : MonoBehaviour
         {
             other.gameObject.GetComponent<EnemyHealth>().DamageEnemy(attackDamage); // player takes damage
 
-
+            enemyDamageSound.Play();
 
             //this.gameObject.SetActive(false);
         }

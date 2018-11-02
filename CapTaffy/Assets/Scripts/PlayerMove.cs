@@ -53,7 +53,6 @@ public class PlayerMove : MonoBehaviour
     const string sprintButtonName = "Sprint";
     const string jumpButtonName = "Jump";
     const string aimButtonName = "Aim";
-    const string attackButtonName = "Attack";
 
     void Awake()
     {
@@ -78,7 +77,6 @@ public class PlayerMove : MonoBehaviour
     void Update()
     {
         ChangeFrictionMaterial();
-<<<<<<< HEAD
 
 
         //Barebones Player Attack
@@ -89,9 +87,6 @@ public class PlayerMove : MonoBehaviour
             swordWhoosh.Play();
         }
         //End
-=======
-        HandleAttack();
->>>>>>> 7177478176b507a3ec2197ad25b15b22b233f402
     }
 
     void FixedUpdate()
@@ -126,7 +121,7 @@ public class PlayerMove : MonoBehaviour
         {
             isAiming = false;
         }
-
+        
         previousDirection = cameraTransform.right;
 
         if (isOnGround)
@@ -164,7 +159,7 @@ public class PlayerMove : MonoBehaviour
                 //TODO: play jump sound
             }
         }
-
+        
         //rotation controls
         if (horizontalInput != 0.0f && !isAiming || verticalInput != 0.0f && !isAiming)     //only rotate player when moving and not aiming
         {
@@ -191,15 +186,6 @@ public class PlayerMove : MonoBehaviour
             {
                 rb.rotation = Quaternion.Slerp(this.gameObject.transform.rotation, Quaternion.LookRotation(dir), turnSpeed * Time.deltaTime);       //rotate player to face aim direction
             }
-        }
-    }
-
-    void HandleAttack()
-    {
-        //Barebones Player Attack
-        if (Input.GetButton("Attack") || Input.GetAxis("Attack") > 0.0f)
-        {
-            anim.SetTrigger("Attack");
         }
     }
 

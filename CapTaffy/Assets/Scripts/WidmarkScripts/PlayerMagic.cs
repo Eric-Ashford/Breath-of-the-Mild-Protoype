@@ -14,15 +14,24 @@ public class PlayerMagic : MonoBehaviour
     [SerializeField]
     private float projectileSpeed = 40f;
 
+    
+    AudioSource[] audioSources;
+
+    public AudioSource fireBall;  
+    public AudioSource footsteps;
+
     public float currentMagic;
     const int maxMagic = 100;
     bool coolDownHasStarted;
 
     void Start ()
     {
+        audioSources = this.gameObject.GetComponents<AudioSource>();
         coolDownHasStarted = false;
         currentMagic = maxMagic;
-	}
+        fireBall = audioSources[1];
+    }
+    
 	
 	
 	void Update ()
@@ -39,6 +48,7 @@ public class PlayerMagic : MonoBehaviour
         {
             Fire();
             currentMagic = 0f;
+            fireBall.Play();
         }
     }
 

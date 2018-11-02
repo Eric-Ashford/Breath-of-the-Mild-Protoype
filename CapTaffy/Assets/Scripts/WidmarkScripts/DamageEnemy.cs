@@ -8,12 +8,21 @@ public class DamageEnemy : MonoBehaviour
     [SerializeField]
     private float attackDamage = 15f;
 
+    public AudioSource enemyDamageSound;
+
+    private void Start()
+    {
+        enemyDamageSound = GetComponent<AudioSource>();
+    }
+
     void OnTriggerEnter(Collider other)
     {
 
         if (other.tag == "Enemy")
         {
             other.gameObject.GetComponent<EnemyHealth>().DamageEnemy(attackDamage); // player takes damage
+
+
 
             //this.gameObject.SetActive(false);
         }

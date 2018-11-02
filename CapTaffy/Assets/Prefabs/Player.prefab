@@ -584,8 +584,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   strafeSpeed: 20
-  walkSpeed: 60
-  runSpeed: 120
+  walkSpeed: 70
+  runSpeed: 140
   turnSpeed: 5
   jumpStrength: 500
   zeroFriction: {fileID: 0}

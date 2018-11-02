@@ -1866,8 +1866,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0f8d4a51449910c41b30ffc908b6ddad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemyCanvas: {fileID: 0}
-  healthBar: {fileID: 0}
+  enemyCanvas: {fileID: 223719972809457582, guid: 5a304a1e757af24478462ba14cb46504,
+    type: 2}
+  healthBar: {fileID: 114521072256686588, guid: 5a304a1e757af24478462ba14cb46504,
+    type: 2}
   sliderOffset: 12.71
   currentHealth: 150
   maxHealth: 150

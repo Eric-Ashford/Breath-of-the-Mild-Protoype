@@ -27,7 +27,7 @@ public class DamagePlayer : MonoBehaviour
         SplashScreenOff();
     }
 
-    void OnTriggerEnter(Collider other)
+    void OnTriggerStay(Collider other)
     {
         
         if (other.tag == "Player")

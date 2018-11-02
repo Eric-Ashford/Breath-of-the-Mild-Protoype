@@ -30,6 +30,9 @@ public class PlayerMove : MonoBehaviour
     Animator anim;
     CapsuleCollider cc;
     AudioSource footstep;
+    AudioSource swordSwing;
+    AudioSource swordWhoosh;
+    AudioSource[] audioSources;
     Transform cameraTransform;
 
     Vector3 facingDirection;
@@ -65,7 +68,9 @@ public class PlayerMove : MonoBehaviour
         rb = this.gameObject.GetComponent<Rigidbody>();
         anim = this.gameObject.GetComponent<Animator>();
         cc = this.gameObject.GetComponent<CapsuleCollider>();
-        footstep = this.gameObject.GetComponent<AudioSource>();
+        footstep = audioSources[0];
+        swordSwing = audioSources[2];
+        swordWhoosh = audioSources[3];
         cameraTransform = Camera.main.transform;
     }
 
@@ -78,6 +83,8 @@ public class PlayerMove : MonoBehaviour
         if (Input.GetButton("Fire 1"))
         {
             anim.SetTrigger("Attack");
+            swordSwing.Play();
+            swordWhoosh.Play();
         }
         //End
     }

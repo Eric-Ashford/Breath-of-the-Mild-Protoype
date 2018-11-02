@@ -12,8 +12,6 @@ public class DamagePlayer : MonoBehaviour
 
     //CameraShake camShake;
     private bool splashScreenHasBeenActivated;
-    
-
 
     void Start()
     {
@@ -29,7 +27,6 @@ public class DamagePlayer : MonoBehaviour
 
     void OnTriggerStay(Collider other)
     {
-        
         if (other.tag == "Player")
         {
             test();
@@ -70,7 +67,4 @@ public class DamagePlayer : MonoBehaviour
             damageSplashScreen.GetComponent<CanvasGroup>().alpha = 1;
         }
     }
-
-
-
 }

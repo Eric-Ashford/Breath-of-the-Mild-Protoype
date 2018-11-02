@@ -18,20 +18,21 @@ public class PlayerMove : MonoBehaviour
     [SerializeField]
     float jumpStrength = 500.0f;
     [SerializeField]
-    float dodgeDistance = 500.0f;
+    float dodgeDistance = 2500.0f;
 
     [SerializeField]
     PhysicMaterial zeroFriction;
     [SerializeField]
     PhysicMaterial maxFriction;
-
+    [SerializeField]
+    Transform cameraTransform;
     [SerializeField]
     AudioClip[] footstepsArray;
 
     Rigidbody rb;
     Animator anim;
     CapsuleCollider cc;
-    Transform cameraTransform;
+    
     AudioSource[] audioSources;
     AudioSource footstep;
     AudioSource swordSwing;
@@ -87,6 +88,7 @@ public class PlayerMove : MonoBehaviour
 
     void FixedUpdate()
     {
+        Dodge();
         MovePlayer();
         PlayFootstep();
     }
@@ -210,19 +212,25 @@ public class PlayerMove : MonoBehaviour
         }
     }
 
-    void Attack()
+    void Attack()   //should not be in movement script
     {
-        if (Input.GetButton("Attack") || Input.GetAxis("Attack") > 0.0f)
+        if (Input.GetButtonDown("Melee Attack") || Input.GetAxis("Melee Attack") > 0.0f)
         {
             anim.SetTrigger("Attack");
+
+            swordSwing.volume = Random.Range(0.9f, 1.1f);
+            swordSwing.pitch = Random.Range(0.85f, 1.1f);
             swordSwing.Play();
+
+            swordWhoosh.volume = Random.Range(0.9f, 1.1f);
+            swordWhoosh.pitch = Random.Range(0.85f, 1.1f);
             swordWhoosh.Play();
         }
     }
 
     void Dodge()
     {
-        if (Input.GetButtonDown("Dodge") && isOnGround == true)
+        if (Input.GetButtonDown("Dodge") && isOnGround)
         {
             rb.AddForce(transform.forward * dodgeDistance, ForceMode.Impulse);
         }

@@ -16,13 +16,13 @@ public class PlayerMagic : MonoBehaviour
 
     
     AudioSource[] audioSources;
-
-    public AudioSource fireBall;  
-    public AudioSource footsteps;
+    AudioSource fireBall;
 
     public float currentMagic;
     const int maxMagic = 100;
     bool coolDownHasStarted;
+
+    const string magicButtonName = "Magic Attack";
 
     void Start ()
     {
@@ -31,8 +31,6 @@ public class PlayerMagic : MonoBehaviour
         currentMagic = maxMagic;
         fireBall = audioSources[1];
     }
-    
-	
 	
 	void Update ()
     {
@@ -44,8 +42,10 @@ public class PlayerMagic : MonoBehaviour
 
     void CastMagic()
     {
-       if (Input.GetKey(KeyCode.M) && currentMagic == maxMagic)
+        Debug.Log(currentMagic);
+       if (Input.GetButtonDown(magicButtonName) && currentMagic == maxMagic)
         {
+            Debug.Log("reached cast magic");
             Fire();
             currentMagic = 0f;
             fireBall.Play();

@@ -782,7 +782,7 @@ MonoBehaviour:
   runSpeed: 140
   turnSpeed: 5
   jumpStrength: 1000
-  zeroFriction: {fileID: 0}
+  zeroFriction: {fileID: 13400000, guid: b8adb3ec2d4c5854983daf8c656bf1d0, type: 2}
   maxFriction: {fileID: 13400000, guid: e0a7b53eb1018bc4e87fcbe2ea481c08, type: 2}
   footstepsArray:
   - {fileID: 8300000, guid: 03a86c18efc5ebc4e8052d262505d18e, type: 3}

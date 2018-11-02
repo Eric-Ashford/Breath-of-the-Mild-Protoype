@@ -17,6 +17,8 @@ public class PlayerMove : MonoBehaviour
     float turnSpeed = 5.0f;
     [SerializeField]
     float jumpStrength = 500.0f;
+    [SerializeField]
+    float dodgeDistance = 500.0f;
 
     [SerializeField]
     PhysicMaterial zeroFriction;
@@ -29,11 +31,11 @@ public class PlayerMove : MonoBehaviour
     Rigidbody rb;
     Animator anim;
     CapsuleCollider cc;
+    Transform cameraTransform;
+    AudioSource[] audioSources;
     AudioSource footstep;
     AudioSource swordSwing;
     AudioSource swordWhoosh;
-    AudioSource[] audioSources;
-    Transform cameraTransform;
 
     Vector3 facingDirection;
     Vector3 previousDirection;
@@ -67,21 +69,20 @@ public class PlayerMove : MonoBehaviour
     {
         rb = this.gameObject.GetComponent<Rigidbody>();
         anim = this.gameObject.GetComponent<Animator>();
-        cc = this.gameObject.GetComponent<CapsuleCollider>();
+        cc = this.gameObject.GetComponentInChildren<CapsuleCollider>();
+        audioSources = this.gameObject.GetComponents<AudioSource>();
+
         footstep = audioSources[0];
         swordSwing = audioSources[2];
         swordWhoosh = audioSources[3];
+
         cameraTransform = Camera.main.transform;
     }
 
     void Update()
     {
         ChangeFrictionMaterial();
-
-
-        //Barebones Player Attack
-        
-        //End
+        Attack();
     }
 
     void FixedUpdate()
@@ -209,7 +210,7 @@ public class PlayerMove : MonoBehaviour
         }
     }
 
-    private void HandleAttack()
+    void Attack()
     {
         if (Input.GetButton("Attack") || Input.GetAxis("Attack") > 0.0f)
         {
@@ -217,6 +218,20 @@ public class PlayerMove : MonoBehaviour
             swordSwing.Play();
             swordWhoosh.Play();
         }
+    }
+
+    void Dodge()
+    {
+        if (Input.GetButtonDown("Dodge") && isOnGround == true)
+        {
+            rb.AddForce(transform.forward * dodgeDistance, ForceMode.Impulse);
+        }
+
+        //isDodging = true;
+
+        //Implement dodge timer
+        //Implement I-frames counter
+        //Add Dodge Anim
     }
 
     IEnumerator TakeStep()

@@ -21,7 +21,6 @@ GameObject:
   - component: {fileID: 4562431403638004}
   - component: {fileID: 20773602013292770}
   - component: {fileID: 81651151798163450}
-  - component: {fileID: 114136385137374740}
   m_Layer: 0
   m_Name: MainCamera
   m_TagString: MainCamera
@@ -38,6 +37,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4714140436834332}
   - component: {fileID: 114002516848794368}
+  - component: {fileID: 114237440725885052}
   m_Layer: 0
   m_Name: CameraBase
   m_TagString: Untagged
@@ -135,18 +135,23 @@ MonoBehaviour:
   target: {fileID: 0}
   pitchMinMax: {x: -40, y: 85}
   rotationSmoothTime: 0.05
---- !u!114 &114136385137374740
+--- !u!114 &114237440725885052
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1094146738156594}
+  m_GameObject: {fileID: 1633685147008856}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 06fa43be8939f304ca2b9623bb7007b9, type: 3}
+  m_Script: {fileID: 11500000, guid: e1963f915d0759648a62ab233b790ff6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  minDistance: 3
-  maxDistance: 4
-  smooth: 10
-  distance: 4
+  xOffset: 1
+  yOffset: 1
+  zOffset: 2
+  normalFOV: 60
+  aimingFOV: 45
+  mouseSensitivity: 5
+  target: {fileID: 0}
+  pitchMinMax: {x: -40, y: 85}
+  rotationSmoothTime: 0.05

@@ -216,6 +216,7 @@ Prefab:
       propertyPath: m_Pivot.y
       value: 0
       objectReference: {fileID: 0}
+<<<<<<< HEAD
     - target: {fileID: 1788561933333208, guid: 1f24429c601ca0545a1bd002f596f824, type: 2}
       propertyPath: m_IsActive
       value: 0
@@ -265,6 +266,8 @@ Prefab:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: Play
       objectReference: {fileID: 0}
+=======
+>>>>>>> 7177478176b507a3ec2197ad25b15b22b233f402
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 1f24429c601ca0545a1bd002f596f824, type: 2}
   m_IsPrefabParent: 0
@@ -574,7 +577,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 114659658783427370, guid: d6c4f37ad8f2ead4999fc73e819fe09c,
         type: 2}
-      propertyPath: theWeaponWheel
+      propertyPath: weaponWheelCanvas
       value: 
       objectReference: {fileID: 1589986481}
     - target: {fileID: 114504875425811174, guid: d6c4f37ad8f2ead4999fc73e819fe09c,

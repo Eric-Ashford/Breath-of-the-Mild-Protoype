@@ -74,7 +74,6 @@ GameObject:
   - component: {fileID: 4260709688801812}
   - component: {fileID: 33242781527343944}
   - component: {fileID: 23457687297176402}
-  - component: {fileID: 136635076669377604}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -110,7 +109,7 @@ GameObject:
   - component: {fileID: 4596988124954548}
   - component: {fileID: 54993101537979004}
   - component: {fileID: 114712259940428248}
-  - component: {fileID: 114504875425811174}
+  - component: {fileID: 114904934268552726}
   - component: {fileID: 114294249027980864}
   - component: {fileID: 114659658783427370}
   - component: {fileID: 95973634195843484}
@@ -118,6 +117,7 @@ GameObject:
   - component: {fileID: 82449975082049072}
   - component: {fileID: 82260519509137822}
   - component: {fileID: 82151196602415884}
+  - component: {fileID: 136063488186160720}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -926,21 +926,6 @@ MonoBehaviour:
     type: 2}
   projectileSpeed: 40
   currentMagic: 100
---- !u!114 &114504875425811174
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1987866581882940}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d7a79f54aa8e97647a6b73a50227580b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  healthBar: {fileID: 0}
-  currentHealth: 0
-  maxHealth: 100
-  respawnPoint: {fileID: 0}
 --- !u!114 &114659658783427370
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -985,6 +970,21 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 4979e0de50609024990872bc52eb750f, type: 3}
   - {fileID: 8300000, guid: 54d6c795374c019409f1437d3fdcc175, type: 3}
   - {fileID: 8300000, guid: ea604c479577f654085fe1674db510e5, type: 3}
+--- !u!114 &114904934268552726
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1987866581882940}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d7a79f54aa8e97647a6b73a50227580b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  healthBar: {fileID: 0}
+  currentHealth: 0
+  maxHealth: 100
+  respawnPoint: {fileID: 0}
 --- !u!135 &135323154430055734
 SphereCollider:
   m_ObjectHideFlags: 1
@@ -1009,16 +1009,16 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 0.5
   m_Center: {x: 0, y: 0, z: 0}
---- !u!136 &136635076669377604
+--- !u!136 &136063488186160720
 CapsuleCollider:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1415478332011428}
+  m_GameObject: {fileID: 1987866581882940}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  m_Radius: 1.2434553
-  m_Height: 7.267611
+  m_Radius: 0.5265541
+  m_Height: 3.1089344
   m_Direction: 1
-  m_Center: {x: 0, y: -1.62, z: 0}
+  m_Center: {x: 0, y: -0.6404085, z: -0.025074005}

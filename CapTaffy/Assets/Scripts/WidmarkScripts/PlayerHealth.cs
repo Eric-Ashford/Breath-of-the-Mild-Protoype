@@ -64,6 +64,7 @@ public class PlayerHealth : MonoBehaviour
 
         yield return new WaitForSecondsRealtime(3.0f);
 
+        currentHealth = maxHealth;
         this.gameObject.transform.position = respawnPoint.position;
     }
 }

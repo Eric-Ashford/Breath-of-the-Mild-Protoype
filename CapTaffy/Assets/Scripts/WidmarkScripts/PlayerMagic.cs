@@ -42,7 +42,6 @@ public class PlayerMagic : MonoBehaviour
 
     void CastMagic()
     {
-        Debug.Log(currentMagic);
        if (Input.GetButtonDown(magicButtonName) && currentMagic == maxMagic)
         {
             Debug.Log("reached cast magic");

@@ -38,12 +38,12 @@ public class WeaponWheel : MonoBehaviour
 
     void FixedUpdate()
     {
-        TimeSlow();
+        //TimeSlow();
     }
 
     void HandleWeaponWheel() //opens/closes the weapon wheel canvas
     {
-        if (Input.GetButton(weaponWheelButtonName))
+        if (Input.GetButtonDown(weaponWheelButtonName))
         {
             isPressed = !isPressed;
 

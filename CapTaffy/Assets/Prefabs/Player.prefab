@@ -108,6 +108,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4596988124954548}
   - component: {fileID: 54993101537979004}
+  - component: {fileID: 114466332120053536}
   - component: {fileID: 114712259940428248}
   - component: {fileID: 114904934268552726}
   - component: {fileID: 114294249027980864}
@@ -223,7 +224,7 @@ MeshRenderer:
   m_ReflectionProbeUsage: 1
   m_RenderingLayerMask: 4294967295
   m_Materials:
-  - {fileID: 2100000, guid: c519e7fbea0b8f74b9b07531ba062be0, type: 2}
+  - {fileID: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -293,7 +294,7 @@ MeshRenderer:
   m_ReflectionProbeUsage: 1
   m_RenderingLayerMask: 4294967295
   m_Materials:
-  - {fileID: 2100000, guid: c519e7fbea0b8f74b9b07531ba062be0, type: 2}
+  - {fileID: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -926,6 +927,18 @@ MonoBehaviour:
     type: 2}
   projectileSpeed: 40
   currentMagic: 100
+--- !u!114 &114466332120053536
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1987866581882940}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5d9c24a506b2515439e59e0ff3abf64f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  attackDelay: 0
 --- !u!114 &114659658783427370
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -956,7 +969,6 @@ MonoBehaviour:
   turnSpeed: 5
   jumpStrength: 1000
   dodgeDistance: 2500
-  attackDelay: 0.6
   zeroFriction: {fileID: 13400000, guid: b8adb3ec2d4c5854983daf8c656bf1d0, type: 2}
   maxFriction: {fileID: 13400000, guid: e0a7b53eb1018bc4e87fcbe2ea481c08, type: 2}
   cameraTransform: {fileID: 0}

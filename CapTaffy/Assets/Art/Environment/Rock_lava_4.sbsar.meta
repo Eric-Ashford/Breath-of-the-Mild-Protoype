@@ -114,7 +114,7 @@ ScriptedImporter:
     generateMipMaps: 1
     preset: " <sbspreset pkgurl=\"pkg://Rock_lava\" label=\"\" >\n  <presetinput identifier=\"$randomseed\"
       uid=\"353873725\" type=\"4\" value=\"3910\" />\n  <presetinput identifier=\"LavaLevels\"
-      uid=\"935721180\" type=\"0\" value=\"0.118\" />\n </sbspreset>\n"
+      uid=\"935721180\" type=\"0\" value=\"0.04\" />\n </sbspreset>\n"
     shaderName: Standard
     outputNames: baseColor,normal,metallic,ambientOcclusion,height
     texturePackingList:

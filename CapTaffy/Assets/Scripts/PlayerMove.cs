@@ -19,8 +19,6 @@ public class PlayerMove : MonoBehaviour
     float jumpStrength = 500.0f;
     [SerializeField]
     float dodgeDistance = 2500.0f;
-    [SerializeField]
-    float attackDelay = 0f;
 
     [SerializeField]
     PhysicMaterial zeroFriction;
@@ -37,8 +35,6 @@ public class PlayerMove : MonoBehaviour
     
     AudioSource[] audioSources;
     AudioSource footstep;
-    AudioSource swordSwing;
-    AudioSource swordWhoosh;
 
     Vector3 facingDirection;
     Vector3 previousDirection;
@@ -52,8 +48,6 @@ public class PlayerMove : MonoBehaviour
     bool isAiming;
     bool isOnGround;
     bool isTakingStep;
-    bool canAttack;
-    bool waitActive;
 
     const string horizontalAxisName = "Horizontal";
     const string verticalAxisName = "Vertical";
@@ -68,8 +62,6 @@ public class PlayerMove : MonoBehaviour
         isAiming = false;
         isOnGround = true;
         isTakingStep = false;
-        canAttack = true;
-        waitActive = false;
     }
 
     void Start()
@@ -80,8 +72,7 @@ public class PlayerMove : MonoBehaviour
         audioSources = this.gameObject.GetComponents<AudioSource>();
 
         footstep = audioSources[0];
-        swordSwing = audioSources[2];
-        swordWhoosh = audioSources[3];
+        
 
         cameraTransform = Camera.main.transform;
     }
@@ -89,7 +80,7 @@ public class PlayerMove : MonoBehaviour
     void Update()
     {
         ChangeFrictionMaterial();
-        Attack();
+
     }
 
     void FixedUpdate()
@@ -218,25 +209,7 @@ public class PlayerMove : MonoBehaviour
         }
     }
 
-    void Attack()   //should not be in movement script
-    {
-        if ((Input.GetButtonDown("Melee Attack") || Input.GetAxis("Melee Attack") > 0.0f) && canAttack)
-        {
-            canAttack = false;
-            anim.SetTrigger("Attack");
-
-            swordSwing.volume = Random.Range(0.9f, 1.1f);
-            swordSwing.pitch = Random.Range(0.85f, 1.1f);
-            swordSwing.Play();
-
-            swordWhoosh.volume = Random.Range(0.9f, 1.1f);
-            swordWhoosh.pitch = Random.Range(0.85f, 1.1f);
-            swordWhoosh.Play();
-            StartCoroutine(Wait(attackDelay));
-            canAttack = true;
-
-        }
-    }
+    
 
     void Dodge()
     {
@@ -280,11 +253,5 @@ public class PlayerMove : MonoBehaviour
             isOnGround = false;
             rb.drag = 0.0f;        //decrease drag when in the air
         }
-    }
-    private IEnumerator Wait(float delay)
-    {
-        waitActive = true;
-        yield return new WaitForSeconds(delay);
-        waitActive = false;
-    }
+    }    
 }

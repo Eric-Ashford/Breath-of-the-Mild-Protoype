@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 8900000, guid: 545abe2b789631d42ba478c66371d77c, type: 2}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0, g: 0, b: 0, a: 1}
+  m_IndirectSpecularColor: {r: 0.4497077, g: 0.49977535, b: 0.57563174, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &4
 LightmapSettings:
@@ -315,6 +315,49 @@ MonoBehaviour:
     dirtTexture: {fileID: 0}
     dirtIntensity: 2.5
   m_Shader: {fileID: 4800000, guid: 910836d371928ab4696c5d8fb670b1a4, type: 3}
+  m_Material: {fileID: 0}
+  m_blurBuffer1:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  m_blurBuffer2:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  m_Threshold: 501
+  m_Curve: 502
+  m_PrefilterOffs: 503
+  m_SampleScale: 504
+  m_Intensity: 505
+  m_DirtTex: 506
+  m_DirtIntensity: 507
+  m_BaseTex: 496
 --- !u!114 &6131420
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -332,6 +375,9 @@ MonoBehaviour:
   ySpeed: 120
   yMinLimit: -20
   yMaxLimit: 80
+  x: 0
+  y: 0
+  prevDistance: 0
 --- !u!81 &6131428
 AudioListener:
   m_ObjectHideFlags: 0
@@ -17453,6 +17499,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b3282122c29c871408c4b1136cda2664, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  timeleft: 0
+  fps: 0
+  frames: 0
 --- !u!114 &266823857
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -17528,40 +17577,74 @@ MonoBehaviour:
   HUETexture: {fileID: 2800000, guid: d47d1048dbdfe004782f709a6a0ecb39, type: 3}
   UseMobileVersion: 0
   RFX4_DistortionAndBloom: {fileID: 0}
+  currentNomber: 0
+  currentInstance: {fileID: 0}
   guiStyleHeader:
     m_Name: 
     m_Normal:
       m_Background: {fileID: 2800000, guid: 38f41791cf18f0846991bf368ea0fd15, type: 3}
       m_ScaledBackgrounds: []
-      m_TextColor: {r: 1, g: 1, b: 1, a: 1}
+      m_TextColor:
+        r: 1
+        g: 1
+        b: 1
+        a: 1
     m_Hover:
       m_Background: {fileID: 0}
       m_ScaledBackgrounds: []
-      m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+      m_TextColor:
+        r: 0
+        g: 0
+        b: 0
+        a: 1
     m_Active:
       m_Background: {fileID: 0}
       m_ScaledBackgrounds: []
-      m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+      m_TextColor:
+        r: 0
+        g: 0
+        b: 0
+        a: 1
     m_Focused:
       m_Background: {fileID: 0}
       m_ScaledBackgrounds: []
-      m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+      m_TextColor:
+        r: 0
+        g: 0
+        b: 0
+        a: 1
     m_OnNormal:
       m_Background: {fileID: 0}
       m_ScaledBackgrounds: []
-      m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+      m_TextColor:
+        r: 0
+        g: 0
+        b: 0
+        a: 1
     m_OnHover:
       m_Background: {fileID: 0}
       m_ScaledBackgrounds: []
-      m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+      m_TextColor:
+        r: 0
+        g: 0
+        b: 0
+        a: 1
     m_OnActive:
       m_Background: {fileID: 0}
       m_ScaledBackgrounds: []
-      m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+      m_TextColor:
+        r: 0
+        g: 0
+        b: 0
+        a: 1
     m_OnFocused:
       m_Background: {fileID: 0}
       m_ScaledBackgrounds: []
-      m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+      m_TextColor:
+        r: 0
+        g: 0
+        b: 0
+        a: 1
     m_Border:
       m_Left: 0
       m_Right: 0
@@ -17600,35 +17683,67 @@ MonoBehaviour:
     m_Normal:
       m_Background: {fileID: 0}
       m_ScaledBackgrounds: []
-      m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+      m_TextColor:
+        r: 0
+        g: 0
+        b: 0
+        a: 1
     m_Hover:
       m_Background: {fileID: 0}
       m_ScaledBackgrounds: []
-      m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+      m_TextColor:
+        r: 0
+        g: 0
+        b: 0
+        a: 1
     m_Active:
       m_Background: {fileID: 0}
       m_ScaledBackgrounds: []
-      m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+      m_TextColor:
+        r: 0
+        g: 0
+        b: 0
+        a: 1
     m_Focused:
       m_Background: {fileID: 0}
       m_ScaledBackgrounds: []
-      m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+      m_TextColor:
+        r: 0
+        g: 0
+        b: 0
+        a: 1
     m_OnNormal:
       m_Background: {fileID: 0}
       m_ScaledBackgrounds: []
-      m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+      m_TextColor:
+        r: 0
+        g: 0
+        b: 0
+        a: 1
     m_OnHover:
       m_Background: {fileID: 0}
       m_ScaledBackgrounds: []
-      m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+      m_TextColor:
+        r: 0
+        g: 0
+        b: 0
+        a: 1
     m_OnActive:
       m_Background: {fileID: 0}
       m_ScaledBackgrounds: []
-      m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+      m_TextColor:
+        r: 0
+        g: 0
+        b: 0
+        a: 1
     m_OnFocused:
       m_Background: {fileID: 0}
       m_ScaledBackgrounds: []
-      m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+      m_TextColor:
+        r: 0
+        g: 0
+        b: 0
+        a: 1
     m_Border:
       m_Left: 0
       m_Right: 0
@@ -17662,6 +17777,21 @@ MonoBehaviour:
     m_FixedHeight: 0
     m_StretchWidth: 1
     m_StretchHeight: 0
+  dpiScale: 0
+  isDay: 0
+  colorHUE: 0
+  startSunIntensity: 0
+  startSunRotation: {x: 0, y: 0, z: 0, w: 0}
+  startAmbientLight:
+    r: 0
+    g: 0
+    b: 0
+    a: 0
+  startAmbientIntencity: 0
+  startReflectionIntencity: 0
+  startLightShadows: 0
+  isButtonPressed: 0
+  isUsedMobileBloom: 1
 --- !u!4 &266823858
 Transform:
   m_ObjectHideFlags: 0
@@ -42851,6 +42981,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 38e04c13395f9de45b9e6b8a711c9b8b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  probe: {fileID: 0}
+  camT: {fileID: 0}
 --- !u!1 &795293476
 GameObject:
   m_ObjectHideFlags: 0

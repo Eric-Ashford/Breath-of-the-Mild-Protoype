@@ -41,6 +41,7 @@ GameObject:
   - component: {fileID: 23089622734676352}
   - component: {fileID: 64526758402681678}
   - component: {fileID: 114239891299524748}
+  - component: {fileID: 114708451215876094}
   m_Layer: 0
   m_Name: Lava
   m_TagString: Untagged
@@ -179,8 +180,8 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1054863205412176}
   m_LocalRotation: {x: -0, y: -1, z: -0, w: 0}
-  m_LocalPosition: {x: -3578, y: -3256, z: -10596}
-  m_LocalScale: {x: 5000, y: 50, z: 3000}
+  m_LocalPosition: {x: -10818, y: -3256, z: -4924}
+  m_LocalScale: {x: 1668.724, y: 50, z: 1865.602}
   m_Children: []
   m_Father: {fileID: 4032142866369948}
   m_RootOrder: 1
@@ -213,7 +214,7 @@ MeshRenderer:
   m_ReflectionProbeUsage: 1
   m_RenderingLayerMask: 4294967295
   m_Materials:
-  - {fileID: 2100000, guid: 192fc269be07ff44db0b211f439b309c, type: 2}
+  - {fileID: 2100002, guid: 023b43d6a20725148bb7065083cedfcf, type: 3}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -248,7 +249,7 @@ MeshRenderer:
   m_ReflectionProbeUsage: 3
   m_RenderingLayerMask: 4294967295
   m_Materials:
-  - {fileID: 2100000, guid: db3d22230145cb5498305e75a41d5391, type: 2}
+  - {fileID: 2100000, guid: 023b43d6a20725148bb7065083cedfcf, type: 3}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -318,7 +319,7 @@ MeshRenderer:
   m_ReflectionProbeUsage: 1
   m_RenderingLayerMask: 4294967295
   m_Materials:
-  - {fileID: 2100000, guid: 597d4073a1b7f5747a1d1d145a0408cf, type: 3}
+  - {fileID: 2100000, guid: 023b43d6a20725148bb7065083cedfcf, type: 3}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -353,7 +354,7 @@ MeshRenderer:
   m_ReflectionProbeUsage: 1
   m_RenderingLayerMask: 4294967295
   m_Materials:
-  - {fileID: 2100000, guid: 597d4073a1b7f5747a1d1d145a0408cf, type: 3}
+  - {fileID: 2100000, guid: 023b43d6a20725148bb7065083cedfcf, type: 3}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -461,3 +462,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   damageSplashScreen: {fileID: 0}
   attackDamage: 200
+--- !u!114 &114708451215876094
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1054863205412176}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7481e25a7f33b324cb70c2988b003f3d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  scrollX: 0.14
+  scrollY: 0.07

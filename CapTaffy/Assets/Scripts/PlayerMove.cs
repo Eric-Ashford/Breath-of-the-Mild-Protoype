@@ -17,20 +17,24 @@ public class PlayerMove : MonoBehaviour
     float turnSpeed = 5.0f;
     [SerializeField]
     float jumpStrength = 500.0f;
+    [SerializeField]
+    float dodgeDistance = 2500.0f;
 
     [SerializeField]
     PhysicMaterial zeroFriction;
     [SerializeField]
     PhysicMaterial maxFriction;
-
+    [SerializeField]
+    Transform cameraTransform;
     [SerializeField]
     AudioClip[] footstepsArray;
 
     Rigidbody rb;
     Animator anim;
     CapsuleCollider cc;
+    
+    AudioSource[] audioSources;
     AudioSource footstep;
-    Transform cameraTransform;
 
     Vector3 facingDirection;
     Vector3 previousDirection;
@@ -50,7 +54,6 @@ public class PlayerMove : MonoBehaviour
     const string sprintButtonName = "Sprint";
     const string jumpButtonName = "Jump";
     const string aimButtonName = "Aim";
-    const string attackButtonName = "Attack";
 
     void Awake()
     {
@@ -65,19 +68,24 @@ public class PlayerMove : MonoBehaviour
     {
         rb = this.gameObject.GetComponent<Rigidbody>();
         anim = this.gameObject.GetComponent<Animator>();
-        cc = this.gameObject.GetComponent<CapsuleCollider>();
-        footstep = this.gameObject.GetComponent<AudioSource>();
+        cc = this.gameObject.GetComponentInChildren<CapsuleCollider>();
+        audioSources = this.gameObject.GetComponents<AudioSource>();
+
+        footstep = audioSources[0];
+        
+
         cameraTransform = Camera.main.transform;
     }
 
     void Update()
     {
         ChangeFrictionMaterial();
-        HandleAttack();
+
     }
 
     void FixedUpdate()
     {
+        Dodge();
         MovePlayer();
         PlayFootstep();
     }
@@ -108,7 +116,7 @@ public class PlayerMove : MonoBehaviour
         {
             isAiming = false;
         }
-
+        
         previousDirection = cameraTransform.right;
 
         if (isOnGround)
@@ -146,7 +154,7 @@ public class PlayerMove : MonoBehaviour
                 //TODO: play jump sound
             }
         }
-
+        
         //rotation controls
         if (horizontalInput != 0.0f && !isAiming || verticalInput != 0.0f && !isAiming)     //only rotate player when moving and not aiming
         {
@@ -176,15 +184,6 @@ public class PlayerMove : MonoBehaviour
         }
     }
 
-    void HandleAttack()
-    {
-        //Barebones Player Attack
-        if (Input.GetButton("Attack") || Input.GetAxis("Attack") > 0.0f)
-        {
-            anim.SetTrigger("Attack");
-        }
-    }
-
     void PlayFootstep()
     {
         //TODO: add check for ground type
@@ -208,6 +207,22 @@ public class PlayerMove : MonoBehaviour
 
             StartCoroutine(TakeStep());
         }
+    }
+
+    
+
+    void Dodge()
+    {
+        if (Input.GetButtonDown("Dodge") && isOnGround)
+        {
+            rb.AddForce(transform.forward * dodgeDistance, ForceMode.Impulse);
+        }
+
+        //isDodging = true;
+
+        //Implement dodge timer
+        //Implement I-frames counter
+        //Add Dodge Anim
     }
 
     IEnumerator TakeStep()
@@ -238,5 +253,5 @@ public class PlayerMove : MonoBehaviour
             isOnGround = false;
             rb.drag = 0.0f;        //decrease drag when in the air
         }
-    }
+    }    
 }

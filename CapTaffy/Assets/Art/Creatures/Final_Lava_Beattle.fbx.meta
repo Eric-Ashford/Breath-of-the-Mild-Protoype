@@ -1,140 +1,143 @@
 fileFormatVersion: 2
-guid: dff4b79d3b6215545a9eab053017f42d
+guid: 06b9060e9e3d42c4e8f5efd05605eb96
 ModelImporter:
   serializedVersion: 22
   fileIDToRecycleName:
-    100000: Group39134
-    100002: Group39137
-    100004: Group39139
-    100006: Group39140
-    100008: Group64037
-    100010: joint1
-    100012: joint10
-    100014: joint11
-    100016: joint12
-    100018: joint13
-    100020: joint14
-    100022: joint15
-    100024: joint16
-    100026: joint17
-    100028: joint18
-    100030: joint19
-    100032: joint2
-    100034: joint20
-    100036: joint21
-    100038: joint22
-    100040: joint23
-    100042: joint24
-    100044: joint25
-    100046: joint26
-    100048: joint27
-    100050: joint28
-    100052: joint29
-    100054: joint3
-    100056: joint30
-    100058: joint31
-    100060: joint32
-    100062: joint33
-    100064: joint34
-    100066: joint34 1
-    100068: joint34 2
-    100070: joint35
-    100072: joint36
-    100074: joint37
-    100076: joint38
-    100078: joint39
-    100080: joint4
-    100082: joint40
-    100084: joint41
-    100086: joint42
-    100088: joint43
-    100090: joint44
-    100092: joint45
-    100094: joint46
-    100096: joint47
-    100098: joint48
-    100100: joint49
-    100102: joint5
-    100104: joint50
-    100106: joint6
-    100108: joint7
-    100110: joint8
-    100112: joint9
-    100114: //RootNode
-    400000: Group39134
-    400002: Group39137
-    400004: Group39139
-    400006: Group39140
-    400008: Group64037
-    400010: joint1
-    400012: joint10
-    400014: joint11
-    400016: joint12
-    400018: joint13
-    400020: joint14
-    400022: joint15
-    400024: joint16
-    400026: joint17
-    400028: joint18
-    400030: joint19
-    400032: joint2
-    400034: joint20
-    400036: joint21
-    400038: joint22
-    400040: joint23
-    400042: joint24
-    400044: joint25
-    400046: joint26
-    400048: joint27
-    400050: joint28
-    400052: joint29
-    400054: joint3
-    400056: joint30
-    400058: joint31
-    400060: joint32
-    400062: joint33
-    400064: joint34
-    400066: joint34 1
-    400068: joint34 2
-    400070: joint35
-    400072: joint36
-    400074: joint37
-    400076: joint38
-    400078: joint39
-    400080: joint4
-    400082: joint40
-    400084: joint41
-    400086: joint42
-    400088: joint43
-    400090: joint44
-    400092: joint45
-    400094: joint46
-    400096: joint47
-    400098: joint48
-    400100: joint49
-    400102: joint5
-    400104: joint50
-    400106: joint6
-    400108: joint7
-    400110: joint8
-    400112: joint9
-    400114: //RootNode
+    100000: //RootNode
+    100002: Group39134
+    100004: Group39137
+    100006: Group39139
+    100008: Group39140
+    100010: Group64037
+    100012: joint1
+    100014: joint10
+    100016: joint11
+    100018: joint12
+    100020: joint13
+    100022: joint14
+    100024: joint15
+    100026: joint16
+    100028: joint17
+    100030: joint18
+    100032: joint19
+    100034: joint2
+    100036: joint20
+    100038: joint21
+    100040: joint22
+    100042: joint23
+    100044: joint24
+    100046: joint25
+    100048: joint26
+    100050: joint27
+    100052: joint28
+    100054: joint29
+    100056: joint3
+    100058: joint30
+    100060: joint31
+    100062: joint32
+    100064: joint33
+    100066: joint34
+    100068: joint34 1
+    100070: joint34 2
+    100072: joint35
+    100074: joint36
+    100076: joint37
+    100078: joint38
+    100080: joint39
+    100082: joint4
+    100084: joint40
+    100086: joint41
+    100088: joint42
+    100090: joint43
+    100092: joint44
+    100094: joint45
+    100096: joint46
+    100098: joint47
+    100100: joint48
+    100102: joint49
+    100104: joint5
+    100106: joint50
+    100108: joint6
+    100110: joint7
+    100112: joint8
+    100114: joint9
+    100116: Mesh1
+    400000: //RootNode
+    400002: Group39134
+    400004: Group39137
+    400006: Group39139
+    400008: Group39140
+    400010: Group64037
+    400012: joint1
+    400014: joint10
+    400016: joint11
+    400018: joint12
+    400020: joint13
+    400022: joint14
+    400024: joint15
+    400026: joint16
+    400028: joint17
+    400030: joint18
+    400032: joint19
+    400034: joint2
+    400036: joint20
+    400038: joint21
+    400040: joint22
+    400042: joint23
+    400044: joint24
+    400046: joint25
+    400048: joint26
+    400050: joint27
+    400052: joint28
+    400054: joint29
+    400056: joint3
+    400058: joint30
+    400060: joint31
+    400062: joint32
+    400064: joint33
+    400066: joint34
+    400068: joint34 1
+    400070: joint34 2
+    400072: joint35
+    400074: joint36
+    400076: joint37
+    400078: joint38
+    400080: joint39
+    400082: joint4
+    400084: joint40
+    400086: joint41
+    400088: joint42
+    400090: joint43
+    400092: joint44
+    400094: joint45
+    400096: joint46
+    400098: joint47
+    400100: joint48
+    400102: joint49
+    400104: joint5
+    400106: joint50
+    400108: joint6
+    400110: joint7
+    400112: joint8
+    400114: joint9
+    400116: Mesh1
     2100000: lambert1
     4300000: Group39140
     4300002: Group39139
     4300004: Group39137
     4300006: Group39134
     4300008: Group64037
-    7400000: Idel_Turnleft
-    7400002: Idel_Still
-    7400004: Idel_Turnright
-    7400006: Attack
-    7400008: Flinch_Damaged
-    7400010: Death
-    7400012: Intro_Walk
-    7400014: Walk_Cycle_Loop
-    7400016: Exit_Walk
-    7400018: MeeleAttack
+    7400000: MeeleAttack
+    7400002: Death
+    7400004: Exit_Walk
+    7400006: Flinch_Damaged
+    7400008: Idel_Still
+    7400010: Idel_Turnleft
+    7400012: Idel_Turnright
+    7400014: Intro_Walk
+    7400016: Attack
+    7400018: Walk_Cycle
+    7400020: Slam
     9500000: //RootNode
     13700000: Group39134
     13700002: Group39137
@@ -171,122 +174,10 @@ ModelImporter:
     extraUserProperties: []
     clipAnimations:
     - serializedVersion: 16
-      name: Idel_Turnleft
+      name: MeeleAttack
       takeName: Take 001
-      firstFrame: 1
-      lastFrame: 40
-      wrapMode: 0
-      orientationOffsetY: 0
-      level: 0
-      cycleOffset: 0
-      loop: 0
-      hasAdditiveReferencePose: 0
-      loopTime: 0
-      loopBlend: 0
-      loopBlendOrientation: 0
-      loopBlendPositionY: 0
-      loopBlendPositionXZ: 0
-      keepOriginalOrientation: 0
-      keepOriginalPositionY: 1
-      keepOriginalPositionXZ: 0
-      heightFromFeet: 0
-      mirror: 0
-      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
-      curves: []
-      events: []
-      transformMask: []
-      maskType: 3
-      maskSource: {instanceID: 0}
-      additiveReferencePoseFrame: 0
-    - serializedVersion: 16
-      name: Idel_Still
-      takeName: Take 001
-      firstFrame: 40
-      lastFrame: 80
-      wrapMode: 0
-      orientationOffsetY: 0
-      level: 0
-      cycleOffset: 0
-      loop: 0
-      hasAdditiveReferencePose: 0
-      loopTime: 1
-      loopBlend: 0
-      loopBlendOrientation: 0
-      loopBlendPositionY: 0
-      loopBlendPositionXZ: 0
-      keepOriginalOrientation: 0
-      keepOriginalPositionY: 1
-      keepOriginalPositionXZ: 0
-      heightFromFeet: 0
-      mirror: 0
-      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
-      curves: []
-      events: []
-      transformMask: []
-      maskType: 3
-      maskSource: {instanceID: 0}
-      additiveReferencePoseFrame: 0
-    - serializedVersion: 16
-      name: Idel_Turnright
-      takeName: Take 001
-      firstFrame: 80
-      lastFrame: 120
-      wrapMode: 0
-      orientationOffsetY: 0
-      level: 0
-      cycleOffset: 0
-      loop: 0
-      hasAdditiveReferencePose: 0
-      loopTime: 0
-      loopBlend: 0
-      loopBlendOrientation: 0
-      loopBlendPositionY: 0
-      loopBlendPositionXZ: 0
-      keepOriginalOrientation: 0
-      keepOriginalPositionY: 1
-      keepOriginalPositionXZ: 0
-      heightFromFeet: 0
-      mirror: 0
-      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
-      curves: []
-      events: []
-      transformMask: []
-      maskType: 3
-      maskSource: {instanceID: 0}
-      additiveReferencePoseFrame: 0
-    - serializedVersion: 16
-      name: Attack
-      takeName: Take 001
-      firstFrame: 120
-      lastFrame: 200
-      wrapMode: 0
-      orientationOffsetY: 0
-      level: 0
-      cycleOffset: 0
-      loop: 0
-      hasAdditiveReferencePose: 0
-      loopTime: 1
-      loopBlend: 0
-      loopBlendOrientation: 0
-      loopBlendPositionY: 0
-      loopBlendPositionXZ: 0
-      keepOriginalOrientation: 0
-      keepOriginalPositionY: 1
-      keepOriginalPositionXZ: 0
-      heightFromFeet: 0
-      mirror: 0
-      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
-      curves: []
-      events: []
-      transformMask: []
-      maskType: 3
-      maskSource: {instanceID: 0}
-      additiveReferencePoseFrame: 0
-    - serializedVersion: 16
-      name: Flinch_Damaged
-      takeName: Take 001
-      firstFrame: 200
-      lastFrame: 220
+      firstFrame: 335
+      lastFrame: 380
       wrapMode: 0
       orientationOffsetY: 0
       level: 0
@@ -339,6 +230,146 @@ ModelImporter:
       maskSource: {instanceID: 0}
       additiveReferencePoseFrame: 0
     - serializedVersion: 16
+      name: Exit_Walk
+      takeName: Take 001
+      firstFrame: 330
+      lastFrame: 335
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 1
+    - serializedVersion: 16
+      name: Flinch_Damaged
+      takeName: Take 001
+      firstFrame: 200
+      lastFrame: 220
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 1
+    - serializedVersion: 16
+      name: Idel_Still
+      takeName: Take 001
+      firstFrame: 40
+      lastFrame: 80
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 1
+    - serializedVersion: 16
+      name: Idel_Turnleft
+      takeName: Take 001
+      firstFrame: 1
+      lastFrame: 40
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 1
+    - serializedVersion: 16
+      name: Idel_Turnright
+      takeName: Take 001
+      firstFrame: 1
+      lastFrame: 420
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 1
+    - serializedVersion: 16
       name: Intro_Walk
       takeName: Take 001
       firstFrame: 301
@@ -365,40 +396,12 @@ ModelImporter:
       transformMask: []
       maskType: 3
       maskSource: {instanceID: 0}
-      additiveReferencePoseFrame: 0
+      additiveReferencePoseFrame: 1
     - serializedVersion: 16
-      name: Walk_Cycle_Loop
+      name: Attack
       takeName: Take 001
-      firstFrame: 306
-      lastFrame: 326
-      wrapMode: 0
-      orientationOffsetY: 0
-      level: 0
-      cycleOffset: 0
-      loop: 0
-      hasAdditiveReferencePose: 0
-      loopTime: 1
-      loopBlend: 0
-      loopBlendOrientation: 0
-      loopBlendPositionY: 0
-      loopBlendPositionXZ: 0
-      keepOriginalOrientation: 0
-      keepOriginalPositionY: 1
-      keepOriginalPositionXZ: 0
-      heightFromFeet: 0
-      mirror: 0
-      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
-      curves: []
-      events: []
-      transformMask: []
-      maskType: 3
-      maskSource: {instanceID: 0}
-      additiveReferencePoseFrame: 0
-    - serializedVersion: 16
-      name: Exit_Walk
-      takeName: Take 001
-      firstFrame: 326
-      lastFrame: 335
+      firstFrame: 120
+      lastFrame: 200
       wrapMode: 0
       orientationOffsetY: 0
       level: 0
@@ -421,18 +424,18 @@ ModelImporter:
       transformMask: []
       maskType: 3
       maskSource: {instanceID: 0}
-      additiveReferencePoseFrame: 0
+      additiveReferencePoseFrame: 1
     - serializedVersion: 16
-      name: MeeleAttack
+      name: Walk_Cycle
       takeName: Take 001
-      firstFrame: 220
-      lastFrame: 260
+      firstFrame: 1
+      lastFrame: 420
       wrapMode: 0
       orientationOffsetY: 0
       level: 0
       cycleOffset: 0
       loop: 0
-      hasAdditiveReferencePose: 1
+      hasAdditiveReferencePose: 0
       loopTime: 0
       loopBlend: 0
       loopBlendOrientation: 0
@@ -449,7 +452,35 @@ ModelImporter:
       transformMask: []
       maskType: 3
       maskSource: {instanceID: 0}
-      additiveReferencePoseFrame: 219
+      additiveReferencePoseFrame: 1
+    - serializedVersion: 16
+      name: Slam
+      takeName: Take 001
+      firstFrame: 389
+      lastFrame: 420
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 1
     isReadable: 1
   meshes:
     lODScreenPercentages: []

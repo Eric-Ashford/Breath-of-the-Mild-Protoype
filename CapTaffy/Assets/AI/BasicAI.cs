@@ -13,13 +13,15 @@ public class BasicAI : MonoBehaviour
         damping;
     [SerializeField]
     private Transform player;
-
+    //lava bug's animator
+    public Animator lavaBug;
     private Rigidbody rb;
     private Renderer rndr;
 
     // Use this for initialization
     void Start()
     {
+        lavaBug = GetComponent<Animator>();
         rndr = GetComponent<Renderer>();
         rb = GetComponent<Rigidbody>();
     }
@@ -31,19 +33,21 @@ public class BasicAI : MonoBehaviour
         if (playerDistance <= lookDistance)
         {
             rndr.material.color = Color.yellow;
+                
             AlignToPlayer();
         }
 
         if (playerDistance <= attackDistance)
         {
             rndr.material.color = Color.red;
+       
             MoveTowardsPlayer();
-            //Attack();
         }
 
         if (playerDistance > lookDistance && playerDistance > attackDistance)
         {
             rndr.material.color = Color.white;
+       
         }
     }
 

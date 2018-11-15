@@ -1903,7 +1903,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerDistance: 305.13733
   lookDistance: 150
-  chaseDistance: 100
+  chaseDistance: 120
   rangedDistance: 30
   meleeDistance: 15
   movementSpeed: 15

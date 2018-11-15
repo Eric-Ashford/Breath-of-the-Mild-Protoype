@@ -5,7 +5,11 @@ using UnityEngine.SceneManagement;
 public class MenuButtons : MonoBehaviour
 {
     [SerializeField]
-    string sceneToLoad;
+    string MainSceneToLoad;
+    [SerializeField]
+    string CreditsSceneToLoad;
+    [SerializeField]
+    int startGameDelay = 5;
 
     //use when we have a loading scene
     //public void PlayButtonClicked()
@@ -16,13 +20,24 @@ public class MenuButtons : MonoBehaviour
     //    LoadingScene.LoadNewScene(sceneToLoad);
     //}
 
-    public void MenuSceneButtonClicked()
+    public void StartButtonClicked()
     {
-        SceneManager.LoadScene(sceneToLoad);
+        StartCoroutine(StartGameDelay());
+    }
+
+    public void CreditsButtonClicked()
+    {
+        SceneManager.LoadScene(CreditsSceneToLoad);
     }
 
     public void ExitGameButtonClicked()
     {
         Application.Quit();
+    }
+
+    IEnumerator StartGameDelay()
+    {
+        yield return new WaitForSeconds(startGameDelay);
+        SceneManager.LoadScene(MainSceneToLoad);
     }
 }

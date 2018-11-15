@@ -21,6 +21,9 @@ public class PlayerAttack : MonoBehaviour {
         canAttack = true;
         waitActive = false;
 
+        audioSources = GetComponents<AudioSource>();
+        anim = GetComponent<Animator>();
+
         swordSwing = audioSources[2];
         swordWhoosh = audioSources[3];
     }

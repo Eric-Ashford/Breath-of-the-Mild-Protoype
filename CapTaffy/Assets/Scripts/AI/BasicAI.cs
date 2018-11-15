@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class BasicAI : MonoBehaviour
 {
-
     [SerializeField]
     private float playerDistance = 0f,
         lookDistance = 80f,

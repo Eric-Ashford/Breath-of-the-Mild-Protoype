@@ -168,23 +168,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!1 &1730464779443000
-GameObject:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  serializedVersion: 5
-  m_Component:
-  - component: {fileID: 4714006994170326}
-  - component: {fileID: 114798801131954008}
-  - component: {fileID: 114698065946036794}
-  m_Layer: 0
-  m_Name: EventSystem
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
 --- !u!1 &1833174413889176
 GameObject:
   m_ObjectHideFlags: 1
@@ -238,19 +221,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &4714006994170326
-Transform:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1730464779443000}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 224602612215819722}
-  m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4945100468544636
 Transform:
   m_ObjectHideFlags: 1
@@ -434,7 +404,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b300a62376a50c742be40d6733832ba6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  menuCanvas: {fileID: 1205876338367982}
+  menuCanvas: {fileID: 0}
 --- !u!114 &114406789543336538
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -467,7 +437,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b300a62376a50c742be40d6733832ba6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  menuCanvas: {fileID: 1205876338367982}
+  menuCanvas: {fileID: 0}
 --- !u!114 &114427478549626190
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -592,24 +562,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   menuCanvas: {fileID: 1205876338367982}
---- !u!114 &114698065946036794
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1730464779443000}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 1077351063, guid: f70555f144d8491a825f0804e09c671c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_HorizontalAxis: Horizontal
-  m_VerticalAxis: Vertical
-  m_SubmitButton: Submit
-  m_CancelButton: Cancel
-  m_InputActionsPerSecond: 10
-  m_RepeatDelay: 0.5
-  m_ForceModuleActive: 0
 --- !u!114 &114738273367111722
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -714,20 +666,6 @@ MonoBehaviour:
         m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
---- !u!114 &114798801131954008
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1730464779443000}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: -619905303, guid: f70555f144d8491a825f0804e09c671c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_FirstSelected: {fileID: 1269278228777788}
-  m_sendNavigationEvents: 1
-  m_DragThreshold: 10
 --- !u!114 &114817240319737208
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -739,7 +677,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dc214b7a32c71cc48a4b9bd0b21ae543, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sceneToLoad: 
+  MainSceneToLoad: 
+  CreditsSceneToLoad: 
+  startGameDelay: 5
 --- !u!114 &114837417086771872
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1015,7 +955,6 @@ RectTransform:
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_Children:
   - {fileID: 224614872471769580}
-  - {fileID: 4714006994170326}
   m_Father: {fileID: 4945100468544636}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

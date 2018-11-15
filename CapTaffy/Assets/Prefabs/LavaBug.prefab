@@ -1557,7 +1557,7 @@ Transform:
   m_GameObject: {fileID: 1777326614928628}
   m_LocalRotation: {x: -0, y: -0.7523863, z: -0, w: -0.6587222}
   m_LocalPosition: {x: 3.49, y: -57.68, z: 74.3}
-  m_LocalScale: {x: 3, y: 3, z: 3}
+  m_LocalScale: {x: 2.8, y: 2.8, z: 2.8}
   m_Children:
   - {fileID: 4739684935972078}
   - {fileID: 4795157355105348}
@@ -1798,8 +1798,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1.1956861, y: 1.6959554, z: 1.3922486}
-  m_Center: {x: -0.000000006016739, y: -1.0978596, z: 0.5461293}
+  m_Size: {x: 0.8137429, y: 1.6959554, z: 0.9854749}
+  m_Center: {x: 0.01, y: -1.0978597, z: 0.3427428}
 --- !u!65 &65669110363964436
 BoxCollider:
   m_ObjectHideFlags: 1
@@ -1903,7 +1903,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerDistance: 305.13733
   lookDistance: 150
-  chaseDistance: 100
+  chaseDistance: 120
   rangedDistance: 30
   meleeDistance: 15
   movementSpeed: 15

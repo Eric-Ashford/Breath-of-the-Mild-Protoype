@@ -434,7 +434,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b300a62376a50c742be40d6733832ba6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  menuCanvas: {fileID: 1205876338367982}
+  menuCanvas: {fileID: 0}
 --- !u!114 &114406789543336538
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -467,7 +467,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b300a62376a50c742be40d6733832ba6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  menuCanvas: {fileID: 1205876338367982}
+  menuCanvas: {fileID: 0}
 --- !u!114 &114427478549626190
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -739,7 +739,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dc214b7a32c71cc48a4b9bd0b21ae543, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sceneToLoad: 
+  MainSceneToLoad: 
+  CreditsSceneToLoad: 
+  startGameDelay: 5
 --- !u!114 &114837417086771872
 MonoBehaviour:
   m_ObjectHideFlags: 1

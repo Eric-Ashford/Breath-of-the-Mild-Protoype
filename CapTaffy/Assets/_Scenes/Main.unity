@@ -1037,7 +1037,7 @@ GameObject:
   - component: {fileID: 945749373}
   - component: {fileID: 945749372}
   m_Layer: 0
-  m_Name: Fire Spell Active Test
+  m_Name: Fire Spell Active Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2034,7 +2034,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Heal Spell is Currently Active
+  m_Text: Healing Spell is Currently Active
 --- !u!222 &1984811060
 CanvasRenderer:
   m_ObjectHideFlags: 0

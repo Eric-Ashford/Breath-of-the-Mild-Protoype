@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class PlayerHealth : MonoBehaviour
 {
@@ -14,6 +15,9 @@ public class PlayerHealth : MonoBehaviour
     [SerializeField]
     private float maxHealth = 100f;
 
+    [SerializeField]
+    Transform respawnPoint;
+
     void Start()
     {
         //camShake = GameObject.FindGameObjectWithTag("ScreenShake").GetComponent<CameraShake>();
@@ -25,16 +29,17 @@ public class PlayerHealth : MonoBehaviour
     {
         UpdateHealthBar();
     }
-    
 
     public void DamagePlayer(float amount)
     {
         currentHealth -= amount;
-        
 
         if (currentHealth <= 0)
         {
             // TODO: lose game
+
+            //temp solution to losing
+            StartCoroutine(Die());
         }
     }
 
@@ -42,7 +47,7 @@ public class PlayerHealth : MonoBehaviour
     {
         currentHealth += amount;
 
-        if (currentHealth > maxHealth)
+        if (currentHealth >= maxHealth)
         {
             currentHealth = maxHealth;
         }
@@ -50,9 +55,17 @@ public class PlayerHealth : MonoBehaviour
 
     void UpdateHealthBar()
     {
-    
         healthBar.value = currentHealth / maxHealth;
-        
+    }
+
+    IEnumerator Die()
+    {
+        Destroy(this.gameObject.GetComponent<Rigidbody>());
+
+        yield return new WaitForSecondsRealtime(3.0f);
+
+        currentHealth = maxHealth;
+        this.gameObject.transform.position = respawnPoint.position;
     }
 
 

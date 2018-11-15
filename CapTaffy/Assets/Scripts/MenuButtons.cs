@@ -1,0 +1,43 @@
+﻿using UnityEngine;
+using System.Collections;
+using UnityEngine.SceneManagement;
+
+public class MenuButtons : MonoBehaviour
+{
+    [SerializeField]
+    string MainSceneToLoad;
+    [SerializeField]
+    string CreditsSceneToLoad;
+    [SerializeField]
+    int startGameDelay = 5;
+
+    //use when we have a loading scene
+    //public void PlayButtonClicked()
+    //{
+    //    MenuMusic music = GameObject.Find("Menu Music").GetComponent<MenuMusic>();
+    //    music.StopMusic();
+
+    //    LoadingScene.LoadNewScene(sceneToLoad);
+    //}
+
+    public void StartButtonClicked()
+    {
+        StartCoroutine(StartGameDelay());
+    }
+
+    public void CreditsButtonClicked()
+    {
+        SceneManager.LoadScene(CreditsSceneToLoad);
+    }
+
+    public void ExitGameButtonClicked()
+    {
+        Application.Quit();
+    }
+
+    IEnumerator StartGameDelay()
+    {
+        yield return new WaitForSeconds(startGameDelay);
+        SceneManager.LoadScene(MainSceneToLoad);
+    }
+}

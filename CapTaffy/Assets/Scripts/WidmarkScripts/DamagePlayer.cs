@@ -12,8 +12,6 @@ public class DamagePlayer : MonoBehaviour
 
     //CameraShake camShake;
     private bool splashScreenHasBeenActivated;
-    
-
 
     void Start()
     {
@@ -27,15 +25,15 @@ public class DamagePlayer : MonoBehaviour
         SplashScreenOff();
     }
 
-    void OnTriggerEnter(Collider other)
+    void OnTriggerStay(Collider other)
     {
-        
         if (other.tag == "Player")
         {
             test();
             splashScreenHasBeenActivated = true;
-            //camShake.CamShake();
             damageSplashScreen.gameObject.SetActive(true); // Damage splash screen appears
+            //camShake.CamShake();
+            //damageSplashScreen.gameObject.SetActive(true); // Damage splash screen appears
             other.gameObject.GetComponent<PlayerHealth>().DamagePlayer(attackDamage); // player takes damage
 
             //this.gameObject.SetActive(false);
@@ -62,7 +60,8 @@ public class DamagePlayer : MonoBehaviour
     }
 
 
-    void test()
+    void test() // Checks to see if the SplashScreen is active. If it isn't already active, then the DamageSlashScreen appears. 
+               
     {
         if (splashScreenHasBeenActivated == false && damageSplashScreen.activeSelf == true)
         {
@@ -70,7 +69,4 @@ public class DamagePlayer : MonoBehaviour
             damageSplashScreen.GetComponent<CanvasGroup>().alpha = 1;
         }
     }
-
-
-
 }

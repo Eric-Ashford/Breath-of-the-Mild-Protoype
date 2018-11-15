@@ -1468,7 +1468,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: '- Enivornment Textures'
+  m_Text: '- Environnment Textures'
 --- !u!114 &114594414088741264
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2813,8 +2813,8 @@ RectTransform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1594748685105646}
-  m_LocalRotation: {x: -0.031996198, y: -0.8125193, z: -0.04479793, w: 0.580329}
-  m_LocalPosition: {x: 0, y: 0, z: 134.52}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.014718101, y: 0.014718101, z: 0.014718101}
   m_Children:
   - {fileID: 224775223922367188}
@@ -2823,6 +2823,6 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: -6.3120003, y: -108.92901, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 233.26, y: 23.3}
-  m_SizeDelta: {x: 1920, y: 1080.2117}
-  m_Pivot: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0, y: 0}

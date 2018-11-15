@@ -47,7 +47,7 @@ public class PlayerHealth : MonoBehaviour
     {
         currentHealth += amount;
 
-        if (currentHealth > maxHealth)
+        if (currentHealth >= maxHealth)
         {
             currentHealth = maxHealth;
         }
@@ -56,6 +56,19 @@ public class PlayerHealth : MonoBehaviour
     void UpdateHealthBar()
     {
         healthBar.value = currentHealth / maxHealth;
+<<<<<<< HEAD
+=======
+    }
+
+    IEnumerator Die()
+    {
+        Destroy(this.gameObject.GetComponent<Rigidbody>());
+
+        yield return new WaitForSecondsRealtime(3.0f);
+
+        currentHealth = maxHealth;
+        this.gameObject.transform.position = respawnPoint.position;
+>>>>>>> 2060d5d4778a8d10a104106b21b93949462f2bc8
     }
 
     IEnumerator Die()

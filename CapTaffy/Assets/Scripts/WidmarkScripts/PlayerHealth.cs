@@ -47,7 +47,7 @@ public class PlayerHealth : MonoBehaviour
     {
         currentHealth += amount;
 
-        if (currentHealth > maxHealth)
+        if (currentHealth >= maxHealth)
         {
             currentHealth = maxHealth;
         }
@@ -67,4 +67,7 @@ public class PlayerHealth : MonoBehaviour
         currentHealth = maxHealth;
         this.gameObject.transform.position = respawnPoint.position;
     }
+
+
+
 }

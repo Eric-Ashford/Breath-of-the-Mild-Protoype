@@ -700,21 +700,6 @@ Prefab:
       propertyPath: m_RootOrder
       value: 6
       objectReference: {fileID: 0}
-    - target: {fileID: 114904934268552726, guid: d6c4f37ad8f2ead4999fc73e819fe09c,
-        type: 2}
-      propertyPath: healthBar
-      value: 
-      objectReference: {fileID: 1191561893}
-    - target: {fileID: 114904934268552726, guid: d6c4f37ad8f2ead4999fc73e819fe09c,
-        type: 2}
-      propertyPath: respawnPoint
-      value: 
-      objectReference: {fileID: 2012459201}
-    - target: {fileID: 114712259940428248, guid: d6c4f37ad8f2ead4999fc73e819fe09c,
-        type: 2}
-      propertyPath: cameraTransform
-      value: 
-      objectReference: {fileID: 1598380885}
     - target: {fileID: 114294249027980864, guid: d6c4f37ad8f2ead4999fc73e819fe09c,
         type: 2}
       propertyPath: magicBar
@@ -735,48 +720,21 @@ Prefab:
       propertyPath: fireSpellActiveText
       value: 
       objectReference: {fileID: 945749370}
-    - target: {fileID: 82680850409206524, guid: d6c4f37ad8f2ead4999fc73e819fe09c,
-        type: 2}
-      propertyPath: OutputAudioMixerGroup
-      value: 
-      objectReference: {fileID: 243931585154396168, guid: e0654aea292542d4ca6990e48cebae43,
-        type: 2}
-    - target: {fileID: 82449975082049072, guid: d6c4f37ad8f2ead4999fc73e819fe09c,
-        type: 2}
-      propertyPath: OutputAudioMixerGroup
-      value: 
-      objectReference: {fileID: 243063656914358232, guid: e0654aea292542d4ca6990e48cebae43,
-        type: 2}
-    - target: {fileID: 82260519509137822, guid: d6c4f37ad8f2ead4999fc73e819fe09c,
-        type: 2}
-      propertyPath: OutputAudioMixerGroup
-      value: 
-      objectReference: {fileID: 243234701428792614, guid: e0654aea292542d4ca6990e48cebae43,
-        type: 2}
-    - target: {fileID: 82151196602415884, guid: d6c4f37ad8f2ead4999fc73e819fe09c,
-        type: 2}
-      propertyPath: OutputAudioMixerGroup
-      value: 
-      objectReference: {fileID: 243234701428792614, guid: e0654aea292542d4ca6990e48cebae43,
-        type: 2}
-    - target: {fileID: 82074838076859570, guid: d6c4f37ad8f2ead4999fc73e819fe09c,
-        type: 2}
-      propertyPath: OutputAudioMixerGroup
-      value: 
-      objectReference: {fileID: 243538387971058846, guid: e0654aea292542d4ca6990e48cebae43,
-        type: 2}
     - target: {fileID: 114904934268552726, guid: d6c4f37ad8f2ead4999fc73e819fe09c,
         type: 2}
-      propertyPath: NearDeath
+      propertyPath: healthBar
       value: 
-      objectReference: {fileID: 245707039680380524, guid: e0654aea292542d4ca6990e48cebae43,
-        type: 2}
+      objectReference: {fileID: 1191561893}
     - target: {fileID: 114904934268552726, guid: d6c4f37ad8f2ead4999fc73e819fe09c,
         type: 2}
-      propertyPath: Healthy
+      propertyPath: respawnPoint
       value: 
-      objectReference: {fileID: 24500006, guid: e0654aea292542d4ca6990e48cebae43,
+      objectReference: {fileID: 2012459201}
+    - target: {fileID: 114712259940428248, guid: d6c4f37ad8f2ead4999fc73e819fe09c,
         type: 2}
+      propertyPath: cameraTransform
+      value: 
+      objectReference: {fileID: 1598380885}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d6c4f37ad8f2ead4999fc73e819fe09c, type: 2}
   m_IsPrefabParent: 0
@@ -2413,6 +2371,26 @@ Prefab:
         type: 2}
       propertyPath: m_AnchorMax.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114614259188119214, guid: e0c3738dfade5f04cb195e30c5c14218,
+        type: 2}
+      propertyPath: m_Text
+      value: Magic Bolt is Currently Active
+      objectReference: {fileID: 0}
+    - target: {fileID: 114614259188119214, guid: e0c3738dfade5f04cb195e30c5c14218,
+        type: 2}
+      propertyPath: m_Color.g
+      value: 0.7176471
+      objectReference: {fileID: 0}
+    - target: {fileID: 114614259188119214, guid: e0c3738dfade5f04cb195e30c5c14218,
+        type: 2}
+      propertyPath: m_Color.b
+      value: 0.972549
+      objectReference: {fileID: 0}
+    - target: {fileID: 114614259188119214, guid: e0c3738dfade5f04cb195e30c5c14218,
+        type: 2}
+      propertyPath: m_Color.r
+      value: 0.24313726
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e0c3738dfade5f04cb195e30c5c14218, type: 2}

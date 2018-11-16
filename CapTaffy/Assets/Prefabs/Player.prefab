@@ -412,7 +412,8 @@ AudioSource:
   m_GameObject: {fileID: 1987866581882940}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: 243538387971058846, guid: e0654aea292542d4ca6990e48cebae43,
+    type: 2}
   m_audioClip: {fileID: 8300000, guid: 8c722c94afabb104596991be5f0ce59a, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
@@ -507,7 +508,8 @@ AudioSource:
   m_GameObject: {fileID: 1987866581882940}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: 243234701428792614, guid: e0654aea292542d4ca6990e48cebae43,
+    type: 2}
   m_audioClip: {fileID: 8300000, guid: 0a1ded979b594ff47a570845e97f0843, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
@@ -602,7 +604,8 @@ AudioSource:
   m_GameObject: {fileID: 1987866581882940}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: 243234701428792614, guid: e0654aea292542d4ca6990e48cebae43,
+    type: 2}
   m_audioClip: {fileID: 8300000, guid: b458d60d288602541b7ef13a9580f084, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
@@ -697,7 +700,8 @@ AudioSource:
   m_GameObject: {fileID: 1987866581882940}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: 243063656914358232, guid: e0654aea292542d4ca6990e48cebae43,
+    type: 2}
   m_audioClip: {fileID: 8300000, guid: 31ba702d9dbdf5f49898284363940746, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
@@ -792,7 +796,8 @@ AudioSource:
   m_GameObject: {fileID: 1987866581882940}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: 243931585154396168, guid: e0654aea292542d4ca6990e48cebae43,
+    type: 2}
   m_audioClip: {fileID: 8300000, guid: 1f48ee7e2c4647745b6770fe6a024d91, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
@@ -1018,7 +1023,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   magicBar: {fileID: 0}
   projectileSpawnPoint: {fileID: 4140382031303638}
-  projectilePrefab: {fileID: 1217582482709366, guid: 5554b69750789db4ca37769ff346f151,
+  projectilePrefab: {fileID: 1640996609037200, guid: 5554b69750789db4ca37769ff346f151,
     type: 2}
   projectileSpeed: 40
   healSplashScreen: {fileID: 0}
@@ -1086,6 +1091,9 @@ MonoBehaviour:
   currentHealth: 0
   maxHealth: 100
   respawnPoint: {fileID: 0}
+  NearDeath: {fileID: 245707039680380524, guid: e0654aea292542d4ca6990e48cebae43,
+    type: 2}
+  Healthy: {fileID: 24500006, guid: e0654aea292542d4ca6990e48cebae43, type: 2}
 --- !u!135 &135323154430055734
 SphereCollider:
   m_ObjectHideFlags: 1

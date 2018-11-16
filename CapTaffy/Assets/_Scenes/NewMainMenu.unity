@@ -7418,6 +7418,11 @@ Prefab:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_Target
       value: 
       objectReference: {fileID: 1957773747}
+    - target: {fileID: 114408601560876948, guid: 1001c274ea2cacc459e43f53f3ee6d63,
+        type: 2}
+      propertyPath: m_Text
+      value: Press B to Return
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 1001c274ea2cacc459e43f53f3ee6d63, type: 2}
   m_IsPrefabParent: 0
@@ -7616,7 +7621,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: My Date with Beetle-chan
+  m_Text: Battle Beneath
 --- !u!222 &1668910111
 CanvasRenderer:
   m_ObjectHideFlags: 0

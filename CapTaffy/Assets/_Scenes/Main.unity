@@ -330,7 +330,7 @@ AudioSource:
   m_GameObject: {fileID: 157519064}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: 243706799455932668, guid: e0654aea292542d4ca6990e48cebae43,
     type: 2}
   m_audioClip: {fileID: 8300000, guid: d4b77876d08c5314aab2917e39dfe9ad, type: 3}
   m_PlayOnAwake: 0
@@ -788,6 +788,11 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 22.341002, y: 17.498001, z: 5.1070004}
+--- !u!1 &362969687 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1269278228777788, guid: 8d30318fddaa5314c8a574cc32d73327,
+    type: 2}
+  m_PrefabInternal: {fileID: 1805613791}
 --- !u!1 &467330963
 GameObject:
   m_ObjectHideFlags: 0
@@ -1079,11 +1084,11 @@ Prefab:
       propertyPath: m_RootOrder
       value: 3
       objectReference: {fileID: 0}
-    - target: {fileID: 114239891299524748, guid: ddde2e0d1dc3f5043b1b80c9997b1c85,
+    - target: {fileID: 136681654200626672, guid: ddde2e0d1dc3f5043b1b80c9997b1c85,
         type: 2}
-      propertyPath: damageSplashScreen
-      value: 
-      objectReference: {fileID: 2132702540}
+      propertyPath: m_IsTrigger
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ddde2e0d1dc3f5043b1b80c9997b1c85, type: 2}
   m_IsPrefabParent: 0
@@ -1849,7 +1854,9 @@ Prefab:
       propertyPath: menuCanvas
       value: 
       objectReference: {fileID: 1349134317}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 114400344071174710, guid: 8d30318fddaa5314c8a574cc32d73327, type: 2}
+    - {fileID: 114419989410134558, guid: 8d30318fddaa5314c8a574cc32d73327, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: 8d30318fddaa5314c8a574cc32d73327, type: 2}
   m_IsPrefabParent: 0
 --- !u!1 &1843679528
@@ -2512,7 +2519,7 @@ MonoBehaviour:
   m_Script: {fileID: -619905303, guid: f70555f144d8491a825f0804e09c671c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_FirstSelected: {fileID: 0}
+  m_FirstSelected: {fileID: 362969687}
   m_sendNavigationEvents: 1
   m_DragThreshold: 10
 --- !u!1 &2132702540 stripped

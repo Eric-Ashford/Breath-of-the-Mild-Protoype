@@ -28,7 +28,7 @@ public class MenuButtons : MonoBehaviour
     {
         if (Input.GetButton("Cancel"))
         {
-            returnButton.onClick.Invoke();
+            //returnButton.onClick.Invoke();
         }
     }
 

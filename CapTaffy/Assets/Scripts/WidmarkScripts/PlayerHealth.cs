@@ -68,8 +68,9 @@ public class PlayerHealth : MonoBehaviour
     IEnumerator Die()
     {
         Destroy(this.gameObject.GetComponent<Rigidbody>());
-
+        GetComponent<PlayerMove>().enabled = false;
         yield return new WaitForSecondsRealtime(3.0f);
+        GetComponent<PlayerMove>().enabled = true;
 
         currentHealth = maxHealth;
         this.gameObject.transform.position = respawnPoint.position;

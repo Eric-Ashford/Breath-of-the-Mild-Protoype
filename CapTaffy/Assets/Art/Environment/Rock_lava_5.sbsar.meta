@@ -1,0 +1,388 @@
+fileFormatVersion: 2
+guid: a3d454d82dd81ba40bf0de1ada11ce2e
+ScriptedImporter:
+  fileIDToRecycleName:
+    100000: Rock_lava_5/Rock_lava_5
+    400000: Rock_lava_5/Rock_lava_5/Transform
+    2100000: mat.Rock_lava
+    2100002: mat.Rock_lava_1
+    2100004: mat.Rock_lava_2
+    2100006: mat.Rock_lava_3
+    2300000: Rock_lava_5/Rock_lava_5/MeshRenderer
+    2800000: Rock_lava_emissive
+    2800002: Rock_lava_normal
+    2800004: Rock_lava_metallic
+    2800006: Rock_lava_ambientOcclusion
+    2800008: Rock_lava_height
+    2800010: Rock_lava_baseColor
+    2800012: Rock_lava_1_emissive
+    2800014: Rock_lava_1_normal
+    2800016: Rock_lava_1_metallic
+    2800018: Rock_lava_1_ambientOcclusion
+    2800020: Rock_lava_1_height
+    2800022: Rock_lava_1_baseColor
+    2800024: Rock_lava_2_emissive
+    2800026: Rock_lava_2_normal
+    2800028: Rock_lava_2_metallic
+    2800030: Rock_lava_2_ambientOcclusion
+    2800032: Rock_lava_2_height
+    2800034: Rock_lava_2_baseColor
+    2800036: Rock_lava_3_emissive
+    2800038: Rock_lava_3_normal
+    2800040: Rock_lava_3_metallic
+    2800042: Rock_lava_3_ambientOcclusion
+    2800044: Rock_lava_3_height
+    2800046: Rock_lava_3_baseColor
+    3300000: Rock_lava_5/Rock_lava_5/MeshFilter
+    11400000: sbsar
+    11400002: graph0
+    11400004: graph1
+    11400006: graph2
+    11400008: graph3
+    13500000: Rock_lava_5/Rock_lava_5/SphereCollider
+    100100000: Rock_lava_5
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: 232528478, guid: 43a8bbf65be290d44ba52b94476242b9, type: 3}
+  version: 13
+  mGraphInstanceData:
+  - graphLabel: Rock_lava
+    prototypeName: Rock_lava
+    graphDescIndex: 0
+    generateAllOutputs: 0
+    generateMipMaps: 1
+    preset: " <sbspreset pkgurl=\"pkg://Rock_lava\" label=\"\" >\n  <presetinput identifier=\"$outputsize\"
+      uid=\"1113962863\" type=\"8\" value=\"10,10\" />\n  <presetinput identifier=\"position\"
+      uid=\"926436313\" type=\"0\" value=\"0.5\" />\n </sbspreset>\n"
+    shaderName: Standard
+    outputNames: emissive,normal,metallic,ambientOcclusion,height,baseColor
+    texturePackingList:
+    - outputName: emissive
+      alphaSource: emissive
+    - outputName: normal
+      alphaSource: normal
+    - outputName: roughness
+      alphaSource: roughness
+    - outputName: metallic
+      alphaSource: metallic
+    - outputName: ambientOcclusion
+      alphaSource: ambientOcclusion
+    - outputName: height
+      alphaSource: height
+    - outputName: baseColor
+      alphaSource: baseColor
+    textureParameters:
+    - textureName: Rock_lava_roughness
+      wrapMode: 0
+      filterMode: 1
+      aniso: 1
+    - textureName: Rock_lava_emissive
+      wrapMode: 0
+      filterMode: 1
+      aniso: 1
+    - textureName: Rock_lava_normal
+      wrapMode: 0
+      filterMode: 1
+      aniso: 1
+    - textureName: Rock_lava_metallic
+      wrapMode: 0
+      filterMode: 1
+      aniso: 1
+    - textureName: Rock_lava_ambientOcclusion
+      wrapMode: 0
+      filterMode: 1
+      aniso: 1
+    - textureName: Rock_lava_height
+      wrapMode: 0
+      filterMode: 1
+      aniso: 1
+    - textureName: Rock_lava_baseColor
+      wrapMode: 0
+      filterMode: 1
+      aniso: 1
+    colorSpaceList:
+    - outputName: emissive
+      bLinear: 0
+    - outputName: normal
+      bLinear: 1
+    - outputName: roughness
+      bLinear: 1
+    - outputName: metallic
+      bLinear: 1
+    - outputName: ambientOcclusion
+      bLinear: 1
+    - outputName: height
+      bLinear: 1
+    - outputName: baseColor
+      bLinear: 0
+    inputTextureMap: []
+    targetSettingList:
+    - label: 
+      bLockRatio: 1
+      bHighQuality: 0
+      textureWidth: 1024
+      textureHeight: 1024
+      textureFormat: 0
+      bGenerateOnLoad: 1
+    material: {fileID: 2100000, guid: a3d454d82dd81ba40bf0de1ada11ce2e, type: 3}
+    generatedTextures: []
+  - graphLabel: Rock_lava_2
+    prototypeName: Rock_lava
+    graphDescIndex: 0
+    generateAllOutputs: 0
+    generateMipMaps: 1
+    preset: " <sbspreset pkgurl=\"pkg://Rock_lava\" label=\"\" >\n  <presetinput identifier=\"$outputsize\"
+      uid=\"1113962863\" type=\"8\" value=\"11,11\" />\n  <presetinput identifier=\"position\"
+      uid=\"926436313\" type=\"0\" value=\"0.639\" />\n </sbspreset>\n"
+    shaderName: Standard
+    outputNames: emissive,normal,metallic,ambientOcclusion,height,baseColor
+    texturePackingList:
+    - outputName: emissive
+      alphaSource: emissive
+    - outputName: normal
+      alphaSource: normal
+    - outputName: roughness
+      alphaSource: roughness
+    - outputName: metallic
+      alphaSource: metallic
+    - outputName: ambientOcclusion
+      alphaSource: ambientOcclusion
+    - outputName: height
+      alphaSource: height
+    - outputName: baseColor
+      alphaSource: baseColor
+    textureParameters:
+    - textureName: Rock_lava_2_emissive
+      wrapMode: 0
+      filterMode: 1
+      aniso: 1
+    - textureName: Rock_lava_2_normal
+      wrapMode: 0
+      filterMode: 1
+      aniso: 1
+    - textureName: Rock_lava_2_roughness
+      wrapMode: 0
+      filterMode: 1
+      aniso: 1
+    - textureName: Rock_lava_2_metallic
+      wrapMode: 0
+      filterMode: 1
+      aniso: 1
+    - textureName: Rock_lava_2_ambientOcclusion
+      wrapMode: 0
+      filterMode: 1
+      aniso: 1
+    - textureName: Rock_lava_2_height
+      wrapMode: 0
+      filterMode: 1
+      aniso: 1
+    - textureName: Rock_lava_2_baseColor
+      wrapMode: 0
+      filterMode: 1
+      aniso: 1
+    colorSpaceList:
+    - outputName: emissive
+      bLinear: 0
+    - outputName: normal
+      bLinear: 1
+    - outputName: roughness
+      bLinear: 1
+    - outputName: metallic
+      bLinear: 1
+    - outputName: ambientOcclusion
+      bLinear: 1
+    - outputName: height
+      bLinear: 1
+    - outputName: baseColor
+      bLinear: 0
+    inputTextureMap: []
+    targetSettingList:
+    - label: 
+      bLockRatio: 1
+      bHighQuality: 0
+      textureWidth: 2048
+      textureHeight: 2048
+      textureFormat: 0
+      bGenerateOnLoad: 1
+    material: {fileID: 2100004, guid: a3d454d82dd81ba40bf0de1ada11ce2e, type: 3}
+    generatedTextures:
+    - {fileID: 2800024, guid: a3d454d82dd81ba40bf0de1ada11ce2e, type: 3}
+    - {fileID: 2800026, guid: a3d454d82dd81ba40bf0de1ada11ce2e, type: 3}
+    - {fileID: 2800028, guid: a3d454d82dd81ba40bf0de1ada11ce2e, type: 3}
+    - {fileID: 2800030, guid: a3d454d82dd81ba40bf0de1ada11ce2e, type: 3}
+    - {fileID: 2800032, guid: a3d454d82dd81ba40bf0de1ada11ce2e, type: 3}
+    - {fileID: 2800034, guid: a3d454d82dd81ba40bf0de1ada11ce2e, type: 3}
+  - graphLabel: Rock_lava_1
+    prototypeName: Rock_lava
+    graphDescIndex: 0
+    generateAllOutputs: 0
+    generateMipMaps: 1
+    preset: " <sbspreset pkgurl=\"pkg://Rock_lava\" label=\"\" >\n  <presetinput identifier=\"$outputsize\"
+      uid=\"1113962863\" type=\"8\" value=\"11,11\" />\n  <presetinput identifier=\"position\"
+      uid=\"926436313\" type=\"0\" value=\"0.184\" />\n </sbspreset>\n"
+    shaderName: Standard
+    outputNames: emissive,normal,metallic,ambientOcclusion,height,baseColor
+    texturePackingList:
+    - outputName: emissive
+      alphaSource: emissive
+    - outputName: normal
+      alphaSource: normal
+    - outputName: roughness
+      alphaSource: roughness
+    - outputName: metallic
+      alphaSource: metallic
+    - outputName: ambientOcclusion
+      alphaSource: ambientOcclusion
+    - outputName: height
+      alphaSource: height
+    - outputName: baseColor
+      alphaSource: baseColor
+    textureParameters:
+    - textureName: Rock_lava_1_emissive
+      wrapMode: 0
+      filterMode: 1
+      aniso: 1
+    - textureName: Rock_lava_1_normal
+      wrapMode: 0
+      filterMode: 1
+      aniso: 1
+    - textureName: Rock_lava_1_roughness
+      wrapMode: 0
+      filterMode: 1
+      aniso: 1
+    - textureName: Rock_lava_1_metallic
+      wrapMode: 0
+      filterMode: 1
+      aniso: 1
+    - textureName: Rock_lava_1_ambientOcclusion
+      wrapMode: 0
+      filterMode: 1
+      aniso: 1
+    - textureName: Rock_lava_1_height
+      wrapMode: 0
+      filterMode: 1
+      aniso: 1
+    - textureName: Rock_lava_1_baseColor
+      wrapMode: 0
+      filterMode: 1
+      aniso: 1
+    colorSpaceList:
+    - outputName: emissive
+      bLinear: 0
+    - outputName: normal
+      bLinear: 1
+    - outputName: roughness
+      bLinear: 1
+    - outputName: metallic
+      bLinear: 1
+    - outputName: ambientOcclusion
+      bLinear: 1
+    - outputName: height
+      bLinear: 1
+    - outputName: baseColor
+      bLinear: 0
+    inputTextureMap: []
+    targetSettingList:
+    - label: 
+      bLockRatio: 1
+      bHighQuality: 0
+      textureWidth: 2048
+      textureHeight: 2048
+      textureFormat: 0
+      bGenerateOnLoad: 1
+    material: {fileID: 2100002, guid: a3d454d82dd81ba40bf0de1ada11ce2e, type: 3}
+    generatedTextures:
+    - {fileID: 2800012, guid: a3d454d82dd81ba40bf0de1ada11ce2e, type: 3}
+    - {fileID: 2800014, guid: a3d454d82dd81ba40bf0de1ada11ce2e, type: 3}
+    - {fileID: 2800016, guid: a3d454d82dd81ba40bf0de1ada11ce2e, type: 3}
+    - {fileID: 2800018, guid: a3d454d82dd81ba40bf0de1ada11ce2e, type: 3}
+    - {fileID: 2800020, guid: a3d454d82dd81ba40bf0de1ada11ce2e, type: 3}
+    - {fileID: 2800022, guid: a3d454d82dd81ba40bf0de1ada11ce2e, type: 3}
+  - graphLabel: Rock_lava_3
+    prototypeName: Rock_lava
+    graphDescIndex: 0
+    generateAllOutputs: 0
+    generateMipMaps: 1
+    preset: " <sbspreset pkgurl=\"pkg://Rock_lava\" label=\"\" >\n  <presetinput identifier=\"$outputsize\"
+      uid=\"1113962863\" type=\"8\" value=\"9,9\" />\n  <presetinput identifier=\"position\"
+      uid=\"926436313\" type=\"0\" value=\"0.557\" />\n </sbspreset>\n"
+    shaderName: Standard
+    outputNames: emissive,normal,metallic,ambientOcclusion,height,baseColor
+    texturePackingList:
+    - outputName: emissive
+      alphaSource: emissive
+    - outputName: normal
+      alphaSource: normal
+    - outputName: roughness
+      alphaSource: roughness
+    - outputName: metallic
+      alphaSource: metallic
+    - outputName: ambientOcclusion
+      alphaSource: ambientOcclusion
+    - outputName: height
+      alphaSource: height
+    - outputName: baseColor
+      alphaSource: baseColor
+    textureParameters:
+    - textureName: Rock_lava_3_emissive
+      wrapMode: 0
+      filterMode: 1
+      aniso: 1
+    - textureName: Rock_lava_3_normal
+      wrapMode: 0
+      filterMode: 1
+      aniso: 1
+    - textureName: Rock_lava_3_roughness
+      wrapMode: 0
+      filterMode: 1
+      aniso: 1
+    - textureName: Rock_lava_3_metallic
+      wrapMode: 0
+      filterMode: 1
+      aniso: 1
+    - textureName: Rock_lava_3_ambientOcclusion
+      wrapMode: 0
+      filterMode: 1
+      aniso: 1
+    - textureName: Rock_lava_3_height
+      wrapMode: 0
+      filterMode: 1
+      aniso: 1
+    - textureName: Rock_lava_3_baseColor
+      wrapMode: 0
+      filterMode: 1
+      aniso: 1
+    colorSpaceList:
+    - outputName: emissive
+      bLinear: 0
+    - outputName: normal
+      bLinear: 1
+    - outputName: roughness
+      bLinear: 1
+    - outputName: metallic
+      bLinear: 1
+    - outputName: ambientOcclusion
+      bLinear: 1
+    - outputName: height
+      bLinear: 1
+    - outputName: baseColor
+      bLinear: 0
+    inputTextureMap: []
+    targetSettingList:
+    - label: 
+      bLockRatio: 1
+      bHighQuality: 0
+      textureWidth: 512
+      textureHeight: 512
+      textureFormat: 0
+      bGenerateOnLoad: 1
+    material: {fileID: 2100006, guid: a3d454d82dd81ba40bf0de1ada11ce2e, type: 3}
+    generatedTextures:
+    - {fileID: 2800036, guid: a3d454d82dd81ba40bf0de1ada11ce2e, type: 3}
+    - {fileID: 2800038, guid: a3d454d82dd81ba40bf0de1ada11ce2e, type: 3}
+    - {fileID: 2800040, guid: a3d454d82dd81ba40bf0de1ada11ce2e, type: 3}
+    - {fileID: 2800042, guid: a3d454d82dd81ba40bf0de1ada11ce2e, type: 3}
+    - {fileID: 2800044, guid: a3d454d82dd81ba40bf0de1ada11ce2e, type: 3}
+    - {fileID: 2800046, guid: a3d454d82dd81ba40bf0de1ada11ce2e, type: 3}

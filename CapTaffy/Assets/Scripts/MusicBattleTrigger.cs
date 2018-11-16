@@ -7,8 +7,6 @@ public class MusicBattleTrigger : MonoBehaviour {
 
     public AudioSource battleMusic;
 
-
-
 	// Use this for initialization
 	void Start ()
     {
@@ -23,7 +21,5 @@ public class MusicBattleTrigger : MonoBehaviour {
     private void OnTriggerEnter(Collider other)
     {
         battleMusic.Play();
-        this.gameObject.GetComponent<BoxCollider>().enabled = false;
-        
     }
 }

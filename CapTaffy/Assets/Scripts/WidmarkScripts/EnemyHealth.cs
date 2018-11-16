@@ -5,8 +5,8 @@ using UnityEngine.UI;
 
 public class EnemyHealth : MonoBehaviour
 {
-    //[SerializeField]
-    //private Canvas enemyCanvas;
+    [SerializeField]
+    private Canvas enemyCanvas;
     [SerializeField]
     Slider healthBar;
     [SerializeField]
@@ -16,10 +16,6 @@ public class EnemyHealth : MonoBehaviour
     [SerializeField]
     private float maxHealth = 100f;
     [SerializeField]
-    private float maxFlinch = 0f;
-    [SerializeField]
-    private float slamAttackDelay = 0f;
-    [SerializeField]
     private Material[] injuryState;
 
     private Canvas enemyCanvasClone;
@@ -27,36 +23,28 @@ public class EnemyHealth : MonoBehaviour
     private SkinnedMeshRenderer sknMeshRndr;
     private Animator anim;
 
-    private float currentFlinch;
-    private bool waitActive;
-
     void Start()
     {
         sknMeshRndr = GetComponent<SkinnedMeshRenderer>();
         anim = GetComponent<Animator>();
 
-        //enemyCanvasClone = Instantiate(enemyCanvas);
-        //enemyCanvas = enemyCanvasClone;
-        //healthBar = enemyCanvas.GetComponentInChildren<Slider>();
+        enemyCanvasClone = Instantiate(enemyCanvas);
+        enemyCanvas = enemyCanvasClone;
+        healthBar = enemyCanvas.GetComponentInChildren<Slider>();
 
         //healthBarClone = Instantiate(healthBar, enemyCanvas.transform);
         //healthBar.transform.parent = enemyCanvas.transform;
 
 
         currentHealth = maxHealth;
-        currentFlinch = 0;
         UpdateHealthBar();
         InjuryStatus();
     }
 
     private void Update()
     {
-        //healthBar.transform.position = new Vector3 (transform.position.x, transform.position.y + sliderOffset, transform.position.z);
+        healthBar.transform.position = new Vector3 (transform.position.x, transform.position.y + sliderOffset, transform.position.z);
         InjuryStatus();
-        if (waitActive == false)
-        {
-            anim.SetBool("canSlam", false);
-        }
     }
 
     void LateUpdate()
@@ -67,7 +55,6 @@ public class EnemyHealth : MonoBehaviour
     public void DamageEnemy(float amount)
     {
         currentHealth -= amount;
-        currentFlinch++;
 
         if (currentHealth <= 0)
         {
@@ -75,14 +62,8 @@ public class EnemyHealth : MonoBehaviour
             anim.SetBool("chasePlayer", false);
             anim.SetBool("breatheFire", false);
             anim.SetBool("attackPlayer", false);
-            Destroy(healthBar);
+            Destroy(enemyCanvasClone);
             
-        }
-        else if (currentFlinch >= maxFlinch)
-        {
-            anim.SetBool("canSlam", true);
-            StartCoroutine(Wait(slamAttackDelay));            
-            currentFlinch = 0;
         }
         else
         {
@@ -119,11 +100,5 @@ public class EnemyHealth : MonoBehaviour
         {
             sknMeshRndr.sharedMaterial = injuryState[2];
         }
-    }
-    private IEnumerator Wait(float delay)
-    {
-        waitActive = true;
-        yield return new WaitForSeconds(delay);
-        waitActive = false;
     }
 }

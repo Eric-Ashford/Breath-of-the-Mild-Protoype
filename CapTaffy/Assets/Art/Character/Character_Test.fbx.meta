@@ -388,6 +388,7 @@ ModelImporter:
     4300000: Pant_low:Group23681
     7400000: Take 001
     9500000: //RootNode
+    2186277476908879412: ImportLogs
   externalObjects: {}
   materials:
     importMaterials: 1
@@ -400,7 +401,8 @@ ModelImporter:
     resampleCurves: 1
     optimizeGameObjects: 0
     motionNodeName: 
-    rigImportErrors: 
+    rigImportErrors: "Invalid Avatar Rig Configuration. Missing or invalid transform:\n\tRequired
+      human bone 'LeftUpperLeg' not found\n"
     rigImportWarnings: 
     animationImportErrors: 
     animationImportWarnings: 
@@ -408,7 +410,7 @@ ModelImporter:
     animationDoRetargetingWarnings: 0
     importAnimatedCustomProperties: 0
     importConstraints: 0
-    animationCompression: 1
+    animationCompression: 3
     animationRotationError: 0.5
     animationPositionError: 0.5
     animationScaleError: 0.5
@@ -448,8 +450,969 @@ ModelImporter:
   copyAvatar: 0
   humanDescription:
     serializedVersion: 2
-    human: []
-    skeleton: []
+    human:
+    - boneName: pPlane116
+      humanName: Hips
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Pant_low:transform37
+      humanName: Spine
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    skeleton:
+    - name: Character_Test(Clone)
+      parentName: 
+      position: {x: 0, y: 0, z: 0}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: BangsV1
+      parentName: Character_Test(Clone)
+      position: {x: 0.2483791, y: 2.2953367, z: 0.5932555}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Pant_low:transform58
+      parentName: BangsV1
+      position: {x: -0.2483791, y: -2.2953367, z: -0.5932555}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: BangsV2
+      parentName: Character_Test(Clone)
+      position: {x: 0.25374025, y: 2.3550694, z: 0.6293955}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Pant_low:transform20
+      parentName: BangsV2
+      position: {x: -0.25374025, y: -2.3550694, z: -0.6293955}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: HairBase1
+      parentName: Character_Test(Clone)
+      position: {x: 0.026780099, y: 2.0558403, z: -0.1882272}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Pant_low:transform4
+      parentName: HairBase1
+      position: {x: -0.026780099, y: -2.0558403, z: 0.1882272}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Head_low:Group25744
+      parentName: Character_Test(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Pant_low:transform69
+      parentName: Head_low:Group25744
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Jacket_low:Group15120
+      parentName: Character_Test(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Pant_low:transform50
+      parentName: Jacket_low:Group15120
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: L_Bangs_Base
+      parentName: Character_Test(Clone)
+      position: {x: -0.330912, y: 2.2955153, z: 0.50121}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Pant_low:transform68
+      parentName: L_Bangs_Base
+      position: {x: 0.330912, y: -2.2955153, z: -0.50121}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: L_Bangs_Base__Reversed_
+      parentName: Character_Test(Clone)
+      position: {x: -0.330912, y: 2.2955153, z: 0.50121}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Pant_low:transform47
+      parentName: L_Bangs_Base__Reversed_
+      position: {x: 0.330912, y: -2.2955153, z: -0.50121}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: L_SideFlipBase
+      parentName: Character_Test(Clone)
+      position: {x: -0.5921169, y: 1.8376032, z: 0.027151333}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Pant_low:transform41
+      parentName: L_SideFlipBase
+      position: {x: 0.5921169, y: -1.8376032, z: -0.027151333}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: L_SideFlipBase_Reversed
+      parentName: Character_Test(Clone)
+      position: {x: -0.5921169, y: 1.8376032, z: 0.027151333}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Pant_low:transform22
+      parentName: L_SideFlipBase_Reversed
+      position: {x: 0.5921169, y: -1.8376032, z: -0.027151333}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: LowerHairBasev1
+      parentName: Character_Test(Clone)
+      position: {x: 0.03686526, y: 1.8336238, z: -0.438671}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Pant_low:transform1
+      parentName: LowerHairBasev1
+      position: {x: -0.03686526, y: -1.8336238, z: 0.438671}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: LowerHairBasev2
+      parentName: Character_Test(Clone)
+      position: {x: 0.07195394, y: 1.9781125, z: -0.48528656}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Pant_low:transform3
+      parentName: LowerHairBasev2
+      position: {x: -0.07195394, y: -1.9781125, z: 0.48528656}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Pant_low:Group23680
+      parentName: Character_Test(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Pant_low:transform71
+      parentName: Pant_low:Group23680
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Pant_low:Group23681
+      parentName: Character_Test(Clone)
+      position: {x: -0, y: -2.2224581, z: 0.04709025}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: polySurface4
+      parentName: Character_Test(Clone)
+      position: {x: -0, y: -0.3734296, z: 0.13421714}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Pant_low:transform70
+      parentName: polySurface4
+      position: {x: -0, y: 0.3734296, z: -0.13421714}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: pPlane19
+      parentName: Character_Test(Clone)
+      position: {x: -0.6230448, y: 2.159397, z: 0.018808812}
+      rotation: {x: -0.3377478, y: 0.66582626, z: -0.62122977, w: -0.23806594}
+      scale: {x: 0.2504402, y: 1.5926603, z: 2.2001858}
+    - name: Pant_low:transform17
+      parentName: pPlane19
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: pPlane25
+      parentName: Character_Test(Clone)
+      position: {x: 0.5191366, y: 2.6995776, z: 0.31328025}
+      rotation: {x: 0.5499962, y: 0.69519943, z: -0.23412162, w: 0.39923558}
+      scale: {x: 0.2504402, y: 1.5926603, z: 1.4093444}
+    - name: Pant_low:transform15
+      parentName: pPlane25
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: pPlane26
+      parentName: Character_Test(Clone)
+      position: {x: 0.50936526, y: 2.7816415, z: 0.20691694}
+      rotation: {x: 0.5499962, y: 0.69519943, z: -0.23412162, w: 0.39923558}
+      scale: {x: 0.2504402, y: 1.5926603, z: 1.4093444}
+    - name: Pant_low:transform16
+      parentName: pPlane26
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: pPlane27
+      parentName: Character_Test(Clone)
+      position: {x: 0.5191366, y: 2.6995776, z: 0.31328025}
+      rotation: {x: 0.5499962, y: 0.69519943, z: -0.23412162, w: 0.39923558}
+      scale: {x: 0.2504402, y: 1.5926603, z: 1.4093444}
+    - name: Pant_low:transform5
+      parentName: pPlane27
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: pPlane28
+      parentName: Character_Test(Clone)
+      position: {x: 0.45552817, y: 2.8521016, z: 0.109792285}
+      rotation: {x: 0.4406864, y: 0.71629137, z: -0.27433375, w: 0.4663295}
+      scale: {x: 0.2504402, y: 1.5926603, z: 1.4093444}
+    - name: Pant_low:transform6
+      parentName: pPlane28
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: pPlane29
+      parentName: Character_Test(Clone)
+      position: {x: 0.49319783, y: 2.7579145, z: 0.26259762}
+      rotation: {x: 0.5968084, y: 0.6247526, z: -0.32662362, w: 0.38317242}
+      scale: {x: 0.2504402, y: 1.5926603, z: 1.3602791}
+    - name: Pant_low:transform7
+      parentName: pPlane29
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: pPlane30
+      parentName: Character_Test(Clone)
+      position: {x: 0.4975174, y: 2.8241482, z: 0.1510482}
+      rotation: {x: 0.5968084, y: 0.6247526, z: -0.32662362, w: 0.38317242}
+      scale: {x: 0.2504402, y: 1.5926603, z: 1.3602791}
+    - name: Pant_low:transform10
+      parentName: pPlane30
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: pPlane31
+      parentName: Character_Test(Clone)
+      position: {x: 0.4944683, y: 2.8401546, z: 0.09561555}
+      rotation: {x: 0.5828855, y: 0.60848284, z: -0.35086703, w: 0.40851617}
+      scale: {x: 0.2504402, y: 1.5926603, z: 1.3602791}
+    - name: Pant_low:transform11
+      parentName: pPlane31
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: pPlane32
+      parentName: Character_Test(Clone)
+      position: {x: 0.5663022, y: 2.4472132, z: 0.5024026}
+      rotation: {x: 0.630612, y: 0.31988826, z: -0.31988826, w: 0.630612}
+      scale: {x: 0.2504402, y: 1.5926603, z: 1.3171188}
+    - name: Pant_low:transform45
+      parentName: pPlane32
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: pPlane33
+      parentName: Character_Test(Clone)
+      position: {x: 0.49693432, y: 2.4469445, z: 0.61460376}
+      rotation: {x: 0.64913106, y: 0.2804084, z: -0.2804084, w: 0.64913106}
+      scale: {x: 0.2504402, y: 1.5926603, z: 1.3171188}
+    - name: Pant_low:transform46
+      parentName: pPlane33
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: pPlane34
+      parentName: Character_Test(Clone)
+      position: {x: -0.48854682, y: 2.2718518, z: 0.46103814}
+      rotation: {x: 0.5703837, y: -0.41792634, z: 0.41792634, w: 0.5703837}
+      scale: {x: 0.2504402, y: 1.5926603, z: 1.3632082}
+    - name: transform8
+      parentName: pPlane34
+      position: {x: -1.6133521, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: pPlane35
+      parentName: Character_Test(Clone)
+      position: {x: -0.46867654, y: 2.2681775, z: 0.5507294}
+      rotation: {x: 0.6061106, y: -0.36418402, z: 0.36418402, w: 0.6061106}
+      scale: {x: 0.2504402, y: 1.5926603, z: 1.3632082}
+    - name: transform5
+      parentName: pPlane35
+      position: {x: -1.6133521, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: pPlane36
+      parentName: Character_Test(Clone)
+      position: {x: -0.4185845, y: 2.2743354, z: 0.67342955}
+      rotation: {x: 0.6308663, y: -0.31938648, z: 0.31938648, w: 0.6308663}
+      scale: {x: 0.2504402, y: 1.5926603, z: 1.3650609}
+    - name: transform6
+      parentName: pPlane36
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: pPlane37
+      parentName: Character_Test(Clone)
+      position: {x: -0.53467005, y: 2.248507, z: 0.3682217}
+      rotation: {x: 0.55599236, y: -0.43688956, z: 0.43688956, w: 0.55599236}
+      scale: {x: 0.2504402, y: 1.5926603, z: 1.321868}
+    - name: transform9
+      parentName: pPlane37
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: pPlane38
+      parentName: Character_Test(Clone)
+      position: {x: -0.54920644, y: 2.248507, z: 0.28987414}
+      rotation: {x: 0.51069367, y: -0.48907262, z: 0.48907262, w: 0.51069367}
+      scale: {x: 0.2504402, y: 1.5926603, z: 1.321868}
+    - name: transform10
+      parentName: pPlane38
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: pPlane39
+      parentName: Character_Test(Clone)
+      position: {x: -0.5147043, y: 2.2558894, z: 0.48424125}
+      rotation: {x: 0.5847275, y: -0.39761004, z: 0.39761004, w: 0.5847275}
+      scale: {x: 0.2504402, y: 1.5926603, z: 1.321868}
+    - name: transform11
+      parentName: pPlane39
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: pPlane40
+      parentName: Character_Test(Clone)
+      position: {x: -0.44425103, y: 2.267724, z: 0.62691045}
+      rotation: {x: 0.5911005, y: -0.3880724, z: 0.3880724, w: 0.5911005}
+      scale: {x: 0.2504402, y: 1.5926603, z: 1.3650609}
+    - name: transform7
+      parentName: pPlane40
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: pPlane41
+      parentName: Character_Test(Clone)
+      position: {x: -0.5709565, y: 2.4421074, z: 0.101866886}
+      rotation: {x: -0.51667726, y: 0.77124083, z: -0.25709537, w: -0.26857817}
+      scale: {x: 0.16931395, y: 0.67599803, z: 0.9338597}
+    - name: Pant_low:transform44
+      parentName: pPlane41
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: pPlane42
+      parentName: Character_Test(Clone)
+      position: {x: -0.5709565, y: 2.4421074, z: 0.045230377}
+      rotation: {x: -0.51667726, y: 0.77124083, z: -0.25709537, w: -0.26857817}
+      scale: {x: 0.16931395, y: 0.67599803, z: 0.9338597}
+    - name: Pant_low:transform51
+      parentName: pPlane42
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: pPlane43
+      parentName: Character_Test(Clone)
+      position: {x: -0.5780689, y: 2.4229841, z: 0.03208262}
+      rotation: {x: -0.4841124, y: 0.7181087, z: -0.36695397, w: -0.33955836}
+      scale: {x: 0.21200994, y: 0.84646475, z: 1.1693516}
+    - name: Pant_low:transform52
+      parentName: pPlane43
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: pPlane63
+      parentName: Character_Test(Clone)
+      position: {x: -0.40326086, y: 1.8147666, z: 0.18422966}
+      rotation: {x: 0.46063086, y: -0.34726593, z: 0.56458414, w: 0.5903138}
+      scale: {x: 0.2504402, y: 1.5926603, z: 1.2176512}
+    - name: transform15
+      parentName: pPlane63
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: pPlane64
+      parentName: Character_Test(Clone)
+      position: {x: -0.5113096, y: 1.7794372, z: 0.09004904}
+      rotation: {x: 0.46063086, y: -0.34726593, z: 0.56458414, w: 0.5903138}
+      scale: {x: 0.2504402, y: 1.5926603, z: 1.2176512}
+    - name: transform18
+      parentName: pPlane64
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: pPlane65
+      parentName: Character_Test(Clone)
+      position: {x: -0.39579856, y: 1.8169277, z: 0.102555536}
+      rotation: {x: 0.46063086, y: -0.34726593, z: 0.56458414, w: 0.5903138}
+      scale: {x: 0.2504402, y: 1.5926603, z: 1.2176512}
+    - name: transform16
+      parentName: pPlane65
+      position: {x: 0.40160948, y: -0.0048890524, z: -0.004864037}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: pPlane66
+      parentName: Character_Test(Clone)
+      position: {x: -0.5520417, y: 2.378814, z: 0.2974562}
+      rotation: {x: 0.5967335, y: -0.37935355, z: 0.37935355, w: 0.5967335}
+      scale: {x: 0.1714903, y: 0.61318463, z: 0.6768589}
+    - name: Pant_low:transform8
+      parentName: pPlane66
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: pPlane67
+      parentName: Character_Test(Clone)
+      position: {x: -0.55579203, y: 2.380267, z: 0.23316686}
+      rotation: {x: 0.57320017, y: -0.41405505, z: 0.41405505, w: 0.57320017}
+      scale: {x: 0.1714903, y: 0.61318463, z: 0.6768589}
+    - name: Pant_low:transform9
+      parentName: pPlane67
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: pPlane68
+      parentName: Character_Test(Clone)
+      position: {x: -0.40326086, y: 1.9308325, z: 0.18422966}
+      rotation: {x: 0.46063086, y: -0.34726593, z: 0.56458414, w: 0.5903138}
+      scale: {x: 0.2504402, y: 1.5926603, z: 1.2176512}
+    - name: transform12
+      parentName: pPlane68
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: pPlane69
+      parentName: Character_Test(Clone)
+      position: {x: -0.5113096, y: 1.990484, z: 0.09004904}
+      rotation: {x: 0.46063086, y: -0.34726593, z: 0.56458414, w: 0.5903138}
+      scale: {x: 0.2504402, y: 1.5926603, z: 1.2176512}
+    - name: transform13
+      parentName: pPlane69
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: pPlane70
+      parentName: Character_Test(Clone)
+      position: {x: -0.49575955, y: 1.7314095, z: -0.047958083}
+      rotation: {x: 0.46063086, y: -0.34726593, z: 0.56458414, w: 0.5903138}
+      scale: {x: 0.2504402, y: 1.5926603, z: 0.6540166}
+    - name: transform14
+      parentName: pPlane70
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: pPlane71
+      parentName: Character_Test(Clone)
+      position: {x: 0.55521095, y: 2.378814, z: 0.30771455}
+      rotation: {x: 0.53789145, y: 0.45899108, z: -0.45899108, w: 0.53789145}
+      scale: {x: -0.1714903, y: 0.61318463, z: 0.6768589}
+    - name: Pant_low:transform55
+      parentName: pPlane71
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: pPlane72
+      parentName: Character_Test(Clone)
+      position: {x: 0.011074643, y: 2.7048402, z: -0.6721468}
+      rotation: {x: 0.01314817, y: 0.7069845, z: -0.7069845, w: 0.01314817}
+      scale: {x: 0.2504402, y: 1.5926603, z: 2.2001858}
+    - name: Pant_low:transform56
+      parentName: pPlane72
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: pPlane73
+      parentName: Character_Test(Clone)
+      position: {x: 0.27307498, y: 2.6997437, z: -0.5646048}
+      rotation: {x: -0.15853353, y: -0.6915717, z: 0.6964893, w: -0.10723028}
+      scale: {x: 0.2504402, y: 1.5926603, z: 2.2001858}
+    - name: Pant_low:transform57
+      parentName: pPlane73
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: pPlane74
+      parentName: Character_Test(Clone)
+      position: {x: 0.4980237, y: 2.6360712, z: -0.4404895}
+      rotation: {x: 0.25790396, y: 0.6812496, z: -0.66085154, w: 0.1807203}
+      scale: {x: 0.2504402, y: 1.5926603, z: 2.2001858}
+    - name: Pant_low:transform53
+      parentName: pPlane74
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: pPlane75
+      parentName: Character_Test(Clone)
+      position: {x: -0.3425091, y: 2.727376, z: -0.510141}
+      rotation: {x: -0.119140334, y: 0.6969976, z: -0.6969976, w: -0.119140334}
+      scale: {x: 0.2504402, y: 1.5926603, z: 2.2001858}
+    - name: Pant_low:transform54
+      parentName: pPlane75
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: pPlane76
+      parentName: Character_Test(Clone)
+      position: {x: -0.24598767, y: 2.7727065, z: -0.5925245}
+      rotation: {x: -0.15997556, y: 0.7028036, z: -0.6887727, w: -0.07789164}
+      scale: {x: 0.2504402, y: 1.5926603, z: 2.2001858}
+    - name: Pant_low:transform30
+      parentName: pPlane76
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: pPlane77
+      parentName: Character_Test(Clone)
+      position: {x: -0.52947277, y: 2.7107584, z: -0.40543112}
+      rotation: {x: -0.19288972, y: 0.6802893, z: -0.6802893, w: -0.19288972}
+      scale: {x: 0.2504402, y: 1.5926603, z: 2.2001858}
+    - name: Pant_low:transform31
+      parentName: pPlane77
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: pPlane81
+      parentName: Character_Test(Clone)
+      position: {x: 0.5594458, y: 1.9274664, z: 0.06453404}
+      rotation: {x: 0.29266346, y: 0.015068169, z: -0.070844084, w: 0.9534685}
+      scale: {x: 1, y: 1, z: 1}
+    - name: polySurface5
+      parentName: pPlane81
+      position: {x: -0.64680815, y: -1.9268856, z: -0.18694806}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: transform20
+      parentName: polySurface5
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: polySurface6
+      parentName: pPlane81
+      position: {x: -0.64680815, y: -1.9268856, z: -0.18694806}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: transform19
+      parentName: polySurface6
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: polySurface7
+      parentName: pPlane81
+      position: {x: -0.64680815, y: -1.9268856, z: -0.18694806}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: transform21
+      parentName: polySurface7
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: polySurface8
+      parentName: pPlane81
+      position: {x: -0.64680815, y: -1.9268856, z: -0.18694806}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: transform22
+      parentName: polySurface8
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: pPlane82
+      parentName: Character_Test(Clone)
+      position: {x: -0.4185845, y: 2.35129, z: 0.67342955}
+      rotation: {x: 0.6308663, y: -0.31938648, z: 0.31938648, w: 0.6308663}
+      scale: {x: 0.2504402, y: 1.5926603, z: 1.3650609}
+    - name: transform1
+      parentName: pPlane82
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: pPlane86
+      parentName: Character_Test(Clone)
+      position: {x: 0.5191366, y: 2.6995776, z: 0.31328025}
+      rotation: {x: 0.5499962, y: 0.69519943, z: -0.23412162, w: 0.39923558}
+      scale: {x: 0.2504402, y: 1.5926603, z: 1.4093444}
+    - name: Pant_low:transform63
+      parentName: pPlane86
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: pPlane87
+      parentName: Character_Test(Clone)
+      position: {x: -0.5780689, y: 2.4967535, z: 0.03208262}
+      rotation: {x: -0.4841124, y: 0.7181087, z: -0.36695397, w: -0.33955836}
+      scale: {x: 0.21200994, y: 0.84646475, z: 1.1693516}
+    - name: Pant_low:transform64
+      parentName: pPlane87
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: pPlane88
+      parentName: Character_Test(Clone)
+      position: {x: -0.65389997, y: 2.694978, z: -0.17828667}
+      rotation: {x: -0.19288974, y: 0.6802893, z: -0.6802893, w: -0.19288974}
+      scale: {x: 0.2504402, y: 1.5926603, z: 2.2001858}
+    - name: Pant_low:transform60
+      parentName: pPlane88
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: pPlane89
+      parentName: Character_Test(Clone)
+      position: {x: 0.19069993, y: 2.7035272, z: -0.6636972}
+      rotation: {x: 0.01314817, y: 0.7069845, z: -0.7069845, w: 0.01314817}
+      scale: {x: 0.3831405, y: 1.5926603, z: 2.6598387}
+    - name: Pant_low:transform61
+      parentName: pPlane89
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: pPlane90
+      parentName: Character_Test(Clone)
+      position: {x: -0.14540774, y: 2.7097585, z: -0.6754784}
+      rotation: {x: -0.058397412, y: 0.7046913, z: -0.7046913, w: -0.058397412}
+      scale: {x: 0.2504402, y: 1.5926603, z: 2.2001858}
+    - name: Pant_low:transform62
+      parentName: pPlane90
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: pPlane91
+      parentName: Character_Test(Clone)
+      position: {x: -0.5347086, y: 2.1984885, z: -0.39373818}
+      rotation: {x: -0.15790245, y: 0.729702, z: -0.6612899, w: -0.0727843}
+      scale: {x: 0.2504402, y: 1.5926603, z: 2.2001858}
+    - name: Pant_low:transform28
+      parentName: pPlane91
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: pPlane92
+      parentName: Character_Test(Clone)
+      position: {x: -0.5347086, y: 2.1984885, z: -0.39373818}
+      rotation: {x: -0.15790245, y: 0.729702, z: -0.6612899, w: -0.0727843}
+      scale: {x: 0.2504402, y: 1.5926603, z: 2.2001858}
+    - name: Pant_low:transform29
+      parentName: pPlane92
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: pPlane93
+      parentName: Character_Test(Clone)
+      position: {x: -0.31115466, y: 2.1949747, z: -0.5557056}
+      rotation: {x: 0.03550935, y: 0.7390893, z: -0.6707263, w: 0.05111055}
+      scale: {x: 0.2504402, y: 1.5926603, z: 2.2001858}
+    - name: Pant_low:transform25
+      parentName: pPlane93
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: pPlane94
+      parentName: Character_Test(Clone)
+      position: {x: -0.04474557, y: 2.1916215, z: -0.5868993}
+      rotation: {x: 0.13511886, y: 0.72750044, z: -0.65765566, w: 0.1413331}
+      scale: {x: 0.2504402, y: 1.5926603, z: 2.2001858}
+    - name: Pant_low:transform26
+      parentName: pPlane94
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: pPlane95
+      parentName: Character_Test(Clone)
+      position: {x: 0.19561732, y: 2.230467, z: -0.59688544}
+      rotation: {x: 0.2844877, y: 0.68306714, z: -0.6134699, w: 0.27593607}
+      scale: {x: 0.2504402, y: 1.5926603, z: 2.2001858}
+    - name: Pant_low:transform27
+      parentName: pPlane95
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: pPlane96
+      parentName: Character_Test(Clone)
+      position: {x: 0.3992525, y: 2.2269344, z: -0.45892447}
+      rotation: {x: 0.42097178, y: 0.6263946, z: -0.566912, w: 0.33018678}
+      scale: {x: 0.2504402, y: 1.5926603, z: 2.2001858}
+    - name: Pant_low:transform13
+      parentName: pPlane96
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: pPlane97
+      parentName: Character_Test(Clone)
+      position: {x: -0.7280552, y: 2.6747105, z: -0.21312118}
+      rotation: {x: -0.34339416, y: 0.6181266, z: -0.6181266, w: -0.34339416}
+      scale: {x: 0.2504402, y: 1.5926603, z: 2.2001858}
+    - name: Pant_low:transform14
+      parentName: pPlane97
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: pPlane98
+      parentName: Character_Test(Clone)
+      position: {x: 0.4975174, y: 2.8241482, z: 0.1510482}
+      rotation: {x: 0.5968084, y: 0.6247526, z: -0.32662362, w: 0.38317242}
+      scale: {x: 0.2504402, y: 1.5926603, z: 1.3602791}
+    - name: Pant_low:transform12
+      parentName: pPlane98
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: pPlane102
+      parentName: Character_Test(Clone)
+      position: {x: 0.3363381, y: 2.6220956, z: 0.13863659}
+      rotation: {x: 0.46523628, y: 0.670896, z: -0.40177074, w: 0.41476992}
+      scale: {x: 0.48881385, y: 1.5926603, z: 1.3602791}
+    - name: Pant_low:transform34
+      parentName: pPlane102
+      position: {x: 0.4310232, y: 0.12723958, z: -0.14710279}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: pPlane103
+      parentName: Character_Test(Clone)
+      position: {x: -0.18347786, y: 2.4384875, z: 0.78953075}
+      rotation: {x: -0.2517078, y: 0.70007306, z: 0.66078985, w: 0.09948712}
+      scale: {x: 0.014152226, y: 0.23740336, z: 0.03668891}
+    - name: Pant_low:transform32
+      parentName: pPlane103
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: pPlane104
+      parentName: Character_Test(Clone)
+      position: {x: -0.19949469, y: 2.4384875, z: 0.78953075}
+      rotation: {x: -0.2942145, y: 0.6894952, z: 0.6600491, w: 0.048676793}
+      scale: {x: 0.014152226, y: 0.23740336, z: 0.03668891}
+    - name: Pant_low:transform33
+      parentName: pPlane104
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: pPlane106
+      parentName: Character_Test(Clone)
+      position: {x: -0.19362071, y: 2.4386306, z: 0.78443813}
+      rotation: {x: -0.29711995, y: 0.689703, z: 0.6587463, w: 0.045638245}
+      scale: {x: 0.014152226, y: 0.23740336, z: 0.03668891}
+    - name: Pant_low:transform65
+      parentName: pPlane106
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: pPlane107
+      parentName: Character_Test(Clone)
+      position: {x: -0.20593643, y: 2.4374478, z: 0.78480816}
+      rotation: {x: -0.29711995, y: 0.689703, z: 0.6587463, w: 0.045638245}
+      scale: {x: 0.014152226, y: 0.23740336, z: 0.03668891}
+    - name: Pant_low:transform66
+      parentName: pPlane107
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: pPlane108
+      parentName: Character_Test(Clone)
+      position: {x: -0.1733716, y: 2.4408035, z: 0.7914235}
+      rotation: {x: -0.29711995, y: 0.689703, z: 0.6587463, w: 0.045638245}
+      scale: {x: 0.014152226, y: 0.23740336, z: 0.03668891}
+    - name: Pant_low:transform67
+      parentName: pPlane108
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: pPlane113
+      parentName: Character_Test(Clone)
+      position: {x: 0.5257925, y: 2.234308, z: -0.51177055}
+      rotation: {x: 0.28561413, y: 0.6468575, z: -0.6468575, w: 0.28561413}
+      scale: {x: 0.44503236, y: 1.5926603, z: 2.2001858}
+    - name: Pant_low:transform18
+      parentName: pPlane113
+      position: {x: -1.6133521, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: pPlane114
+      parentName: Character_Test(Clone)
+      position: {x: -0.44425103, y: 2.267724, z: 0.62691045}
+      rotation: {x: 0.5911005, y: -0.3880724, z: 0.3880724, w: 0.5911005}
+      scale: {x: 0.31730667, y: 1.5926603, z: 1.3650609}
+    - name: transform2
+      parentName: pPlane114
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: pPlane115
+      parentName: Character_Test(Clone)
+      position: {x: -0.6570543, y: 2.4609075, z: 0.11957275}
+      rotation: {x: 0.53361017, y: -0.46396142, z: 0.46396142, w: 0.53361017}
+      scale: {x: 0.2504402, y: 1.5926603, z: 1.6144788}
+    - name: Pant_low:transform19
+      parentName: pPlane115
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: pPlane116
+      parentName: Character_Test(Clone)
+      position: {x: 0.30857927, y: 2.5765631, z: 0.37994534}
+      rotation: {x: 0.46523628, y: 0.670896, z: -0.40177074, w: 0.41476992}
+      scale: {x: 0.48881385, y: 1.5926603, z: 1.3602791}
+    - name: Pant_low:transform37
+      parentName: pPlane116
+      position: {x: 0.4310232, y: 0.12723958, z: -0.14710279}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: pPlane117
+      parentName: Character_Test(Clone)
+      position: {x: 0.30857927, y: 2.5765631, z: 0.37994534}
+      rotation: {x: 0.46523628, y: 0.670896, z: -0.40177074, w: 0.41476992}
+      scale: {x: 0.48881385, y: 1.5926603, z: 1.3602791}
+    - name: Pant_low:transform38
+      parentName: pPlane117
+      position: {x: 0.4310232, y: 0.12723958, z: -0.14710279}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: pPlane118
+      parentName: Character_Test(Clone)
+      position: {x: 0.19069993, y: 2.7409832, z: -0.6636972}
+      rotation: {x: 0.01314817, y: 0.7069845, z: -0.7069845, w: 0.01314817}
+      scale: {x: 0.3831405, y: 1.5926603, z: 2.6598387}
+    - name: Pant_low:transform35
+      parentName: pPlane118
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: pPlane119
+      parentName: Character_Test(Clone)
+      position: {x: -0.39654487, y: 2.2234664, z: -0.42108986}
+      rotation: {x: -0.15790245, y: 0.729702, z: -0.6612899, w: -0.0727843}
+      scale: {x: 0.2504402, y: 1.5926603, z: 2.2001858}
+    - name: Pant_low:transform36
+      parentName: pPlane119
+      position: {x: 0.5329459, y: 0.013914287, z: -0.024459988}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: pPlane120
+      parentName: Character_Test(Clone)
+      position: {x: -0.44425103, y: 2.317153, z: 0.558813}
+      rotation: {x: 0.5911005, y: -0.3880724, z: 0.3880724, w: 0.5911005}
+      scale: {x: 0.31730667, y: 1.5926603, z: 1.3650609}
+    - name: transform3
+      parentName: pPlane120
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: pPlane121
+      parentName: Character_Test(Clone)
+      position: {x: -0.43564644, y: 2.3759294, z: 0.6679074}
+      rotation: {x: 0.6308663, y: -0.31938648, z: 0.31938648, w: 0.6308663}
+      scale: {x: 0.2504402, y: 1.5926603, z: 1.3650609}
+    - name: transform4
+      parentName: pPlane121
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: pPlane124
+      parentName: Character_Test(Clone)
+      position: {x: 0.5472475, y: 2.3964975, z: 0.36614028}
+      rotation: {x: 0.50847954, y: 0.4274205, z: -0.49056858, w: 0.56400603}
+      scale: {x: -0.1714903, y: 0.61318463, z: 0.6768589}
+    - name: Pant_low:transform39
+      parentName: pPlane124
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: pPlane126
+      parentName: Character_Test(Clone)
+      position: {x: -0.60955155, y: 2.380575, z: -0.36400324}
+      rotation: {x: -0.32940602, y: 0.62569296, z: -0.62569296, w: -0.32940602}
+      scale: {x: 0.3007327, y: 1.5926603, z: 1.4041069}
+    - name: Pant_low:transform43
+      parentName: pPlane126
+      position: {x: -1.6133521, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: pPlane127
+      parentName: Character_Test(Clone)
+      position: {x: -0.60955155, y: 2.4306915, z: -0.36400324}
+      rotation: {x: -0.32940602, y: 0.62569296, z: -0.62569296, w: -0.32940602}
+      scale: {x: 0.3007327, y: 1.5926603, z: 1.4041069}
+    - name: Pant_low:transform40
+      parentName: pPlane127
+      position: {x: -1.6133521, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: pPlane128
+      parentName: Character_Test(Clone)
+      position: {x: 0.48197252, y: 2.7234695, z: -0.5868847}
+      rotation: {x: -0.17060971, y: -0.686216, z: 0.686216, w: -0.17060971}
+      scale: {x: 0.3831405, y: 1.5926603, z: 2.6598387}
+    - name: Pant_low:transform48
+      parentName: pPlane128
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: pPlane129
+      parentName: Character_Test(Clone)
+      position: {x: -0.5927617, y: 1.744311, z: 0.050893515}
+      rotation: {x: 0.46063086, y: -0.34726593, z: 0.56458414, w: 0.5903138}
+      scale: {x: 0.2504402, y: 1.5926603, z: 1.2176512}
+    - name: transform17
+      parentName: pPlane129
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: R_SideFlipBase
+      parentName: Character_Test(Clone)
+      position: {x: 0.57546484, y: 1.9214474, z: 0.12678997}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Pant_low:transform24
+      parentName: R_SideFlipBase
+      position: {x: -0.57546484, y: -1.9214474, z: -0.12678997}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: R_SideFlipBase_Reversed
+      parentName: Character_Test(Clone)
+      position: {x: 0.57546484, y: 1.9214474, z: 0.12678997}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Pant_low:transform23
+      parentName: R_SideFlipBase_Reversed
+      position: {x: -0.57546484, y: -1.9214474, z: -0.12678997}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: ReverseBangsV1
+      parentName: Character_Test(Clone)
+      position: {x: 0.2483791, y: 2.2953367, z: 0.5932555}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Pant_low:transform59
+      parentName: ReverseBangsV1
+      position: {x: -0.2483791, y: -2.2953367, z: -0.5932555}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: ReverseBangsV2
+      parentName: Character_Test(Clone)
+      position: {x: 0.25374025, y: 2.3550694, z: 0.6293955}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Pant_low:transform2
+      parentName: ReverseBangsV2
+      position: {x: -0.25374025, y: -2.3550694, z: -0.6293955}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: ReversedLowerHairBasev1
+      parentName: Character_Test(Clone)
+      position: {x: 0.03686526, y: 1.8336238, z: -0.438671}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Pant_low:transform42
+      parentName: ReversedLowerHairBasev1
+      position: {x: -0.03686526, y: -1.8336238, z: 0.438671}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: ReversedLowerHairBasev2
+      parentName: Character_Test(Clone)
+      position: {x: 0.07195394, y: 1.9781125, z: -0.48528656}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Pant_low:transform21
+      parentName: ReversedLowerHairBasev2
+      position: {x: -0.07195394, y: -1.9781125, z: 0.48528656}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Shirt_low:Group10672
+      parentName: Character_Test(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Pant_low:transform49
+      parentName: Shirt_low:Group10672
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
     armTwist: 0.5
     foreArmTwist: 0.5
     upperLegTwist: 0.5
@@ -460,10 +1423,10 @@ ModelImporter:
     rootMotionBoneName: 
     rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
     hasTranslationDoF: 0
-    hasExtraRoot: 0
+    hasExtraRoot: 1
     skeletonHasParents: 1
   lastHumanDescriptionAvatarSource: {instanceID: 0}
-  animationType: 2
+  animationType: 3
   humanoidOversampling: 1
   additionalBone: 0
   userData: 

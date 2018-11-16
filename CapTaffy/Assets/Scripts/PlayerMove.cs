@@ -19,6 +19,10 @@ public class PlayerMove : MonoBehaviour
     float jumpStrength = 500.0f;
     [SerializeField]
     float dodgeDistance = 2500.0f;
+    [SerializeField]
+    float m_AnimSpeedMultiplier = 1f;
+
+    private Vector3 m_GroundNormal;
 
     [SerializeField]
     PhysicMaterial zeroFriction;
@@ -79,7 +83,7 @@ public class PlayerMove : MonoBehaviour
 
     void Update()
     {
-        ChangeFrictionMaterial();
+       
 
     }
 
@@ -88,6 +92,8 @@ public class PlayerMove : MonoBehaviour
         Dodge();
         MovePlayer();
         PlayFootstep();
+        ChangeFrictionMaterial();
+
     }
 
     void ChangeFrictionMaterial()
@@ -102,11 +108,27 @@ public class PlayerMove : MonoBehaviour
         }
     }
 
+
+    void UpdateAnimator(Vector3 move)
+    {
+        anim.SetFloat("Forward", verticalInput, 0.1f, Time.deltaTime);
+        anim.SetFloat("Turn", horizontalInput, 0.1f, Time.deltaTime);
+
+        //anim.speed = m_AnimSpeedMultiplier;
+
+    }
+
+
     void MovePlayer()
     {
         horizontalInput = Input.GetAxis(horizontalAxisName);
         verticalInput = Input.GetAxis(verticalAxisName);
         isJumping = Input.GetButtonDown(jumpButtonName);
+
+        Vector3 move = new Vector3(horizontalInput, verticalInput);
+
+        move = transform.InverseTransformDirection(move);
+        move = Vector3.ProjectOnPlane(move, m_GroundNormal);
 
         if (Input.GetButton(aimButtonName) || Input.GetAxis(aimButtonName) > 0.0f)
         {
@@ -150,6 +172,7 @@ public class PlayerMove : MonoBehaviour
             if (isJumping && isOnGround)
             {
                 rb.AddForce(Vector3.up * jumpStrength, ForceMode.Impulse);
+               
 
                 //TODO: play jump sound
             }
@@ -182,6 +205,10 @@ public class PlayerMove : MonoBehaviour
                 rb.rotation = Quaternion.Slerp(this.gameObject.transform.rotation, Quaternion.LookRotation(dir), turnSpeed * Time.deltaTime);       //rotate player to face aim direction
             }
         }
+
+        UpdateAnimator(move);
+
+       
     }
 
     void PlayFootstep()
@@ -209,11 +236,20 @@ public class PlayerMove : MonoBehaviour
         }
     }
 
+    
+
     void Dodge()
     {
         if (Input.GetButtonDown("Dodge") && isOnGround)
         {
+            rb.AddForce(transform.forward * -1 * rb.velocity.magnitude, ForceMode.Impulse);
             rb.AddForce(transform.forward * dodgeDistance, ForceMode.Impulse);
+            anim.SetBool("Dodge", true);
+        }
+
+        else
+        {
+            anim.SetBool("Dodge", false);
         }
 
         //isDodging = true;

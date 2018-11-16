@@ -6,51 +6,56 @@ using UnityEngine.SceneManagement;
 public class PauseMenu : MonoBehaviour
 {
     [SerializeField]
-    GameObject menuCanvas;
+    private GameObject menuCanvas;
 
-    bool isPaused;
+    private static bool isPaused = false;
+
+    private GameObject activeEnemies;
 
     const string startButtonName = "Start";
 
     void Awake()
     {
-        isPaused = false;
+
     }
 
     void Start()
     {
-        menuCanvas.SetActive(false);
+        Unpause();
+        //menuCanvas.SetActive(false);
     }
 
     void Update()
     {
-        if (Input.GetButtonDown(startButtonName))
-        {
-            isPaused = !isPaused;
+        activeEnemies = GameObject.FindGameObjectWithTag("Enemy");
 
+        if (Input.GetButtonDown(startButtonName) && activeEnemies != null)
+        {
+            //isPaused = !isPaused;
+            
             if (isPaused)
             {
-                Pause();
+                Unpause();
             }
             else
             {
-                Unpause();
+                Pause();
             }
         }
     }
 
     void Pause()
-    {
-        Time.timeScale = 0;
+    {        
         isPaused = true;
         menuCanvas.SetActive(true);
+        Time.timeScale = 0;
     }
 
     void Unpause()
     {
-        Time.timeScale = 1;
         isPaused = false;
         menuCanvas.SetActive(false);
+        Time.timeScale = 1;
     }
 
     public void ResumeButtonClicked()
@@ -63,6 +68,6 @@ public class PauseMenu : MonoBehaviour
         Unpause();
 
         //LoadingScene.LoadNewScene("MainMenu");
-        SceneManager.LoadScene("MainMenu");
+        SceneManager.LoadScene("NewMainMenu");
     }
 }

@@ -5,8 +5,8 @@ using UnityEngine.UI;
 
 public class EnemyHealth : MonoBehaviour
 {
-    [SerializeField]
-    private Canvas enemyCanvas;
+    //[SerializeField]
+    //private Canvas enemyCanvas;
     [SerializeField]
     Slider healthBar;
     [SerializeField]
@@ -35,9 +35,9 @@ public class EnemyHealth : MonoBehaviour
         sknMeshRndr = GetComponent<SkinnedMeshRenderer>();
         anim = GetComponent<Animator>();
 
-        enemyCanvasClone = Instantiate(enemyCanvas);
-        enemyCanvas = enemyCanvasClone;
-        healthBar = enemyCanvas.GetComponentInChildren<Slider>();
+        //enemyCanvasClone = Instantiate(enemyCanvas);
+        //enemyCanvas = enemyCanvasClone;
+        //healthBar = enemyCanvas.GetComponentInChildren<Slider>();
 
         //healthBarClone = Instantiate(healthBar, enemyCanvas.transform);
         //healthBar.transform.parent = enemyCanvas.transform;
@@ -51,7 +51,7 @@ public class EnemyHealth : MonoBehaviour
 
     private void Update()
     {
-        healthBar.transform.position = new Vector3 (transform.position.x, transform.position.y + sliderOffset, transform.position.z);
+        //healthBar.transform.position = new Vector3 (transform.position.x, transform.position.y + sliderOffset, transform.position.z);
         InjuryStatus();
         if (waitActive == false)
         {
@@ -75,7 +75,7 @@ public class EnemyHealth : MonoBehaviour
             anim.SetBool("chasePlayer", false);
             anim.SetBool("breatheFire", false);
             anim.SetBool("attackPlayer", false);
-            Destroy(enemyCanvasClone);
+            Destroy(healthBar);
             
         }
         else if (currentFlinch >= maxFlinch)

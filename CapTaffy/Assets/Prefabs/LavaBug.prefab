@@ -2196,10 +2196,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0f8d4a51449910c41b30ffc908b6ddad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemyCanvas: {fileID: 223719972809457582, guid: 5a304a1e757af24478462ba14cb46504,
-    type: 2}
-  healthBar: {fileID: 114521072256686588, guid: 5a304a1e757af24478462ba14cb46504,
-    type: 2}
+  healthBar: {fileID: 0}
   sliderOffset: 13.17
   currentHealth: 150
   maxHealth: 600
@@ -2227,7 +2224,7 @@ MonoBehaviour:
   meleeDistance: 15
   movementSpeed: 15
   turnSpeed: 1
-  rangeAttackDelay: 3.5
+  rangeAttackDelay: 3.7
   meleeAttackDelay: 1.5
   player: {fileID: 0}
 --- !u!114 &114616213845450302

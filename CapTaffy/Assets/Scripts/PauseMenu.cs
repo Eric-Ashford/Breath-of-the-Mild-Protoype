@@ -8,22 +8,27 @@ public class PauseMenu : MonoBehaviour
     [SerializeField]
     private GameObject menuCanvas;
 
-    private static bool isPaused;
+    private static bool isPaused = false;
+
+    private GameObject activeEnemies;
 
     const string startButtonName = "Start";
 
     void Awake()
     {
-        Unpause();
+
     }
 
     void Start()
     {
+        Unpause();
         //menuCanvas.SetActive(false);
     }
 
     void Update()
     {
+        //activeEnemies = GameObject.FindGameObjectWithTag("Enemy");
+
         if (Input.GetButtonDown(startButtonName))
         {
             //isPaused = !isPaused;

@@ -44,7 +44,7 @@ ScriptedImporter:
     generateMipMaps: 1
     preset: " <sbspreset pkgurl=\"pkg://Rock_lava\" label=\"\" >\n  <presetinput identifier=\"$randomseed\"
       uid=\"353873725\" type=\"4\" value=\"6857\" />\n  <presetinput identifier=\"LavaLevels\"
-      uid=\"935721180\" type=\"0\" value=\"0.55\" />\n </sbspreset>\n"
+      uid=\"935721180\" type=\"0\" value=\"0.581\" />\n </sbspreset>\n"
     shaderName: Standard
     outputNames: baseColor,normal,metallic,ambientOcclusion,height
     texturePackingList:
@@ -198,7 +198,9 @@ ScriptedImporter:
     generateMipMaps: 1
     preset: " <sbspreset pkgurl=\"pkg://Rock_lava\" label=\"\" >\n  <presetinput identifier=\"$randomseed\"
       uid=\"353873725\" type=\"4\" value=\"6857\" />\n  <presetinput identifier=\"LavaLevels\"
-      uid=\"935721180\" type=\"0\" value=\"0.622\" />\n </sbspreset>\n"
+
+      uid=\"935721180\" type=\"0\" value=\"0.683\" />\n </sbspreset>\n"
+
     shaderName: Standard
     outputNames: baseColor,normal,metallic,ambientOcclusion,height
     texturePackingList:

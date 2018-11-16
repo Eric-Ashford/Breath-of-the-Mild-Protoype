@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.Audio;
 using UnityEngine.SceneManagement;
 
 public class PlayerHealth : MonoBehaviour
@@ -18,6 +19,9 @@ public class PlayerHealth : MonoBehaviour
     [SerializeField]
     Transform respawnPoint;
 
+    public AudioMixerSnapshot NearDeath;
+    public AudioMixerSnapshot Healthy;
+
     void Start()
     {
         //camShake = GameObject.FindGameObjectWithTag("ScreenShake").GetComponent<CameraShake>();
@@ -28,6 +32,7 @@ public class PlayerHealth : MonoBehaviour
     void LateUpdate()
     {
         UpdateHealthBar();
+        
     }
 
     public void DamagePlayer(float amount)
@@ -56,16 +61,31 @@ public class PlayerHealth : MonoBehaviour
     void UpdateHealthBar()
     {
         healthBar.value = currentHealth / maxHealth;
+
+        NearDeathAudio();
     }
 
     IEnumerator Die()
     {
         Destroy(this.gameObject.GetComponent<Rigidbody>());
-
+        GetComponent<PlayerMove>().enabled = false;
         yield return new WaitForSecondsRealtime(3.0f);
+        GetComponent<PlayerMove>().enabled = true;
 
         currentHealth = maxHealth;
         this.gameObject.transform.position = respawnPoint.position;
+    }
+
+    void NearDeathAudio()
+    {
+        if (currentHealth <= 30)
+        {
+            NearDeath.TransitionTo(.1f);
+        }
+        else
+        {
+            Healthy.TransitionTo(.02f);
+        }
     }
 
 

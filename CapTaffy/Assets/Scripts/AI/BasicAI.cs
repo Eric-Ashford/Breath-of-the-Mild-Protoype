@@ -87,6 +87,7 @@ public class BasicAI : MonoBehaviour
     {
         Quaternion rotation = Quaternion.LookRotation(player.position - transform.position);
         transform.rotation = Quaternion.Euler(new Vector3(0f, rotation.eulerAngles.y, 0f));
+        //transform.rotation = Quaternion.Slerp(transform.rotation, newAlignment, Time.deltaTime);
         //transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.LookRotation(lookDirection), turnSpeed * Time.deltaTime);
     }
 

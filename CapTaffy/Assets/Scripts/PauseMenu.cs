@@ -14,15 +14,9 @@ public class PauseMenu : MonoBehaviour
 
     const string startButtonName = "Start";
 
-    void Awake()
-    {
-
-    }
-
     void Start()
     {
         Unpause();
-        //menuCanvas.SetActive(false);
     }
 
     void Update()
@@ -31,8 +25,6 @@ public class PauseMenu : MonoBehaviour
 
         if (Input.GetButtonDown(startButtonName) && activeEnemies != null)
         {
-            //isPaused = !isPaused;
-            
             if (isPaused)
             {
                 Unpause();

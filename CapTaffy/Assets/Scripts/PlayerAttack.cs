@@ -48,8 +48,13 @@ public class PlayerAttack : MonoBehaviour {
     {
         if ((Input.GetButtonDown("Melee Attack") || Input.GetAxis("Melee Attack") > 0.0f) && canAttack)
         {
+            int attackNumber;
+            System.Random random = new System.Random();
+            attackNumber = random.Next(1, 100);
+
             canAttack = false;
             anim.SetTrigger("Attack");
+            anim.SetInteger("AttackNumber", attackNumber);
 
             swordSwing.volume = Random.Range(0.9f, 1.1f);
             swordSwing.pitch = Random.Range(0.85f, 1.1f);
@@ -59,8 +64,6 @@ public class PlayerAttack : MonoBehaviour {
             swordWhoosh.pitch = Random.Range(0.85f, 1.1f);
             swordWhoosh.Play();
             StartCoroutine(Wait(attackDelay));
-            canAttack = true;
-
         }
     }
 
@@ -91,5 +94,6 @@ public class PlayerAttack : MonoBehaviour {
         waitActive = true;
         yield return new WaitForSeconds(delay);
         waitActive = false;
+        canAttack = true;
     }
 }

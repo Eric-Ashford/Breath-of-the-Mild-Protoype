@@ -88,6 +88,8 @@ public class PlayerMove : MonoBehaviour
         Dodge();
         MovePlayer();
         PlayFootstep();
+        anim.SetFloat("vSpeed", rb.velocity.y);
+        anim.SetFloat("Speed", rb.velocity.x + rb.velocity.z);
     }
 
     void ChangeFrictionMaterial()

@@ -15,6 +15,8 @@ public class PlayerHealth : MonoBehaviour
     private float currentHealth;
     [SerializeField]
     private float maxHealth = 100f;
+    [SerializeField]
+    private float deathDelay = 1f;
 
     [SerializeField]
     Transform respawnPoint;
@@ -22,11 +24,14 @@ public class PlayerHealth : MonoBehaviour
     public AudioMixerSnapshot NearDeath;
     public AudioMixerSnapshot Healthy;
 
+    private Animator anim;
+
     void Start()
     {
         //camShake = GameObject.FindGameObjectWithTag("ScreenShake").GetComponent<CameraShake>();
         currentHealth = maxHealth;
         UpdateHealthBar();
+        anim = GetComponent<Animator>();
     }
 
     void LateUpdate()
@@ -69,11 +74,13 @@ public class PlayerHealth : MonoBehaviour
     {
         Destroy(this.gameObject.GetComponent<Rigidbody>());
         GetComponent<PlayerMove>().enabled = false;
-        yield return new WaitForSecondsRealtime(3.0f);
-        GetComponent<PlayerMove>().enabled = true;
+        anim.SetBool("isDead", true);
+        yield return new WaitForSecondsRealtime(deathDelay);
+        anim.SetBool("isDead", false);       
 
         currentHealth = maxHealth;
         this.gameObject.transform.position = respawnPoint.position;
+        GetComponent<PlayerMove>().enabled = true;
     }
 
     void NearDeathAudio()

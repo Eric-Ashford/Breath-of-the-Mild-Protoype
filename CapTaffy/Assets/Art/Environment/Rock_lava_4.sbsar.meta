@@ -44,7 +44,7 @@ ScriptedImporter:
     generateMipMaps: 1
     preset: " <sbspreset pkgurl=\"pkg://Rock_lava\" label=\"\" >\n  <presetinput identifier=\"$randomseed\"
       uid=\"353873725\" type=\"4\" value=\"6857\" />\n  <presetinput identifier=\"LavaLevels\"
-      uid=\"935721180\" type=\"0\" value=\"0.581\" />\n </sbspreset>\n"
+      uid=\"935721180\" type=\"0\" value=\"0.629\" />\n </sbspreset>\n"
     shaderName: Standard
     outputNames: baseColor,normal,metallic,ambientOcclusion,height
     texturePackingList:
@@ -108,12 +108,7 @@ ScriptedImporter:
       textureFormat: 0
       bGenerateOnLoad: 1
     material: {fileID: 2100000, guid: 023b43d6a20725148bb7065083cedfcf, type: 3}
-    generatedTextures:
-    - {fileID: 2800000, guid: 023b43d6a20725148bb7065083cedfcf, type: 3}
-    - {fileID: 2800002, guid: 023b43d6a20725148bb7065083cedfcf, type: 3}
-    - {fileID: 2800004, guid: 023b43d6a20725148bb7065083cedfcf, type: 3}
-    - {fileID: 2800006, guid: 023b43d6a20725148bb7065083cedfcf, type: 3}
-    - {fileID: 2800008, guid: 023b43d6a20725148bb7065083cedfcf, type: 3}
+    generatedTextures: []
   - graphLabel: Rock_lava_1
     prototypeName: Rock_lava
     graphDescIndex: 0
@@ -198,9 +193,7 @@ ScriptedImporter:
     generateMipMaps: 1
     preset: " <sbspreset pkgurl=\"pkg://Rock_lava\" label=\"\" >\n  <presetinput identifier=\"$randomseed\"
       uid=\"353873725\" type=\"4\" value=\"6857\" />\n  <presetinput identifier=\"LavaLevels\"
-
       uid=\"935721180\" type=\"0\" value=\"0.683\" />\n </sbspreset>\n"
-
     shaderName: Standard
     outputNames: baseColor,normal,metallic,ambientOcclusion,height
     texturePackingList:

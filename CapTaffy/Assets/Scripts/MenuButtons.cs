@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class MenuButtons : MonoBehaviour
 {
@@ -11,6 +12,9 @@ public class MenuButtons : MonoBehaviour
     [SerializeField]
     int startGameDelay = 5;
 
+    [SerializeField]
+    Button returnButton;
+
     //use when we have a loading scene
     //public void PlayButtonClicked()
     //{
@@ -19,6 +23,14 @@ public class MenuButtons : MonoBehaviour
 
     //    LoadingScene.LoadNewScene(sceneToLoad);
     //}
+
+    void Update()
+    {
+        if (Input.GetButton("Cancel"))
+        {
+            returnButton.onClick.Invoke();
+        }
+    }
 
     public void StartButtonClicked()
     {

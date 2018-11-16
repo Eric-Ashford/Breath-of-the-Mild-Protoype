@@ -23,6 +23,8 @@ public class WinGame : MonoBehaviour
         if (enemyObject == null)
         {
             endCanvas.enabled = true;
+            Cursor.lockState = CursorLockMode.None;
+            Cursor.visible = true;
             Time.timeScale = 0;
         }
     }

@@ -215,6 +215,7 @@ MonoBehaviour:
   MainSceneToLoad: 
   CreditsSceneToLoad: NewMainMenu
   startGameDelay: 5
+  returnButton: {fileID: 0}
 --- !u!114 &83282216
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -330,6 +331,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
+    type: 2}
   m_audioClip: {fileID: 8300000, guid: d4b77876d08c5314aab2917e39dfe9ad, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
@@ -527,6 +529,48 @@ Prefab:
       propertyPath: fireSpellActiveText
       value: 
       objectReference: {fileID: 945749370}
+    - target: {fileID: 82680850409206524, guid: d6c4f37ad8f2ead4999fc73e819fe09c,
+        type: 2}
+      propertyPath: OutputAudioMixerGroup
+      value: 
+      objectReference: {fileID: 243931585154396168, guid: e0654aea292542d4ca6990e48cebae43,
+        type: 2}
+    - target: {fileID: 82449975082049072, guid: d6c4f37ad8f2ead4999fc73e819fe09c,
+        type: 2}
+      propertyPath: OutputAudioMixerGroup
+      value: 
+      objectReference: {fileID: 243063656914358232, guid: e0654aea292542d4ca6990e48cebae43,
+        type: 2}
+    - target: {fileID: 82260519509137822, guid: d6c4f37ad8f2ead4999fc73e819fe09c,
+        type: 2}
+      propertyPath: OutputAudioMixerGroup
+      value: 
+      objectReference: {fileID: 243234701428792614, guid: e0654aea292542d4ca6990e48cebae43,
+        type: 2}
+    - target: {fileID: 82151196602415884, guid: d6c4f37ad8f2ead4999fc73e819fe09c,
+        type: 2}
+      propertyPath: OutputAudioMixerGroup
+      value: 
+      objectReference: {fileID: 243234701428792614, guid: e0654aea292542d4ca6990e48cebae43,
+        type: 2}
+    - target: {fileID: 82074838076859570, guid: d6c4f37ad8f2ead4999fc73e819fe09c,
+        type: 2}
+      propertyPath: OutputAudioMixerGroup
+      value: 
+      objectReference: {fileID: 243538387971058846, guid: e0654aea292542d4ca6990e48cebae43,
+        type: 2}
+    - target: {fileID: 114904934268552726, guid: d6c4f37ad8f2ead4999fc73e819fe09c,
+        type: 2}
+      propertyPath: NearDeath
+      value: 
+      objectReference: {fileID: 245707039680380524, guid: e0654aea292542d4ca6990e48cebae43,
+        type: 2}
+    - target: {fileID: 114904934268552726, guid: d6c4f37ad8f2ead4999fc73e819fe09c,
+        type: 2}
+      propertyPath: Healthy
+      value: 
+      objectReference: {fileID: 24500006, guid: e0654aea292542d4ca6990e48cebae43,
+        type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d6c4f37ad8f2ead4999fc73e819fe09c, type: 2}
   m_IsPrefabParent: 0
@@ -585,6 +629,7 @@ MonoBehaviour:
   MainSceneToLoad: 
   CreditsSceneToLoad: 
   startGameDelay: 5
+  returnButton: {fileID: 0}
 --- !u!114 &261416371
 MonoBehaviour:
   m_ObjectHideFlags: 0

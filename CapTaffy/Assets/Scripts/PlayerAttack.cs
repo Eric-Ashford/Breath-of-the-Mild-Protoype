@@ -7,6 +7,13 @@ public class PlayerAttack : MonoBehaviour {
     [SerializeField]
     float attackDelay = 0f;
 
+    //Temp Variables
+    [SerializeField]
+    private BoxCollider swordCollider;
+    [SerializeField]
+    private GameObject swordVFX;
+    //End of Temp Variables
+
     Animator anim;
 
     AudioSource[] audioSources;
@@ -26,6 +33,9 @@ public class PlayerAttack : MonoBehaviour {
 
         swordSwing = audioSources[2];
         swordWhoosh = audioSources[3];
+
+        //Temp
+        swordVFX.gameObject.SetActive(false);
     }
 
     private void Update()
@@ -53,6 +63,28 @@ public class PlayerAttack : MonoBehaviour {
 
         }
     }
+
+    //Hopefully Temp Code, called in Animation
+    private void EnableSwordCollider()
+    {
+        swordCollider.enabled = true;
+    }
+
+    private void DisableSwordCollider()
+    {
+        swordCollider.enabled = false;
+    }
+
+    private void EnableVFX()
+    {
+        swordVFX.gameObject.SetActive(true);
+    }
+
+    private void DisableVFX()
+    {
+        swordVFX.gameObject.SetActive(false);
+    }
+    //End of Temp Code
 
     private IEnumerator Wait(float delay)
     {

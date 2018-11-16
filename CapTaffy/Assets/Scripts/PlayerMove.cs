@@ -213,6 +213,7 @@ public class PlayerMove : MonoBehaviour
     {
         if (Input.GetButtonDown("Dodge") && isOnGround)
         {
+            anim.SetTrigger("Dodge");
             rb.AddForce(transform.forward * dodgeDistance, ForceMode.Impulse);
         }
 

@@ -27,9 +27,9 @@ public class PauseMenu : MonoBehaviour
 
     void Update()
     {
-        //activeEnemies = GameObject.FindGameObjectWithTag("Enemy");
+        activeEnemies = GameObject.FindGameObjectWithTag("Enemy");
 
-        if (Input.GetButtonDown(startButtonName))
+        if (Input.GetButtonDown(startButtonName) && activeEnemies != null)
         {
             //isPaused = !isPaused;
             

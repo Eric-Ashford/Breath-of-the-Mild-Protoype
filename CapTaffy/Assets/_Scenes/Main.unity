@@ -788,12 +788,7 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 22.341002, y: 17.498001, z: 5.1070004}
---- !u!1 &362969687 stripped
-GameObject:
-  m_PrefabParentObject: {fileID: 1269278228777788, guid: 8d30318fddaa5314c8a574cc32d73327,
-    type: 2}
-  m_PrefabInternal: {fileID: 1805613791}
---- !u!1001 &428982943
+--- !u!1001 &353791447
 Prefab:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -832,33 +827,28 @@ Prefab:
       propertyPath: m_RootOrder
       value: 3
       objectReference: {fileID: 0}
-    - target: {fileID: 4996348416681108, guid: ddde2e0d1dc3f5043b1b80c9997b1c85, type: 2}
-      propertyPath: m_LocalPosition.z
-      value: -150.99951
-      objectReference: {fileID: 0}
-    - target: {fileID: 4882885133915780, guid: ddde2e0d1dc3f5043b1b80c9997b1c85, type: 2}
-      propertyPath: m_LocalPosition.z
-      value: 254.00006
-      objectReference: {fileID: 0}
-    - target: {fileID: 4663660279188110, guid: ddde2e0d1dc3f5043b1b80c9997b1c85, type: 2}
-      propertyPath: m_LocalPosition.z
-      value: -1346
-      objectReference: {fileID: 0}
-    - target: {fileID: 4799027825402070, guid: ddde2e0d1dc3f5043b1b80c9997b1c85, type: 2}
-      propertyPath: m_LocalPosition.z
-      value: -1346
-      objectReference: {fileID: 0}
-    - target: {fileID: 4663660279188110, guid: ddde2e0d1dc3f5043b1b80c9997b1c85, type: 2}
-      propertyPath: m_LocalPosition.y
-      value: 275
-      objectReference: {fileID: 0}
-    - target: {fileID: 4653275624369580, guid: ddde2e0d1dc3f5043b1b80c9997b1c85, type: 2}
-      propertyPath: m_LocalPosition.z
-      value: -893
+    - target: {fileID: 114239891299524748, guid: ddde2e0d1dc3f5043b1b80c9997b1c85,
+        type: 2}
+      propertyPath: damageSplashScreen
+      value: 
+      objectReference: {fileID: 2132702540}
+    - target: {fileID: 114591678217769242, guid: ddde2e0d1dc3f5043b1b80c9997b1c85,
+        type: 2}
+      propertyPath: damageSplashScreen
+      value: 
+      objectReference: {fileID: 2132702540}
+    - target: {fileID: 1054863205412176, guid: ddde2e0d1dc3f5043b1b80c9997b1c85, type: 2}
+      propertyPath: m_TagString
+      value: Ground
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ddde2e0d1dc3f5043b1b80c9997b1c85, type: 2}
   m_IsPrefabParent: 0
+--- !u!1 &362969687 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1269278228777788, guid: 8d30318fddaa5314c8a574cc32d73327,
+    type: 2}
+  m_PrefabInternal: {fileID: 1805613791}
 --- !u!1 &467330963
 GameObject:
   m_ObjectHideFlags: 0

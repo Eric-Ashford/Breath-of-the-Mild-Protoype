@@ -14,11 +14,12 @@ public class PauseMenu : MonoBehaviour
 
     void Awake()
     {
-        Unpause();
+        
     }
 
     void Start()
     {
+        Unpause();
         //menuCanvas.SetActive(false);
     }
 

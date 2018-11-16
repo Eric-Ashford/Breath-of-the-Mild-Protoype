@@ -59,8 +59,8 @@ public class PlayerMagic : MonoBehaviour
         fireBall = audioSources[1];
         healSFX = audioSources[4];
 
-        healsActive = false;
-        fireActive = true;
+        healsActive = true;
+        fireActive = false;
         healSplashScreen.gameObject.SetActive(false);
     }
 	

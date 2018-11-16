@@ -16,12 +16,19 @@ public class EnemyHealth : MonoBehaviour
     [SerializeField]
     private float maxHealth = 100f;
     [SerializeField]
+    private float maxFlinch = 0f;
+    [SerializeField]
+    private float slamAttackDelay = 0f;
+    [SerializeField]
     private Material[] injuryState;
 
     private Canvas enemyCanvasClone;
     private Slider healthBarClone;
     private SkinnedMeshRenderer sknMeshRndr;
     private Animator anim;
+
+    private float currentFlinch;
+    private bool waitActive;
 
     void Start()
     {
@@ -37,6 +44,7 @@ public class EnemyHealth : MonoBehaviour
 
 
         currentHealth = maxHealth;
+        currentFlinch = 0;
         UpdateHealthBar();
         InjuryStatus();
     }
@@ -45,6 +53,10 @@ public class EnemyHealth : MonoBehaviour
     {
         healthBar.transform.position = new Vector3 (transform.position.x, transform.position.y + sliderOffset, transform.position.z);
         InjuryStatus();
+        if (waitActive == false)
+        {
+            anim.SetBool("canSlam", false);
+        }
     }
 
     void LateUpdate()
@@ -55,6 +67,7 @@ public class EnemyHealth : MonoBehaviour
     public void DamageEnemy(float amount)
     {
         currentHealth -= amount;
+        currentFlinch++;
 
         if (currentHealth <= 0)
         {
@@ -64,6 +77,12 @@ public class EnemyHealth : MonoBehaviour
             anim.SetBool("attackPlayer", false);
             Destroy(enemyCanvasClone);
             
+        }
+        else if (currentFlinch >= maxFlinch)
+        {
+            anim.SetBool("canSlam", true);
+            StartCoroutine(Wait(slamAttackDelay));            
+            currentFlinch = 0;
         }
         else
         {
@@ -100,5 +119,11 @@ public class EnemyHealth : MonoBehaviour
         {
             sknMeshRndr.sharedMaterial = injuryState[2];
         }
+    }
+    private IEnumerator Wait(float delay)
+    {
+        waitActive = true;
+        yield return new WaitForSeconds(delay);
+        waitActive = false;
     }
 }

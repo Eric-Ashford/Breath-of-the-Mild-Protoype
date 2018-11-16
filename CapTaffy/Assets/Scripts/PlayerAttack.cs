@@ -1,6 +1,6 @@
 ﻿using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
-
 
 public class PlayerAttack : MonoBehaviour {
 
@@ -13,15 +13,8 @@ public class PlayerAttack : MonoBehaviour {
     AudioSource swordSwing;
     AudioSource swordWhoosh;
 
-    private CapsuleCollider SwordCC;
-
     bool canAttack;
     bool waitActive;
-
-    [SerializeField]
-    private float attackDamage = 15f;
-
-    private bool isAttacking;
 
     private void Start()
     {
@@ -30,7 +23,6 @@ public class PlayerAttack : MonoBehaviour {
 
         audioSources = GetComponents<AudioSource>();
         anim = GetComponent<Animator>();
-       
 
         swordSwing = audioSources[2];
         swordWhoosh = audioSources[3];
@@ -42,14 +34,12 @@ public class PlayerAttack : MonoBehaviour {
     }
 
 
-    public void Attack()   //should not be in movement script
+    private void Attack()   //should not be in movement script
     {
         if ((Input.GetButtonDown("Melee Attack") || Input.GetAxis("Melee Attack") > 0.0f) && canAttack)
         {
             canAttack = false;
             anim.SetTrigger("Attack");
-            isAttacking = true;
-           
 
             swordSwing.volume = Random.Range(0.9f, 1.1f);
             swordSwing.pitch = Random.Range(0.85f, 1.1f);
@@ -59,29 +49,15 @@ public class PlayerAttack : MonoBehaviour {
             swordWhoosh.pitch = Random.Range(0.85f, 1.1f);
             swordWhoosh.Play();
             StartCoroutine(Wait(attackDelay));
-            
+            canAttack = true;
+
         }
-       
-        
     }
 
     private IEnumerator Wait(float delay)
     {
-        canAttack = false;
+        waitActive = true;
         yield return new WaitForSeconds(delay);
-        canAttack = true;
+        waitActive = false;
     }
-
-    void OnTriggerEnter(Collider other)
-    {
-
-
-        if (other.tag == "Enemy" && isAttacking == true)
-        {
-            other.gameObject.GetComponent<EnemyHealth>().DamageEnemy(attackDamage); // player takes damage
-
-            //this.gameObject.SetActive(false);
-        }
-    }
-
 }

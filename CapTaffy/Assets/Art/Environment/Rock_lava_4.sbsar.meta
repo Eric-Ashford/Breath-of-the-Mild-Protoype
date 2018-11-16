@@ -6,6 +6,7 @@ ScriptedImporter:
     400000: Rock_lava_4/Rock_lava_4/Transform
     2100000: mat.Rock_lava
     2100002: mat.Rock_lava_1
+    2100004: mat.Rock_lava_2
     2300000: Rock_lava_4/Rock_lava_4/MeshRenderer
     2800000: Rock_lava_baseColor
     2800002: Rock_lava_normal
@@ -17,10 +18,16 @@ ScriptedImporter:
     2800014: Rock_lava_1_metallic
     2800016: Rock_lava_1_ambientOcclusion
     2800018: Rock_lava_1_height
+    2800020: Rock_lava_2_baseColor
+    2800022: Rock_lava_2_normal
+    2800024: Rock_lava_2_metallic
+    2800026: Rock_lava_2_ambientOcclusion
+    2800028: Rock_lava_2_height
     3300000: Rock_lava_4/Rock_lava_4/MeshFilter
     11400000: sbsar
     11400002: graph0
     11400004: graph1
+    11400006: graph2
     13500000: Rock_lava_4/Rock_lava_4/SphereCollider
     100100000: Rock_lava_4
   externalObjects: {}
@@ -37,7 +44,7 @@ ScriptedImporter:
     generateMipMaps: 1
     preset: " <sbspreset pkgurl=\"pkg://Rock_lava\" label=\"\" >\n  <presetinput identifier=\"$randomseed\"
       uid=\"353873725\" type=\"4\" value=\"6857\" />\n  <presetinput identifier=\"LavaLevels\"
-      uid=\"935721180\" type=\"0\" value=\"0.55\" />\n </sbspreset>\n"
+      uid=\"935721180\" type=\"0\" value=\"0.581\" />\n </sbspreset>\n"
     shaderName: Standard
     outputNames: baseColor,normal,metallic,ambientOcclusion,height
     texturePackingList:
@@ -184,3 +191,80 @@ ScriptedImporter:
     - {fileID: 2800014, guid: 023b43d6a20725148bb7065083cedfcf, type: 3}
     - {fileID: 2800016, guid: 023b43d6a20725148bb7065083cedfcf, type: 3}
     - {fileID: 2800018, guid: 023b43d6a20725148bb7065083cedfcf, type: 3}
+  - graphLabel: Rock_lava_2
+    prototypeName: Rock_lava
+    graphDescIndex: 0
+    generateAllOutputs: 0
+    generateMipMaps: 1
+    preset: " <sbspreset pkgurl=\"pkg://Rock_lava\" label=\"\" >\n  <presetinput identifier=\"$randomseed\"
+      uid=\"353873725\" type=\"4\" value=\"6857\" />\n  <presetinput identifier=\"LavaLevels\"
+      uid=\"935721180\" type=\"0\" value=\"0.683\" />\n </sbspreset>\n"
+    shaderName: Standard
+    outputNames: baseColor,normal,metallic,ambientOcclusion,height
+    texturePackingList:
+    - outputName: baseColor
+      alphaSource: baseColor
+    - outputName: normal
+      alphaSource: normal
+    - outputName: roughness
+      alphaSource: roughness
+    - outputName: metallic
+      alphaSource: smoothness
+    - outputName: ambientOcclusion
+      alphaSource: ambientOcclusion
+    - outputName: height
+      alphaSource: height
+    textureParameters:
+    - textureName: Rock_lava_2_roughness
+      wrapMode: 0
+      filterMode: 1
+      aniso: 1
+    - textureName: Rock_lava_2_baseColor
+      wrapMode: 0
+      filterMode: 1
+      aniso: 1
+    - textureName: Rock_lava_2_normal
+      wrapMode: 0
+      filterMode: 1
+      aniso: 1
+    - textureName: Rock_lava_2_metallic
+      wrapMode: 0
+      filterMode: 1
+      aniso: 1
+    - textureName: Rock_lava_2_ambientOcclusion
+      wrapMode: 0
+      filterMode: 1
+      aniso: 1
+    - textureName: Rock_lava_2_height
+      wrapMode: 0
+      filterMode: 1
+      aniso: 1
+    colorSpaceList:
+    - outputName: baseColor
+      bLinear: 0
+    - outputName: normal
+      bLinear: 1
+    - outputName: roughness
+      bLinear: 1
+    - outputName: metallic
+      bLinear: 1
+    - outputName: ambientOcclusion
+      bLinear: 1
+    - outputName: height
+      bLinear: 1
+    inputTextureMap: []
+    targetSettingList:
+    - label: 
+      bLockRatio: 1
+      bHighQuality: 0
+      textureWidth: 256
+      textureHeight: 256
+      textureFormat: 0
+      bGenerateOnLoad: 1
+    material: {fileID: 2100004, guid: 023b43d6a20725148bb7065083cedfcf, type: 3}
+    generatedTextures:
+    - {fileID: 2800020, guid: 023b43d6a20725148bb7065083cedfcf, type: 3}
+    - {fileID: 2800022, guid: 023b43d6a20725148bb7065083cedfcf, type: 3}
+    - {fileID: 2800024, guid: 023b43d6a20725148bb7065083cedfcf, type: 3}
+    - {fileID: 2800026, guid: 023b43d6a20725148bb7065083cedfcf, type: 3}
+    - {fileID: 2800028, guid: 023b43d6a20725148bb7065083cedfcf, type: 3}

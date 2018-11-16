@@ -209,8 +209,6 @@ public class PlayerMove : MonoBehaviour
         }
     }
 
-    
-
     void Dodge()
     {
         if (Input.GetButtonDown("Dodge") && isOnGround)

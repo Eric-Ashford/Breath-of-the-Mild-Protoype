@@ -8,7 +8,7 @@ public class PauseMenu : MonoBehaviour
     [SerializeField]
     private GameObject menuCanvas;
 
-    private static bool isPaused;
+    static bool isPaused;
 
     const string startButtonName = "Start";
 
@@ -26,7 +26,7 @@ public class PauseMenu : MonoBehaviour
     {
         if (Input.GetButtonDown(startButtonName))
         {
-            //isPaused = !isPaused;
+            isPaused = !isPaused;
             
             if (isPaused)
             {

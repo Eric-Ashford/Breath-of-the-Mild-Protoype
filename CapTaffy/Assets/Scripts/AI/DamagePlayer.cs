@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
+
+//This script will go on any object with a Trigger that will be able to damage the player
 public class DamagePlayer : MonoBehaviour
 {
     [SerializeField]
@@ -10,12 +12,10 @@ public class DamagePlayer : MonoBehaviour
     [SerializeField]
     private float attackDamage = 15f;
 
-    //CameraShake camShake;
     private bool splashScreenHasBeenActivated;
 
     void Start()
     {
-        //camShake = GameObject.FindGameObjectWithTag("ScreenShake").GetComponent<CameraShake>();
         damageSplashScreen.gameObject.SetActive(false);
     }
 
@@ -29,14 +29,10 @@ public class DamagePlayer : MonoBehaviour
     {
         if (other.tag == "Player")
         {
-            test();
+            Test();
             splashScreenHasBeenActivated = true;
             damageSplashScreen.gameObject.SetActive(true); // Damage splash screen appears
-            //camShake.CamShake();
-            //damageSplashScreen.gameObject.SetActive(true); // Damage splash screen appears
             other.gameObject.GetComponent<PlayerHealth>().DamagePlayer(attackDamage); // player takes damage
-
-            //this.gameObject.SetActive(false);
         }
     }
 
@@ -44,7 +40,7 @@ public class DamagePlayer : MonoBehaviour
     {
         if (splashScreenHasBeenActivated == true)
         {
-            test();
+            Test();
 
             damageSplashScreen.GetComponent<CanvasGroup>().alpha -= Time.deltaTime;
         }
@@ -60,8 +56,7 @@ public class DamagePlayer : MonoBehaviour
     }
 
 
-    void test() // Checks to see if the SplashScreen is active. If it isn't already active, then the DamageSlashScreen appears. 
-               
+    void Test() // Checks to see if the SplashScreen is active. If it isn't already active, then the DamageSlashScreen appears.               
     {
         if (splashScreenHasBeenActivated == false && damageSplashScreen.activeSelf == true)
         {

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
+//This script will go on an AI to determine its Health and Flinchin
 public class EnemyHealth : MonoBehaviour
 {
     [SerializeField]
@@ -28,6 +29,8 @@ public class EnemyHealth : MonoBehaviour
     private float currentFlinch;
     private bool waitActive;
 
+    
+
     void Start()
     {
         sknMeshRndr = GetComponent<SkinnedMeshRenderer>();
@@ -41,7 +44,6 @@ public class EnemyHealth : MonoBehaviour
 
     private void Update()
     {
-        //healthBar.transform.position = new Vector3 (transform.position.x, transform.position.y + sliderOffset, transform.position.z);
         InjuryStatus();
         if (waitActive == false)
         {
@@ -54,20 +56,27 @@ public class EnemyHealth : MonoBehaviour
         UpdateHealthBar();
     }
 
+    //This is called by the DamageEnemy script, which will be placed on a Trigger that overlaps with the AI and can cause damage
     public void DamageEnemy(float amount)
     {
         currentHealth -= amount;
         currentFlinch++;
 
+        //This will trigger the AI Death Animation when hit
         if (currentHealth <= 0)
         {
             anim.SetBool("isDead", true);
             anim.SetBool("chasePlayer", false);
             anim.SetBool("breatheFire", false);
             anim.SetBool("attackPlayer", false);
-            Destroy(healthBar);
-            
+            Destroy(healthBar);            
         }
+
+        /// <summary>
+        /// Once the AI has flinched a certain amount of times, it will enter the Slam Animation, similar
+        /// to other attacks in the Basic AI script, before resetting the currentFlinch counter.  The AI
+        /// cannot be flinched while performing this action due to the Wait Coroutine.
+        /// </summary>
         else if (currentFlinch >= maxFlinch)
         {
             anim.SetBool("canSlam", true);
@@ -80,6 +89,7 @@ public class EnemyHealth : MonoBehaviour
         }
     }
 
+    //This function can restore an AI's health, not currently used
     public void HealEnemy(float amount)
     {
         currentHealth += amount;
@@ -90,11 +100,13 @@ public class EnemyHealth : MonoBehaviour
         }
     }
 
+    //This is used to update the healthBar attached to the AI
     private void UpdateHealthBar()
     {
         healthBar.value = currentHealth / maxHealth;                
     }
 
+    //This is used to alter the damage material on the AI depending on currentHealth, similar to ARK: Survival Evolved
     private void InjuryStatus()
     {
         if (currentHealth / maxHealth >= 2f / 3f)

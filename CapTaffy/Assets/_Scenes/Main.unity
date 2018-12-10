@@ -38,13 +38,13 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0, g: 0, b: 0, a: 1}
+  m_IndirectSpecularColor: {r: 0.4504906, g: 0.4983732, b: 0.56376404, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 11
-  m_GIWorkflowMode: 0
+  m_GIWorkflowMode: 1
   m_GISettings:
     serializedVersion: 2
     m_BounceScale: 1
@@ -89,7 +89,8 @@ LightmapSettings:
     m_PVRFilteringAtrousPositionSigmaIndirect: 2
     m_PVRFilteringAtrousPositionSigmaAO: 1
     m_ShowResolutionOverlay: 1
-  m_LightingDataAsset: {fileID: 0}
+  m_LightingDataAsset: {fileID: 112000002, guid: fc308b0273ca5ae4c97926170ad571c1,
+    type: 2}
   m_UseShadowmask: 1
 --- !u!196 &4
 NavMeshSettings:
@@ -2020,27 +2021,27 @@ Prefab:
       propertyPath: m_RootOrder
       value: 3
       objectReference: {fileID: 0}
-    - target: {fileID: 114073733497017494, guid: 61e5907a346da4642acdffd3538322fa,
+    - target: {fileID: 114616213845450302, guid: 61e5907a346da4642acdffd3538322fa,
         type: 2}
       propertyPath: damageSplashScreen
       value: 
       objectReference: {fileID: 2132702540}
-    - target: {fileID: 114411556915405868, guid: 61e5907a346da4642acdffd3538322fa,
-        type: 2}
-      propertyPath: damageSplashScreen
-      value: 
-      objectReference: {fileID: 2132702540}
-    - target: {fileID: 114432149407528172, guid: 61e5907a346da4642acdffd3538322fa,
-        type: 2}
-      propertyPath: healthBar
-      value: 
-      objectReference: {fileID: 18270838}
     - target: {fileID: 114514025453820788, guid: 61e5907a346da4642acdffd3538322fa,
         type: 2}
       propertyPath: player
       value: 
       objectReference: {fileID: 1360068173}
-    - target: {fileID: 114616213845450302, guid: 61e5907a346da4642acdffd3538322fa,
+    - target: {fileID: 114432149407528172, guid: 61e5907a346da4642acdffd3538322fa,
+        type: 2}
+      propertyPath: healthBar
+      value: 
+      objectReference: {fileID: 18270838}
+    - target: {fileID: 114411556915405868, guid: 61e5907a346da4642acdffd3538322fa,
+        type: 2}
+      propertyPath: damageSplashScreen
+      value: 
+      objectReference: {fileID: 2132702540}
+    - target: {fileID: 114073733497017494, guid: 61e5907a346da4642acdffd3538322fa,
         type: 2}
       propertyPath: damageSplashScreen
       value: 

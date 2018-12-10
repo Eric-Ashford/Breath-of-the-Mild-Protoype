@@ -5,8 +5,6 @@ using UnityEngine.UI;
 
 public class EnemyHealth : MonoBehaviour
 {
-    //[SerializeField]
-    //private Canvas enemyCanvas;
     [SerializeField]
     Slider healthBar;
     [SerializeField]
@@ -34,14 +32,6 @@ public class EnemyHealth : MonoBehaviour
     {
         sknMeshRndr = GetComponent<SkinnedMeshRenderer>();
         anim = GetComponent<Animator>();
-
-        //enemyCanvasClone = Instantiate(enemyCanvas);
-        //enemyCanvas = enemyCanvasClone;
-        //healthBar = enemyCanvas.GetComponentInChildren<Slider>();
-
-        //healthBarClone = Instantiate(healthBar, enemyCanvas.transform);
-        //healthBar.transform.parent = enemyCanvas.transform;
-
 
         currentHealth = maxHealth;
         currentFlinch = 0;
